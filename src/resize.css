@@ -1,0 +1,47 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* 公共样式表 */
+
+body{text-align:left; font-family:"宋体", arial; margin:0; padding:0; background:#FFF; font-size:12px; color:#666;}
+
+
+/*01. 整体颜色风格、字体设置：
+    a. background:#FFF; 背景颜色，根据网页效果图来设定背景颜色，如果有图片就加图片。
+	b. 字体： font-size:12px; 
+*/
+
+div,form,img,ul,ol,li,dl,dt,dd,input{margin:0; padding:0; border:0; }
+
+/**{margin:0; padding:0; border:0; }*/
+
+li,dl{list-style-type:none;}
+h2,h3,h4,h5,h6 { margin:0; padding:0;font-size:12px; font-weight:normal;}
+p{margin:0;padding:0}
+h1{margin:0; padding:0;font-size:14px;}
+
+.margintop10{ margin-top:10px;}
+.margintop30{ margin-top:30px;}
+
+.marginleft30{ margin-left:20px;}
+
+/* 公共样式中的默认超链接 */
+
+a:link {color: #656565; text-decoration:none;}
+a:visited {color: #656565;text-decoration:none;}
+a:hover {color: #950304; text-decoration:underline;}
+a:active {color: #950304;}
+
+/* 系统样式表 */
+
+.floatl{ float:left;}
+.floatr{ float:right;}
+.clrarly{ clear:both;}
+
+
+/* 自定义样式表 */
+
+.bigone { margin:0 auto; width:1003px; height:800px; background:#CCC;}
+
+
+
