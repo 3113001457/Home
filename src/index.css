@@ -3,3 +3,36 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+@media only screen and (min-width: 992px){
+	.publick_header{
+		height: 70px;
+		padding: 0 40px;
+		font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+		background: #333333;
+	}
+	.header_logo{
+		width: 102px;
+		height: 33px;
+		margin-top: 23px;
+		background: #000;
+		margin-right: 112px;
+		float: left;
+	}
+	.publick_header li{
+		float: left;
+		font-size: 13px;
+		margin-top: 30px;
+		margin-right: 47px;
+	    color: #fff;
+	    cursor: pointer;
+	}
+	.publick_header li a{
+	    color: #fff;
+	    text-decoration: none;
+	}
+}

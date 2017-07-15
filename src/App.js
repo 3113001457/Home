@@ -11,25 +11,19 @@ import {
 const App = () => (
   <Router>
     <div>
-      <ul>
+      <ul className="publick_header clear">
+        <div className="header_logo"></div>
         <li><Link to="/">首页</Link></li>
         <li><Link to="/Template">模板</Link></li>
         <li><Link to="/Meal">套餐</Link></li>
-        <li><Link to="/About">关于</Link></li>
+        <li>关于</li>
       </ul>
-      <hr/>
+      <div></div>
       <Route exact path="/" component={Home}/>
       <Route path="/Template" component={Template}/>
       <Route path="/Meal" component={Meal}/>
-      <Route path="/About" component={About}/>
     </div>
   </Router>
-)
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
 )
 
 export default App;
