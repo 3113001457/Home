@@ -45,10 +45,12 @@ dbody {
 		background: #333;
 		top: 26px;
 		left: -500px;
+		z-index: -1;
 		display: none;
 	}
 	.H_about:hover .aboutList{
 		display: block;
+		z-index: 99999999;
 		animation:mymove 1s;
 		-webkit-animation:mymove 1s; 
 	}
