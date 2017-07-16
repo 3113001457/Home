@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 公共样式表 */
+
+body{text-align:left; font-family:"宋体", arial; margin:0; padding:0; background:#FFF; font-size:12px; color:#666;}
+
+
+/*01. 整体颜色风格、字体设置：
+    a. background:#FFF; 背景颜色，根据网页效果图来设定背景颜色，如果有图片就加图片。
+	b. 字体： font-size:12px;
+*/
+
+div,form,img,ul,ol,li,dl,dt,dd,input{margin:0; padding:0; border:0; }
+
+/**{margin:0; padding:0; border:0; }*/
+
+li,dl{list-style-type:none;}
+h2,h3,h4,h5,h6 { margin:0; padding:0;font-size:12px; font-weight:normal;}
+p{margin:0;padding:0}
+h1{margin:0; padding:0;font-size:14px;}
+
+.margintop10{ margin-top:10px;}
+.margintop30{ margin-top:30px;}
+
+.marginleft30{ margin-left:20px;}
+
+/* 公共样式中的默认超链接 */
+
+a:link {color: #656565; text-decoration:none;}
+a:visited {color: #656565;text-decoration:none;}
+a:hover {color: #950304; text-decoration:underline;}
+a:active {color: #950304;}
+
+/* 系统样式表 */
+
+.floatl{ float:left;}
+.floatr{ float:right;}
+.clrarly{ clear:both;}
+
+
+/* 自定义样式表 */
+
+.bigone { margin:0 auto; width:1003px; height:800px; background:#CCC;}
+/*banner开始*/
+.zyh-banner{
+    width: 100%;
+}
+.zyh-background-video{
+    width: 100%;
+    height: 850px;
+    object-fit:cover;
+    object-position:center center;
+    position: relative;
+}
+.zyh-bannerIn{
+    width: 100%;
+    height: 850px;
+    background-color: rgba(48,38,38,0.7);
+    position: absolute;
+    top: 0px;
+}
+.zyh-container{
+    width: 1200px;
+    height: 374px;
+    margin: 0 auto;
+    margin-top: 160px;
+}
+.zyh-text{
+    font-family: 微软雅黑;
+    font-size: 40px;
+    font-weight: normal;
+    font-style: normal;
+    color: #c3c3c3;
+}
+.zyh-text-first{
+    margin-left: 815px;
+    margin-bottom: -5px;
+}
+.zyh-text-second{
+    margin-left: 789px;
+}
+.zyh-tSecond{
+    width: 351px;
+    height: auto;
+    font-size: 22px;
+    color: #c3c3c3;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-left: 800px;
+}
+.zyh-tSecondTop{
+    margin-top: 70px;
+}
+.zyh-tSecondBottom{
+    margin-bottom: 53px;
+}
+.zyh-button{
+    width: 281px;
+    height: 62px;
+    border:1px solid #FFFFFF;
+    font-size: 22px;
+    text-align: center;
+    line-height: 62px;
+    color: white;
+    margin-left: 834px;
+    transition: 0.5s;
+    letter-spacing: 5px;
+}
+.zyh-button:hover{
+    width: 281px;
+    height: 62px;
+    border:1px solid transparent;
+    background-color: white;
+    font-size: 22px;
+    text-align: center;
+    line-height: 62px;
+    color: rgb(117,117,117);
+    margin-left: 834px;
+    letter-spacing: 5px;
+}
+.zyh-decline{
+    width: 29px;
+    height: 17px;
+    cursor: pointer;
+    background-image: url("images/jt.png");
+    background-size: 100% 100%;
+    margin: 0 auto;
+    margin-top: 206px;
+}
+/*banner结束*/
+/*responsive开始*/
+.zyh-responsive{
+    width: 100%;
+}
+.zyh-responsiveIn{
+    width: 1200px;
+    margin: 0 auto;
+}
+.zyh-responsiveTop{
+    width: 268px;
+    height: 134px;
+}
+.zyh-responsiveBottom{
+    width: 1200px;
+}
+.zyh-resBotImg{
+    width: 1169px;
+    height: 725px;
+}
+/*responsive结束*/

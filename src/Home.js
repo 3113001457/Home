@@ -1,8 +1,9 @@
 import React from 'react'
+import Zyh from './zyh'
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <Zyh/>
   </div>
 )
 export default Home;
