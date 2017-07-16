@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Template = () => (
-  <div>2135</div>
+  <div>213</div>
 );
 
 export default Template;
