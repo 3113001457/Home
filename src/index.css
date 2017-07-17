@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .clear:after{
 	content: "";
@@ -210,7 +210,7 @@ body {
 	}
 	.wjt_banner{width: 100%;height: 335px;background-image: url('http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDYvZGQ0NTEzYzJiOWNhMDNiYWMzNWUzNGQxNWQ4YjFiNjUuanBn.jpg'); background-repeat:no-repeat; background-size:cover;overflow: hidden;position: relative;}
 	.wjt_banner_color{width: 100%;height: 100%;left: 0;top: 0;background-color: rgba(48,48,48,.7);position: absolute;}
-	.wjt_banerCon{width: 95%;height: 100%;margin: 0 auto;overflow: hidden;}
+	.wjt_banerCon{width: 100%;height: 100%;margin: 0 auto;overflow: hidden;padding: 0 40px;box-sizing: border-box;;}
 	.wjt_firsttext{height: 6.2rem;line-height: 6.2rem;font-size:36px;color: white;text-align: center;margin-top: 90px;}
 	.wjt_sendtext{height: 2.5rem;text-align: center;margin-top: 11px;font-size: 16px;color: #D3D3D3}
 	.wjt_bannerul{width: 100%;height: 55px;background: #666;position: absolute;bottom: 0;left: 0;}
@@ -220,6 +220,24 @@ body {
 	.wjt_bannerul>ul>li>a:hover{color: #c4c4c4;transition: all 500ms linear;cursor: pointer;}
 	.wjt_bannerul>ul>li>a{color: white;text-decoration: none;font-size: 15px;}
 	.wjt_bannerul>ul>li.wjt_borhide{border:none;}
+	.wjt_template1{width: 1200px;height: 133px;background: #EAEAEA;margin: 0 auto;}
+	.wjt_tem_left{float: left;width: 103px;height: 103px;margin: 20px;}
+	.wjt_tem_left>img{width: 100%;height: 100%;vertical-align: middle;}
+	.wjt_template1>h2{height: 100%;line-height: 133px;font-size: 28px;color: #000;float: left;}
+	.wjt_template1>h3{height: 100%;line-height: 133px;font-size: 14px;color: #595959;float: left;margin-left: 25px;}
+	.wjt_template2{width: 1200px;height: 954px;background: red;margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
