@@ -10,6 +10,7 @@ body {
 	clear: both;
 }
 @media only screen and (min-width: 992px){
+	/*侯宇杰*/
 	.publick_header{
 		height: 70px;
 		padding: 0 40px;
@@ -17,25 +18,28 @@ body {
 		background: #333333;
 	}
 	.header_logo{
-		width: 102px;
-		height: 33px;
-		margin-top: 23px;
+		width: 120px;
+		height: 40px;
+		margin-top: 15px;
 		background: #000;
 		margin-right: 112px;
 		float: left;
+		margin-left: 100px;
 	}
 	.publick_header>li{
 		float: left;
-		font-size: 13px;
-		margin-top: 30px;
+		font-size: 20px;
+		margin-top: 24px;
 		margin-right: 47px;
 	    color: #fff;
-	    padding-bottom: 20px;
 	    position: relative;
+	    padding-bottom: 10px;
+	    font-size: 20px;
 	}
 	.publick_header>li>a{
 		padding-bottom: 5px;
 	    color: #fff;
+	    letter-spacing: 10px;
 	    text-decoration: none;
 	}
 	.aboutList{
@@ -43,10 +47,11 @@ body {
 		width: 1730px;
 		height: 264px;
 		background: #333;
-		top: 26px;
-		left: -500px;
+		top: 32px;
+		left: -700px;
 		z-index: -1;
 		display: none;
+		font-size: 16px;
 	}
 	.H_about:hover .aboutList{
 		display: block;
@@ -104,12 +109,10 @@ body {
 		text-decoration: none;
 	}
 	.aboutL li .list_O{
-		font-size: 14px;
 		font-family: 微软雅黑;
 		color: #fff;
 	}
 	.aboutL li .list_O:hover{
-		font-size: 14px;
 		font-family: 微软雅黑;
 		color: #808080;
 	}
@@ -129,12 +132,10 @@ body {
 		text-decoration: none;
 	}
 	.aboutC li .list_O{
-		font-size: 14px;
 		font-family: 微软雅黑;
 		color: #fff;
 	}
 	.aboutC li .list_O:hover{
-		font-size: 14px;
 		font-family: 微软雅黑;
 		color: #808080;
 	}
@@ -189,12 +190,10 @@ body {
 		text-decoration: none;
 	}
 	.aboutR li .list_O{
-		font-size: 14px;
 		font-family: 微软雅黑;
 		color: #fff;
 	}
 	.aboutR li .list_O:hover{
-		font-size: 14px;
 		font-family: 微软雅黑;
 		color: #808080;
 	}
@@ -207,6 +206,68 @@ body {
 	}
 	.aboutR p .color_r{
 		color: #A9A9A9;
+	}
+	/*首页尾部*/
+	.publick-footer{
+		padding: 0 40px;
+	}
+	.h_footer{
+		padding: 0 40px;
+	}
+	.line_t{
+		width: 100%;
+		height: 28px;
+		border-bottom: 1px solid #dbdbdb;
+		margin-bottom: 42px;
+	}
+	.publick_panel_t_l{
+		float: left;
+		width: 360px;
+		padding-right: 60px;
+		margin-bottom: 30px;
+	}
+	.publick_panel_t_l h2{
+		font-weight: bold;
+		font-size: 20px;
+		color: #000;
+		padding-bottom: 25px;
+	}
+	.publick_panel_t_l_b{
+		font-weight: bold;
+		color: #000;
+		padding: 20px 0;
+	}
+	.publick_panel_t_r{
+		float: left;
+	}
+	.publick_panel_t_r li{
+		float: left;
+		padding-right: 90px;
+		padding-bottom: 20px;
+	}
+	.publick_panel_t_r li h2{
+		font-weight: bold;
+		font-size: 20px;
+		color: #000;
+		padding-bottom: 25px;
+	}
+	.publick_panel_t_r li p{
+		height: 30px;
+	}
+	.publick_panel_o_c{
+		margin-top: 100px;
+	}
+	.publick_panel_s{
+		text-align: center;
+	}
+	.publick_panel_s p{
+		height: 42px;
+		line-height: 42px;
+		border-top: 1px solid #dbdbdb;
+	}
+	.publick_panel_o_c p:first-of-type{
+		font-size: 20px;
+		color: #000;
 	}
 	.wjt_banner{width: 100%;height: 335px;background-image: url('http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDYvZGQ0NTEzYzJiOWNhMDNiYWMzNWUzNGQxNWQ4YjFiNjUuanBn.jpg'); background-repeat:no-repeat; background-size:cover;overflow: hidden;position: relative;}
 	.wjt_banner_color{width: 100%;height: 100%;left: 0;top: 0;background-color: rgba(48,48,48,.7);position: absolute;}
