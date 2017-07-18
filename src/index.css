@@ -211,20 +211,11 @@ body {
 		transition: all 500ms linear;
 		text-decoration: none;
 	}
-	.aboutR li .list_O {
-		font-size: 14px;
-		font-family: 微软雅黑;
-		color: #fff;
-	}
-	.aboutR li .list_O:hover {
-		font-size: 14px;
-	}
 	.aboutR li .list_O{
 		font-family: 微软雅黑;
 		color: #fff;
 	}
 	.aboutR li .list_O:hover{
-
 		font-family: 微软雅黑;
 		color: #808080;
 	}
@@ -239,9 +230,6 @@ body {
 		color: #A9A9A9;
 	}
 	/*首页尾部*/
-	.publick-footer{
-		padding: 0 40px;
-	}
 	.h_footer{
 		width: 1200px;
 		margin: 0 auto;
