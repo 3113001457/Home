@@ -259,7 +259,12 @@ body {
 		margin-top:1px;
 
 	}
+	.D_wrap{padding: 0 40px;width: 100%;box-sizing: border-box;background: #F2F2F2;overflow: hidden}
+	.D_temTit{width: 716px;  height:66px;margin: 25px auto 0 auto;text-align: center;font-size: 30px}
+	.D_tembut{font-size: 14px;text-align: center;color: #666}
+	.D_title{padding-bottom: 24px;border-bottom: 1px solid #ccc}
 }
+
 
 
 
