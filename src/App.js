@@ -112,3 +112,36 @@ const App = () => (
 );
 
 export default App;
+
+let flag=true;
+window.onload=function () {
+    window.onscroll=function () {
+        let publick_header=document.getElementsByClassName('publick_header');
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        let num=-70;
+        if(scrollTop>=70){
+          if(flag){
+            flag=false;
+            publick_header[0].style.position="fixed";
+            publick_header[0].style.top="-70px";
+            publick_header[0].style.left="0";
+            publick_header[0].style.zIndex="999";
+            publick_header[0].style.height="60px";
+            publick_header[0].style.marginTop="-10px";
+            var time=setInterval(function(){
+              num++;
+              publick_header[0].style.top=num+"px";
+              if(num==0){
+                clearInterval(time);
+              }
+            },7);
+          }
+        }else if(scrollTop<70){
+          flag=true;
+          publick_header[0].style.position="static";
+          publick_header[0].style.zIndex="999";
+          publick_header[0].style.height="70px";
+          publick_header[0].style.marginTop="0px";
+        }
+    };
+};

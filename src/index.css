@@ -4,6 +4,7 @@ body,html{
   font-family: sans-serif;
   overflow-x: hidden;
   font-size: 62.5%;
+  font-family: 微软雅黑;
 }
 @media only screen and (min-width: 992px){
 	.clear:after{
@@ -12,6 +13,7 @@ body,html{
 		clear: both;
 	}
 	.publick_header{
+		width: 100%;
 		height: 70px;
 		padding: 0 40px;
 		font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
@@ -328,6 +330,7 @@ body,html{
 	.h_footer{
 		width: 1200px;
 		margin: 0 auto;
+  		font-family: 微软雅黑;
 	}
 	.line_t{
 		width: 100%;
