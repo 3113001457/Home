@@ -68,6 +68,12 @@ a:active {color: #950304;}
         margin: 0 auto;
         margin-top: 160px;
     }
+    #zyhTextFirst{
+        display: none;
+    }
+    #zyhTextSecond{
+        display: none;
+    }
     .zyh-text {
         font-family: 微软雅黑;
         font-size: 40px;
