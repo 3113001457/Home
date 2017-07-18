@@ -63,6 +63,50 @@ const App = () => (
       <Route exact path="/" component={Home}/>
       <Route path="/Template" component={Template}/>
       <Route path="/Meal" component={Meal}/>
+      <div className="publick-footer">
+        <div className="h_footer">
+          <div className="line_t"></div>
+          <div className="publick_panel_t clear">
+            <div className="publick_panel_t_l">
+              <h2>起飞页 · 优雅做网站</h2>
+              <p>2014年起，专注于响应式建站领域。起飞页是目前国内最专业、最领先的响应式建站平台。</p>
+              <div className="publick_panel_t_l_b">
+                <p>QQ客服：800088546</p>
+                <p>客服热线：4006-285-729 / 0512-62969169</p>
+              </div>
+            </div>
+            <ul className="publick_panel_t_r">
+              <li>
+                <h2>公司信息</h2>
+                <p><a href="">公司介绍</a></p>
+                <p><a href="">服务条款</a></p>
+                <p><a href="">法律声明</a></p>
+                <p><a href="">可接受服务</a></p>
+                <p><a href="">免责声明</a></p>
+              </li>
+              <li>
+                <h2>最新资讯</h2>
+                <p><a href="">如何减少网站页面相似度？</a></p>
+                <p><a href="">企业如何建网站？</a></p>
+                <p><a href="">响应式网站建设报价单</a></p>
+                <p><a href="">网站推广的方法</a></p>
+                <p><a href="">企业如何建网站？</a></p>
+                <p><a href="">网站外链越多越好吗？</a></p>
+              </li>
+              <li>
+                 <div className="publick_panel_o_c">
+                  <p>工作时间：09:00~19:00（节假日定时响应）</p>
+                  <p>为每个用户提供优质的客户服务 让每个人都能自己做出赏心悦目的网站</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="publick_panel_s">
+            <p>拓展您的业务，展示您的风采，或者只是尝试一下新的想法。 起飞页自助建站平台，拉近您与互联网的距离！</p>
+            <p>版权所有 2013-2017 苏州卡达网络科技有限公司   增值电信业务经营许可证苏B2-20150321 苏ICP备09008221号-3 版本: V3.6</p>
+          </div>
+        </div>
+      </div>
     </div>
   </Router>
 );
