@@ -54,7 +54,16 @@ class Zyh extends Component {
                 zyhTextSecond.style.width=num2+'px';
             },250);
         },3000);
-        window.onscroll=function () {
+        function addEvent(obj,type,fn){
+            if(obj.attachEvent){
+                obj.attachEvent('on'+type,function(){
+                    fn.call(obj);
+                })
+            }else{
+                obj.addEventListener(type,fn,false);
+            }
+        }
+        addEvent(window,'scroll',function(){
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             num=scrollTop;
             let timer=null;
@@ -94,7 +103,7 @@ class Zyh extends Component {
                 Fourthright.style.right='0';
                 Fourthleft.style.opacity='1';
             }
-        };
+        });
     }
     render() {
         return (
