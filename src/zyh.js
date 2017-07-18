@@ -36,7 +36,6 @@ class Zyh extends Component {
 export default Zyh;
 
 window.onload=function () {
-    // let zyhSpan=document.getElementById('zyhSpan');
     let zyhTextFirst=document.getElementById('zyhTextFirst');
     let zyhTextSecond=document.getElementById('zyhTextSecond');
     let zyhButton=document.getElementById('zyhButton');
@@ -55,8 +54,6 @@ window.onload=function () {
     let timer2=null;
     let num=0;
     let num2=0;
-    zyhTextFirst.style.display='none';
-    zyhTextSecond.style.display='none';
     // setInterval(function () {
     //     zyhSpan.style.opacity='1';
     //     setTimeout(function () {
