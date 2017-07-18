@@ -16,7 +16,7 @@ const App = () => (
         <li><Link to="/">首页</Link></li>
         <li><Link to="/Template">模板</Link></li>
         <li><Link to="/Meal">套餐</Link></li>
-        <li className="H_about"><a href="">关于</a>
+        <li className="H_about"><span>关于</span>
             <ul className="aboutList">
               <p className="line"></p>
               <div className="H_listC">

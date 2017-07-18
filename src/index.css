@@ -59,6 +59,9 @@ body {
 		display: none;
 		font-size: 16px;
 	}
+	.H_about span{
+		cursor: pointer;
+	}
 	.H_about:hover .aboutList {
 		display: block;
 		z-index: 99999999;
