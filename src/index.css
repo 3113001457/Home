@@ -34,7 +34,7 @@ body {
 	    color: #fff;
 	    position: relative;
 	    padding-bottom: 10px;
-	    font-size: 20px;
+	    font-size: 18px;
 	}
 	.publick_header>li>a{
 		padding-bottom: 5px;
@@ -140,7 +140,6 @@ body {
 		color: #808080;
 	}
 	.aboutC div{
-		width: 130px;
 		float: left;
 		padding-right: 10px;
 	}
@@ -223,7 +222,7 @@ body {
 	.publick_panel_t_l{
 		float: left;
 		width: 360px;
-		padding-right: 60px;
+		padding-right: 40px;
 		margin-bottom: 30px;
 	}
 	.publick_panel_t_l h2{
@@ -242,7 +241,7 @@ body {
 	}
 	.publick_panel_t_r li{
 		float: left;
-		padding-right: 90px;
+		padding-right: 50px;
 		padding-bottom: 20px;
 	}
 	.publick_panel_t_r li h2{
