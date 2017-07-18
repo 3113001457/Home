@@ -72,7 +72,7 @@ class MealtemplateThree extends Component{
 							</ul>
 							<div className="wjt_tem_right">
 								<div className="wjt_tem_right_con">
-									<img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMzc1OGVlOGJmYWRjY2NjODhlMTRhMmUzMmU3NzZkYmQucG5nP2F0dGFjaG1lbnRfaWQ9MzI2NTA_p_p100_p_3D.png"/>
+									<img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMzc1OGVlOGJmYWRjY2NjODhlMTRhMmUzMmU3NzZkYmQucG5nP2F0dGFjaG1lbnRfaWQ9MzI2NTA_p_p100_p_3D.png" alt=""/>
 									<p>支持30日无理由退换</p>
 									<p className="wjt_cha">查看所有套餐</p>
 								</div>

@@ -18,21 +18,18 @@ class Sy extends Component {
     render() {
         return (
             <div className="Sy">
-
                 <Sy_Contain data={this.state}/>
             </div>
         )
     }
 }
 class Sy_Contain extends Component {
-
     render() {
         return (
             <div className="sy_Con">
                 <div className="sy_Con_tit">
                     <h2>客户反馈</h2>
                 </div>
-
                 <div id="myCarousel" className="carousel slide sy_carousel">
                     <ol className="carousel-indicators" id="sy_carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" className="active sy_active"></li>
@@ -45,7 +42,6 @@ class Sy_Contain extends Component {
                             <p>
                                 <span>{this.props.data.con[0]}</span>
                                 <b>{this.props.data.tit[0]}</b>
-
                             </p>
                         </div>
                         <div className="item sy_item">
@@ -72,13 +68,8 @@ class Sy_Contain extends Component {
                     </a>
                 </div>
             </div>
-
         )
     }
 }
 
 export default Sy;
-// window.onload=function () {
-//     console.log($)
-//
-// };
