@@ -1,17 +1,17 @@
-body {
+body,html{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   overflow-x: hidden;
+  font-size: 62.5%;
 }
-.clear:after{
+@media only screen and (min-width: 992px){
+	.clear:after{
 	content: "";
 	display: block;
 	clear: both;
 }
 
-@media only screen and (min-width: 992px){
-	/*侯宇杰*/
 	.publick_header{
 		height: 70px;
 		padding: 0 40px;
@@ -430,7 +430,7 @@ body {
 	.wht_rigther>div:hover{background:#3EA3FF;transition: .2s}
 	.wjt_template2{width: 1200px;margin: 0 auto;}
 	.wjt_template3{width: 1200px;margin: 0 auto;font-size: 14px;color: #FF6600;margin-top: 20px;margin-bottom: 10px;}
-	.wjt_template4{width: 1200px;height: 153px;margin: 0 auto;border: 1px solid #e2e2e2;box-sizing: border-box;border-top: 2px solid #B2B2B2;background: white}
+	.wjt_template4{width: 1200px;height: 153px;margin: 0 auto;border: 1px solid #e2e2e2;box-sizing: border-box;border-top: 2px solid #B2B2B2;background: white;overflow: hidden;}
 	.tem4_left{width: 990px;height: 100%;float: left;padding: 40px 20px; box-sizing: border-box;font-family: 微软雅黑;color: #494949;font-size: 18px;}
 	.tem4_right{width: 208px;height: 100%;float: left;border-left: 1px solid #e2e2e2}
 	.tem4_right>div{width: 122px;height: 27px;border-radius: 18px;background: #61B0FF;line-height: 27px;text-align:center;color: white;font-size: 13px;margin: 0 auto;margin-top: 30px;}
@@ -551,3 +551,4 @@ body {
 		display: block;
 		font-weight: normal;
 	}
+

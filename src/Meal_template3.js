@@ -29,7 +29,7 @@ class MealtemplateThree extends Component{
 								<li>邮件</li><li className="wjt_temmaney">0元/年</li>
 								<li className="template2_con temb"><p>*选择海外机房可绑定域名(仅限于在起飞页购买的域名)并发布网站
 			*网站有起飞页底标</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_c">
 								<li className="template2_font">起飞版</li>
@@ -42,7 +42,7 @@ class MealtemplateThree extends Component{
 								<li>每日自动备份</li>
 								<li>邮件/QQ/电话</li><li className="wjt_temmaney">365元/年</li>
 								<li className="template2_con temc"><p>*可绑定国际域名</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_d">
 								<li className="template2_font">翱翔版</li>
@@ -55,7 +55,7 @@ class MealtemplateThree extends Component{
 								<li>每日自动备份</li>
 								<li>邮件/QQ/电话</li><li className="wjt_temmaney">600元/年</li>
 								<li className="template2_con temd"><p>一次性购买3年套餐立享95折优惠，并赠送400元代建费！</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_e">
 								<li className="template2_font">太空版</li>
@@ -68,7 +68,7 @@ class MealtemplateThree extends Component{
 								<li>每日自动备份</li>
 								<li>邮件/QQ/电话</li><li className="wjt_temmaney">1200元/年</li>
 								<li className="template2_con teme"><p>一次性购买3年套餐立享95折优惠，并赠送800元代建费！</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<div className="wjt_tem_right">
 								<div className="wjt_tem_right_con">
