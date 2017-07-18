@@ -163,19 +163,19 @@ window.onload=function () {
             edit.style.transition = '1.5s';
             edit.style.marginTop = '13px';
         }
-        if(num>=1640){
+        if(num>=1640 && num<=1660){
             Firstleft.style.left='0';
             Firstright.style.opacity='1';
         }
-        if(num>=1940){
+        if(num>=1940 && num<=1960){
             Secondright.style.right='0';
             Secondleft.style.opacity='1';
         }
-        if(num>=2540){
+        if(num>=2540 && num<=2560){
             Thiredleft.style.left='0';
             Thiredright.style.opacity='1';
         }
-        if(num>=3140){
+        if(num>=3140 && num<=3160){
             Fourthright.style.right='0';
             Fourthleft.style.opacity='1';
         }
