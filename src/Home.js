@@ -5,5 +5,5 @@ const Home = () => (
   <div>
     <Zyh/>
   </div>
-)
+);
 export default Home;

@@ -11,7 +11,7 @@ import {
 const App = () => (
   <Router>
     <div>
-      <ul className="publick_header clear">
+      <ul id="div" className="publick_header clear">
         <div className="header_logo"></div>
         <li><Link to="/">首页</Link></li>
         <li><Link to="/Template">模板</Link></li>
@@ -65,6 +65,6 @@ const App = () => (
       <Route path="/Meal" component={Meal}/>
     </div>
   </Router>
-)
+);
 
 export default App;

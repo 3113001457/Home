@@ -1,9 +1,24 @@
 import React from 'react'
 
-const Meal = () => (
-  <div>
-    <h3>HHH</h3>
-  </div>
+const Meal = () => (       
+	<div className="wjt_banner">
+        		<div className="wjt_banner_color">
+        			<div classNameName="wjt_banerCon">
+        				<div className="wjt_firsttext">
+        					免费使用所有模板，只需支付托管费用
+        				</div>
+        				<div className="wjt_sendtext">敢为人先，起飞页支持用户网站30天无理由退款政策！</div>
+        			</div>
+        			<div className="wjt_bannerul">
+ 					<ul>
+ 						<li><a href="javascript:;">托管套餐</a></li>
+ 						<li><a href="javascript:;">代理服务</a></li>
+ 						<li><a href="javascript:;">定制服务</a></li>
+ 						<li className="wjt_borhide"><a href="javascript:;">常见问题</a></li>
+ 					</ul>
+        			</div>	
+        		</div>	
+       </div>
 )
 
 export default Meal;
