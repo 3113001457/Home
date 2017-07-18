@@ -338,7 +338,6 @@ body {
 	.wjt_template2>ul>li.wjt_tem_fx{height: 120px;line-height: 120px;}
 	.wjt_template2>ul>li.wjt_tem_on{height: 71px;line-height: 71px;}
 	.wht_rigther>div:hover{background:#3EA3FF;transition: .2s}
-<<<<<<< HEAD
 	.wjt_template2{width: 1200px;margin: 0 auto;}
 	.wjt_template3{width: 1200px;margin: 0 auto;font-size: 14px;color: #FF6600;margin-top: 20px;margin-bottom: 10px;}
 	.wjt_template4{width: 1200px;height: 153px;margin: 0 auto;border: 1px solid #e2e2e2;box-sizing: border-box;border-top: 2px solid #B2B2B2;background: white}
@@ -347,11 +346,8 @@ body {
 	.tem4_right>div{width: 122px;height: 27px;border-radius: 18px;background: #61B0FF;line-height: 27px;text-align:center;color: white;font-size: 13px;margin: 0 auto;margin-top: 30px;}
 	.tem4_right>div:hover{cursor: pointer;background:#3EA3FF;transition: .3s}
 	.wjt_modulemodule{width: 100%;background: #f9f9f9;padding: 0 0 55px 0;overflow: hidden;}
-=======
 }
 	.wjt_template2{width: 1200px;height: 954px;background: red;margin: 0 auto;}
-
->>>>>>> origin/master
 	.Sy {
 		width: 100%;
 		height: 2000px;
@@ -465,9 +461,4 @@ body {
 		text-align:right;
 		display: block;
 		font-weight: normal;
-<<<<<<< HEAD
 	}
-}
-=======
-	}
->>>>>>> origin/master
