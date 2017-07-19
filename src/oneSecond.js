@@ -27,6 +27,7 @@ class Onesecond extends Component {
             dl.style.margin='21px';
             dl.style.padding='30px';
             dl.style.transition='0.8s';
+            dl.style.cursor='pointer';
             img.src=pic[i];
             dd.innerHTML=title[i];
             dd.style.fontFamily='微软雅黑';
