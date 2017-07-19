@@ -9,6 +9,7 @@ import Main3 from './Main3';
 import Main4 from './Main4';
 import Banner from './banner';
 import Respon from './respon';
+import Onesecond from './oneSecond';
 
 class Zyh extends Component {
     componentDidMount(){
@@ -63,7 +64,7 @@ class Zyh extends Component {
             let timer=null;
             zyhButton.onclick= () => {
                 timer=setInterval(function () {
-                    if(num>=930){
+                    if(num>=850){
                         clearInterval(timer)
                     }
                     num += 10;
@@ -81,19 +82,19 @@ class Zyh extends Component {
                 edit.style.transition = '1.5s';
                 edit.style.marginTop = '13px';
             }
-            if(num>=1640 && num<=1740){
+            if(num>=1640 && num<=2140){
                 Firstleft.style.left='0';
                 Firstright.style.opacity='1';
             }
-            if(num>=1940 && num<=2040){
+            if(num>=2140 && num<=2640){
                 Secondright.style.right='0';
                 Secondleft.style.opacity='1';
             }
-            if(num>=2540 && num<=2640){
+            if(num>=2640 && num<=3140){
                 Thiredleft.style.left='0';
                 Thiredright.style.opacity='1';
             }
-            if(num>=3140 && num<=3240){
+            if(num>=3140 && num<=3640){
                 Fourthright.style.right='0';
                 Fourthleft.style.opacity='1';
             }
@@ -116,6 +117,10 @@ class Zyh extends Component {
                     <Main2/>
                     <Main3/>
                     <Main4/>
+                </div>
+                {/*onesecond*/}
+                <div className="zyh-onesecond">
+                    <Onesecond/>
                 </div>
             </div>
         );
