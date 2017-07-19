@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body, html {
     margin: 0;
     padding: 0;
@@ -1126,7 +1126,7 @@ body, html {
         width:100%;
         height:294px;
         overflow: hidden;
-        position: relative;     background-color: red;
+        position: relative;
     }
     .sy_wrapSm >div >div{
         width:1310px;
@@ -1172,7 +1172,7 @@ body, html {
     }
 
 }
-=======
+
 body,html{
   margin: 0;
   padding: 0;
@@ -1658,7 +1658,7 @@ body,html{
 		display: block;
 		font-weight: normal;
 	}
->>>>>>> 8c7453713fedb6a202376f8730c74f1154dc4cff
+
 
 @media only screen and (max-width: 640px){
 
