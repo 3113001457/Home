@@ -231,7 +231,7 @@ a:active {color: #950304;}
     .zyh-mai{
         width: 100%;
         height: 500px;
-        padding: 50px 40px;
+        padding: 50px 0px;
         box-sizing: border-box;
     }
     .zyh-maiIn{
@@ -281,17 +281,66 @@ a:active {color: #950304;}
         position: relative;
         left: -618px;
         transition: 1.5s;
+        height: 386px;
     }
     #Firstright,#Secondleft,#Thiredright,#Fourthleft{
         opacity: 0;
         transition: 1.5s;
+        height: 386px;
     }
     #Secondright,#Fourthright{
         position: relative;
         right: -618px;
         transition: 1.5s;
+        height: 386px;
     }
     /*main结束*/
+    /*onesecond开始*/
+    .zyh-onesecond{
+        width: 100%;
+        background: #F6F6F6;
+    }
+    .zyh-onesecondIn{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .zyh-onesecondTop{
+        width: 100%;
+        height: 290px;
+        padding-top: 137px;
+        box-sizing: border-box;
+    }
+    .zyh-onesecondBottom{
+        width: 1000px;
+        margin: 0 auto;
+        height: 528px;
+    }
+    .zyh-oneTopP{
+        text-align: center;
+        font-family: 微软雅黑;
+        word-wrap: break-word;
+        word-break: break-all !important;
+        overflow-wrap: normal !important;
+    }
+    .zyh-oneTopPFirst{
+        letter-spacing: 3px;
+        font-size: 36px;
+        color: #393939;
+        margin-bottom: 20px;
+    }
+    .zyh-oneTopPSecond{
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 16px;
+        color: #494949;
+    }
+    .zyh-oneTopPSpan{
+        font-family: 黑体;
+        word-wrap: break-word;
+        word-break: break-all !important;
+        overflow-wrap: normal !important;
+    }
+    /*onesecond结束*/
 }
 @media only screen and (max-width: 992px){
     /*banner开始*/
