@@ -30,12 +30,6 @@ class Zyh extends Component {
         let timer2=null;
         let num=0;
         let num2=0;
-        // setInterval(function () {
-        //     zyhSpan.style.opacity='1';
-        //     setTimeout(function () {
-        //         zyhSpan.style.opacity='0'
-        //     },400)
-        // },800);
         timer=setInterval(function () {
             zyhTextFirst.style.display='block';
             if(num>=300){
@@ -65,7 +59,7 @@ class Zyh extends Component {
         }
         addEvent(window,'scroll',function(){
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            num=scrollTop;
+            let num=scrollTop;
             let timer=null;
             zyhButton.onclick= () => {
                 timer=setInterval(function () {
