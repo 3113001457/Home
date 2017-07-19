@@ -39,13 +39,12 @@ body, html {
 
     .publick_header > li {
          float: left;
-         font-size: 0.2rem;
+         font-size: 0.16rem;
          margin-top: 0.24rem;
          margin-right: 0.47rem;
          color: #fff;
          position: relative;
          padding-bottom: 0.1rem;
-         font-size: 0.18rem;
     }
      .publick_header > li > a {
          padding-bottom: 0.05rem;
@@ -56,13 +55,12 @@ body, html {
      .aboutList {
          position: absolute;
          width: 17.3rem;
-         height: 2.64rem;
          background: #333;
          top: 0.32rem;
          left: -7rem;
          z-index: -1;
          display: none;
-         font-size: 0.16rem;
+         font-size: 0.14rem;
     }
      .H_about span {
          letter-spacing: 0.1rem;
@@ -114,7 +112,7 @@ body, html {
              opacity: 1;
         }
     }
-     .line {
+    .line {
          height: 0.01rem;
          text-align: left;
          width: 100%;
@@ -124,13 +122,13 @@ body, html {
          border-style: solid;
          border-color: rgb(68, 68, 68) rgb(255, 255, 255) rgb(255, 255, 255);
     }
-     .H_listC {
-         width: 8rem;
+    .H_listC {
+         width: 10rem;
          margin-left: 2rem;
          padding-top: 0.3rem;
     }
-     .aboutL {
-         width: 1.24rem;
+    .aboutL {
+         width: 1.25rem;
          float: left;
     }
      .aboutL li {
@@ -154,8 +152,9 @@ body, html {
          color: #61b0ff;
     }
      .aboutC {
-         width: 2.8rem;
+         width: 4rem;
          float: left;
+         padding-bottom:  0.2rem;
     }
      .aboutC li:first-of-type {
          margin-bottom: 0.1rem;
@@ -178,7 +177,6 @@ body, html {
      .aboutC div a {
          margin-top: 0.15rem;
          display: block;
-         height: 0.67rem;
          position: relative;
     }
     .aboutC div a img {
@@ -209,9 +207,8 @@ body, html {
          border: 1px solid #ccc;
     }
      .aboutR {
-         width: 4.68rem;
+         width: 4.7rem;
          float: left;
-         padding-left: 0.4rem;
     }
      .aboutR li:first-of-type {
          margin-bottom: 0.1rem;
@@ -357,15 +354,12 @@ body, html {
          padding: 0.2rem 0;
     }
      .publick_panel_t_r {
-         float: right;
+         float: left;
     }
     .publick_panel_t_r li {
          float: left;
          padding-left:0.1rem;
          padding-bottom: 0.2rem;
-    }
-    .publick_panel_t_r li:first-of-type{
-         padding-left:0;
     }
     .publick_panel_t_r li h2 {
          font-weight: bold;

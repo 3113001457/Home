@@ -35,7 +35,7 @@ class App extends Component {
             publick_header[0].style.marginTop="-0.1rem";
 
             var time=setInterval(function(){
-              num+=0.1;
+              num+=0.01;
               console.log(num);
               publick_header[0].style.top=num+"rem";
               if(num>0){
@@ -65,8 +65,8 @@ class App extends Component {
                 <li className="H_about"><span>关于</span>
                     <ul className="aboutList">
                       <p className="line"></p>
-                      <div className="H_listC">
-                        <div className="aboutL">
+                      <div className="H_listC clear">
+                        <div className="aboutL clear">
                           <li><a href="" className="list_O">公司信息</a></li>
                           <li><a href="">公司介绍</a></li>
                           <li><a href="">服务条款</a></li>
@@ -74,26 +74,26 @@ class App extends Component {
                           <li><a href="">可接受服务</a></li>
                           <li><a href="">免责声明</a></li>
                         </div>
-                        <div className="aboutC">
+                        <div className="aboutC clear">
                           <li><a href="" className="list_O">荣誉资质</a></li>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt=""/>
                             <span></span>
                           </a></div>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
                             <span></span>
                           </a></div>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
                             <span></span>
                           </a></div>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
                             <span></span>
                           </a></div>
                         </div>
-                        <div className="aboutR">
+                        <div className="aboutR clear">
                           <li><a href="" className="list_O">联系客服</a></li>
                           <p><a href="">客户服务热线</a></p>
                           <p><a href="" className="color_r">4006-285-729</a></p>
