@@ -23,20 +23,23 @@ class App extends Component {
       addEvent(window,'scroll',function(){
         let publick_header=document.getElementsByClassName('publick_header');
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        let num=-70;
+        let num=-0.7;
         if(scrollTop>=70){
           if(flag){
             flag=false;
             publick_header[0].style.position="fixed";
-            publick_header[0].style.top="-70px";
+            publick_header[0].style.top="-0.7rem";
             publick_header[0].style.left="0";
             publick_header[0].style.zIndex="999";
-            publick_header[0].style.height="60px";
-            publick_header[0].style.marginTop="-10px";
+            publick_header[0].style.height="0.6rem";
+            publick_header[0].style.marginTop="-0.1rem";
+
             var time=setInterval(function(){
-              num++;
-              publick_header[0].style.top=num+"px";
-              if(num===0){
+              num+=0.1;
+              console.log(num);
+              publick_header[0].style.top=num+"rem";
+              if(num>0){
+                publick_header[0].style.top=0;
                 clearInterval(time);
               }
             },7);
@@ -45,8 +48,8 @@ class App extends Component {
           flag=true;
           publick_header[0].style.position="static";
           publick_header[0].style.zIndex="999";
-          publick_header[0].style.height="70px";
-          publick_header[0].style.marginTop="0px";
+          publick_header[0].style.height="0.7rem";
+          publick_header[0].style.marginTop="0";
         }
       });
     }
