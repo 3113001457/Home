@@ -243,14 +243,12 @@ class Sy_wrap extends Component {
         }.bind(this),3000)
     }
     handleClickRight(){
-        clearInterval(this.state.wrap_timeTw);
         if(this.state.wrap_boo==true){
             this.state.wrap_boo=false;
             this.state.wrap_fun()
         }
     }
     handleClickLeft(){
-        clearInterval(this.state.wrap_timeTw);
         if(this.state.wrap_boo==true) {
             this.state.wrap_boo = false;
             if (this.state.wrap_num <= 0) {
@@ -273,11 +271,9 @@ class Sy_wrap extends Component {
 
     }
     handleOver(){
-
         clearInterval(this.state.wrap_timeTw);
     }
     handleOut(){
-
         clearInterval(this.state.wrap_timeTw);
         this.state.wrap_timeTw=setInterval(function () {
             this.state.wrap_fun()
