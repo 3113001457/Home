@@ -9,6 +9,7 @@ import Main3 from './Main3';
 import Main4 from './Main4';
 import Banner from './banner';
 import Respon from './respon';
+import Onesecond from './oneSecond';
 
 class Zyh extends Component {
     componentDidMount(){
@@ -63,7 +64,7 @@ class Zyh extends Component {
             let timer=null;
             zyhButton.onclick= () => {
                 timer=setInterval(function () {
-                    if(num>=930){
+                    if(num>=850){
                         clearInterval(timer)
                     }
                     num += 10;
@@ -116,6 +117,10 @@ class Zyh extends Component {
                     <Main2/>
                     <Main3/>
                     <Main4/>
+                </div>
+                {/*onesecond*/}
+                <div className="zyh-onesecond">
+                    <Onesecond/>
                 </div>
             </div>
         );
