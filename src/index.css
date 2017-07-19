@@ -61,6 +61,7 @@ body,html{
 		font-size: 16px;
 	}
 	.H_about span{
+	    letter-spacing: 10px;
 		cursor: pointer;
 	}
 	.H_about:hover .aboutList {
