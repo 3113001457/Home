@@ -233,22 +233,23 @@ class Sy_wrap extends Component {
                 }.bind(this),700);
 
             }
-            this.refs.aa.style.left=-this.state.wrap_num*444+'px';
+            this.refs.aa.style.left=-this.state.wrap_num*4.44+'rem';
         }.bind(this);
-       clearInterval(this.state.wrap_timeTw);
-        this.state.wrap_timeTw=setInterval(function () {
-            // this.state.wrap_fun()
-        }.bind(this),3000)
 
+        clearInterval(this.state.wrap_timeTw);
+        this.state.wrap_timeTw=setInterval(function () {
+            this.state.wrap_fun()
+        }.bind(this),3000)
     }
     handleClickRight(){
+        clearInterval(this.state.wrap_timeTw);
         if(this.state.wrap_boo==true){
             this.state.wrap_boo=false;
             this.state.wrap_fun()
         }
     }
     handleClickLeft(){
-
+        clearInterval(this.state.wrap_timeTw);
         if(this.state.wrap_boo==true) {
             this.state.wrap_boo = false;
             if (this.state.wrap_num <= 0) {
@@ -266,17 +267,22 @@ class Sy_wrap extends Component {
                     this.state.wrap_boo=true;
                 }.bind(this),700);
             }
-            this.refs.aa.style.left = -this.state.wrap_num * 445 + 'px';
+            this.refs.aa.style.left = -this.state.wrap_num * 4.45 + 'rem';
         }
 
     }
     handleOver(){
+
         clearInterval(this.state.wrap_timeTw);
     }
-    // handleOut(){
-    //     this.state.wrap_fun()
-    //
-    // }
+    handleOut(){
+
+        clearInterval(this.state.wrap_timeTw);
+        this.state.wrap_timeTw=setInterval(function () {
+            this.state.wrap_fun()
+        }.bind(this),3000)
+
+    }
 
     render() {
         return (
@@ -284,9 +290,9 @@ class Sy_wrap extends Component {
                 <div className="sy_wrapSm">
                     <h2>免费海量模板随您挑选</h2>
                     <h3>您可以从众多出色的H5模板中挑选出您最喜欢的</h3>
-                    <div  onMouseOver={this.handleOver.bind(this)}>
-                        <span className="glyphicon glyphicon-chevron-left" onClick={this.handleClickLeft.bind(this)}></span>
-                        <span className="glyphicon glyphicon-chevron-right" onClick={this.handleClickRight.bind(this)}></span>
+                    <div onMouseOver={this.handleOver.bind(this)} onMouseOut={this.handleOut.bind(this)}>
+                        <span className="glyphicon glyphicon-chevron-left" onClick={this.handleClickLeft.bind(this)} ></span>
+                        <span className="glyphicon glyphicon-chevron-right" onClick={this.handleClickRight.bind(this)} ></span>
                         <div>
                             <ul ref='aa' style={{left:'0'}}>
                                 {

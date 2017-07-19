@@ -766,58 +766,66 @@ body, html {
 }
  
 
+}
+
+
+@media only screen and (max-width: 640px){
+
+}
+@media only screen and (min-width:993px){
+
     .Sy {
         width: 100%;
-        height: 2650px;
+        height: 26.5rem;
 
     }
 
     .sy_Con {
-        width: 1190px;
-        height: 309px;
+        width: 11.9rem;
+        height: 3.09rem;
         margin: 0 auto;
-        padding: 0 10px;
+        padding: 0 0.1rem;
         box-sizing: border-box;
-        margin-top: 117px;
-        margin-bottom: 150px;
+        margin-top: 1.17rem;
+        margin-bottom: 1.50rem;
 
     }
 
     .sy_Con_tit {
         position: relative;
         background-repeat: no-repeat;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        padding: 0px 0px 40px;
+        margin-top: 0.05rem;
+        margin-bottom: 0.2rem;
+        padding: 0px 0px 0.4rem;
     }
 
     .sy_Con h2 {
         width: 100%;
-        height: 68px;
+        height: 0.68rem;
         text-align: center;
         font-family: 微软雅黑;
-        font-size: 36px;
+        font-size: 0.36rem;
         font-weight: normal;
         font-style: normal;
         color: #393939;
-        border-bottom: 1px solid #E2E2E2;
+        border-bottom: 0.01rem solid #E2E2E2;
     }
 
     .sy_carousel {
         width: 100%;
-        height: 171px;
+        height: 1.71rem;
         position: relative;
         margin: 0 auto;
         box-sizing: border-box;
     }
 
     #sy_carousel-indicators li {
-        width: 8px;
-        height: 8px;
+        width: 0.08rem;
+        height: 0.08rem;
         background-color: #cecece;
-        border: 1px solid #cecece;
+        border: 0.01rem solid #cecece;
         vertical-align: top;
-        margin-left: 8px;
+        margin-left: 0.08rem;
     }
 
     #sy_carousel-indicators li:first-child {
@@ -826,19 +834,19 @@ body, html {
 
     #sy_carousel-indicators li.active {
         background-color: #5fb0ff;
-        border: 1px solid #5fb0ff;
-        width: 8px;
-        height: 8px;
-        margin-top: 1px;
+        border: 0.01rem solid #5fb0ff;
+        width: 0.08rem;
+        height: 0.08rem;
+        margin-top: 0.01rem;
     }
 
     .sy_btnLeftCon, .sy_btnRightCon {
-        width: 32px;
-        height: 32px;
+        width: 0.32rem;
+        height: 0.32rem;
         background-color: #cecece;
         position: absolute;
         top: 50%;
-        margin-top: -16px;
+        margin-top: -0.16rem;
     }
 
     .sy_btnLeftCon {
@@ -858,41 +866,41 @@ body, html {
     .sy_item {
         width: 100%;
         height: 100%;
-        padding-right: 65px;
+        padding-right: 0.65rem;
         box-sizing: border-box;
         position: relative;
     }
 
     .sy_item > span {
-        width: 90px;
-        height: 90px;
+        width: 0.90rem;
+        height: 0.90rem;
         border-radius: 50%;
         position: absolute;
-        margin-top: 10px;
-        margin-left: 100px;
+        margin-top: 0.10rem;
+        margin-left: 1rem;
     }
 
     .sy_item p {
-        width: 786px;
-        height: 103px;
+        width: 7.86rem;
+        height: 1.03rem;
         float: right;
-        margin-top: 10px;
+        margin-top: 0.10rem;
         font-family: 微软雅黑;
         position: relative;
     }
 
     .sy_item p span {
         display: block;
-        font-size: 13px;
+        font-size: 0.13rem;
         color: #888888;
-        line-height: 25px;
+        line-height: 0.25rem;
     }
 
     .sy_item p b {
         width: 100%;
-        height: 25px;
-        line-height: 25px;
-        font-size: 16px;
+        height: 0.25rem;
+        line-height: 0.25rem;
+        font-size: 0.16rem;
         color: #494949;
         position: absolute;
         bottom: 0;
@@ -903,13 +911,13 @@ body, html {
 
     .sy_friend {
         width: 100%;
-        height: 630px;
+        height: 6.30rem;
         background-color: #F9F9F9;
     }
 
     .sy_friendSm {
-        width: 1200px;
-        height: 630px;
+        width: 12rem;
+        height: 6.3rem;
         margin: 0 auto;
         overflow: hidden;
     }
@@ -917,29 +925,29 @@ body, html {
     .sy_friendSm h2 {
         width: 100%;
         text-align: center;
-        height: 47px;
+        height: 0.47rem;
         font-family: 微软雅黑;
-        font-size: 36px;
+        font-size: 0.36rem;
         font-weight: normal;
         font-style: normal;
         color: #393939;
-        margin-top: 190px;
-        margin-bottom: 62px;
+        margin-top: 1.90rem;
+        margin-bottom: 0.62rem;
     }
 
     .sy_friendSm ul {
         width: 100%;
-        height: 222px;
+        height: 2.22rem;
     }
 
     .sy_friendSm ul li {
-        width: 290px;
-        height: 222px;
+        width: 2.90rem;
+        height: 2.22rem;
         float: left;
-        border: 1px solid #DBDBDB;
-        padding: 30px 5px 20px 5px;
+        border: 0.01rem solid #DBDBDB;
+        padding: 0.30rem 0.05rem 0.20rem 0.05rem;
         font-family: 微软雅黑;
-        margin-left: 10px;
+        margin-left: 0.10rem;
         transition: All .3s ease;
     }
 
@@ -959,26 +967,26 @@ body, html {
     }
 
     .sy_friendSm ul li img {
-        width: 220px;
-        height: 80px;
+        width: 2.20rem;
+        height: 0.80rem;
         margin: 0 auto;
-        margin-top: 5px;
+        margin-top: 0.05rem;
     }
 
     .sy_friendSm ul li span {
-        font-size: 18px;
-        margin-top: 30px;
+        font-size: 0.18rem;
+        margin-top: 0.30rem;
     }
 
     .sy_friendSm ul li b {
-        font-size: 16px;
+        font-size: 0.16rem;
         font-family: arial;
-        margin-top: 5px;
+        margin-top: 0.05rem;
     }
 
     .sy_query {
         width: 100%;
-        height: 958px;
+        height: 9.58rem;
         background-color: red;
         background: url("http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYmY2YmRjMTgxNmM4N2ZhNWNhYmI1ODViYTgyNzRiZjIuanBn.jpg") no-repeat;
         background-size: 100% 100%;
@@ -986,113 +994,114 @@ body, html {
     }
 
     .sy_querySm {
-        width: 1200px;
-        height: 958px;
+        width: 12rem;
+        height: 9.58rem;
         margin: 0 auto;
         overflow: hidden;
     }
 
     .sy_querySm h2 {
         font-family: 微软雅黑;
-        font-size: 36px;
+        font-size: 0.36rem;
         font-weight: normal;
         font-style: normal;
         color: #ffffff;
         text-align: center;
         width: 100%;
-        height: 47px;
-        line-height: 47px;
-        margin-top: 130px;
+        height: 0.47rem;
+        line-height: 0.47rem;
+        margin-top: 1.30rem;
     }
 
     .sy_querySm em {
         display: block;
-        margin: 15px auto;
-        width: 60px;
-        height: 2px;
+        margin: 0.15rem auto;
+        width: 0.60rem;
+        height: 0.02rem;
         background-color: #FFF;
     }
 
     .sy_querySm span {
-        width: 930px;
-        height: 47px;
+        width: 9.30rem;
+        height: 0.47rem;
         font-family: 微软雅黑;
         display: block;
-        font-size: 15px;
-        text-shadow: rgb(73, 73, 73) 0px 0px 2px;
+        font-size: 0.15rem;
+        text-shadow: rgb(73, 73, 73) 0px 0px 0.02rem;
         text-align: center;
         color: #FFF;
-        margin: 32px auto;
+        margin: 0.32rem auto;
 
     }
 
     .sy_querySm div {
-        width: 934px;
-        height: 505px;
+        width: 9.34rem;
+        height: 5.05rem;
         margin: 0 auto;
     }
 
     .sy_querySm div img {
         width: 100%;
         height: 100%;
-        margin: 40px auto;
+        margin: 0.40rem auto;
     }
     .sy_wrap{
         width:100%;
-        height:473px;
-        margin-top:82px;
+        height:4.73rem;
+        margin-top:0.82rem;
     }
     .sy_wrapSm{
         width:99%;
-        height:473px;
+        height:4.73rem;
         margin:0 auto;
     }
     .sy_wrapSm h2{
         width:100%;
-        height:47px;
-        line-height:47px;
-        text-align: center;font-size: 36px;font-family: 微软雅黑;
+        height:0.47rem;
+        line-height:0.47rem;
+        text-align: center;font-size: 0.36rem;font-family: 微软雅黑;
         color: #393939;
     }
     .sy_wrapSm h3{
         width:100%;
-        height:27px;
-        line-height:27px;
-        text-align: center;font-size: 18px;font-family: 微软雅黑;
+        height:0.27rem;
+        line-height:0.27rem;
+        text-align: center;font-size: 0.18rem;font-family: 微软雅黑;
         color: #A9A9A9;
-        margin-top:40px;
+        margin-top:0.40rem;
     }
     .sy_wrapSm >div{
         width:100%;
-        height:294px;
+        height:2.94rem;
         overflow: hidden;
         position: relative;
     }
     .sy_wrapSm >div >div{
-        width:1310px;
+        width:13.10rem;
         margin:0 auto;
         overflow: hidden;
     }
     .sy_wrapSm div div ul{
-        width:3200px;
-        height:294px;
-        margin-top:42px;
+        width:32rem;
+        height:2.94rem;
+        margin-top:0.42rem;
         overflow: hidden;
         position: relative;
         transition:All .5s ease;
 
     }
     .sy_wrapSm div div ul li:first-child{
-        margin-left:10px;
+        margin-left:0.1rem;
     }
     .sy_wrapSm div span{
         position: absolute;display: block;
-        width:15px;
-        height:30px;
-        top:66%; font-size: 15px;
-        margin-top:-15px;
+        width:0.15rem;
+        height:0.30rem;
+        top:66%; font-size: 0.15rem;
+        margin-top:-0.15rem;
         cursor: pointer;
         color: #808080;
+        z-index:111;
     }
     .sy_wrapSm div span:nth-child(1){
         left:0;
@@ -1101,9 +1110,9 @@ body, html {
         right:0;
     }
     .sy_wrapSm div div ul li {
-        width:389px;
-        height:294px;
-        margin:10px 28px 0 28px;
+        width:3.89rem;
+        height:2.94rem;
+        margin:0.10rem 0.28rem 0 0.28rem;
         float: left;
     }
     .sy_wrapSm div div ul li img{
@@ -1111,9 +1120,17 @@ body, html {
         height:100%;
     }
 
+<<<<<<< HEAD
 }
 
 
 @media only screen and (min-width: 768px) and(max-width: ){
     
 }
+=======
+
+}
+@media only screen and (min-width: 1201px){
+
+}
+>>>>>>> origin/master
