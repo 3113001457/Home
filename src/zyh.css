@@ -43,7 +43,7 @@ a:active {color: #950304;}
 
 .bigone { margin:0 auto; width:1003px; height:800px; background:#CCC;}
 
-@media only screen and (min-width: 1201px){
+@media only screen and (min-width: 992px){
     /*banner开始*/
     .zyh-banner {
         width: 100%;
@@ -51,22 +51,22 @@ a:active {color: #950304;}
     }
     .zyh-background-video {
         width: 100%;
-        height: 850px;
+        height: 8.5rem;
         object-fit: cover;
         object-position: center center;
     }
     .zyh-bannerIn {
         width: 100%;
-        height: 850px;
+        height: 8.5rem;
         background-color: rgba(48, 38, 38, 0.7);
         position: absolute;
-        top: 0px;
+        top: 0rem;
     }
     .zyh-container {
-        width: 1200px;
-        height: 374px;
+        width: 12rem;
+        height: 3.74rem;
         margin: 0 auto;
-        margin-top: 160px;
+        margin-top: 1.6rem;
     }
     #zyhTextFirst{
         display: none;
@@ -76,84 +76,84 @@ a:active {color: #950304;}
     }
     .zyh-text {
         font-family: 微软雅黑;
-        font-size: 40px;
+        font-size: 0.4rem;
         font-weight: normal;
         font-style: normal;
         color: #c3c3c3;
     }
     .zyh-text-first {
-        margin-bottom: -5px;
+        margin-bottom: -0.05rem;
     }
     .zyhP{
-        width: 0px;
-        height: 52px;
+        width: 0rem;
+        height: 0.52rem;
         overflow: hidden;
         margin: 0 auto;
         text-align: center;
     }
     .zyh-logo{
-        width: 413px;
-        height: 104px;
-        margin-bottom: 72px;
+        width: 4.13rem;
+        height: 1.04rem;
+        margin-bottom: 0.72rem;
         float: right;
-        margin-right: 30px;
+        margin-right: 0.3rem;
     }
     .zyh-text-second {
     }
     .zyh-tSecond {
-        width: 351px;
+        width: 3.51rem;
         height: auto;
-        font-size: 22px;
+        font-size: 0.22rem;
         color: #c3c3c3;
-        letter-spacing: 2px;
+        letter-spacing: 0.02rem;
         text-align: center;
-        margin-left: 800px;
+        margin-left: 8rem;
     }
     .zyh-tSecondTop {
-        margin-top: 70px;
-        margin-bottom: 10px;
+        margin-top: 0.7rem;
+        margin-bottom: 0.1rem;
     }
     .zyh-tSecondBottom {
-        margin-bottom: 53px;
+        margin-bottom: 0.53rem;
     }
     .zyh-button {
-        width: 281px;
-        height: 62px;
+        width: 2.81rem;
+        height: 0.62rem;
         border: 1px solid #FFFFFF;
-        font-size: 22px;
+        font-size: 0.22rem;
         text-align: center;
-        line-height: 62px;
+        line-height: 0.62rem;
         color: white;
-        margin-left: 834px;
+        margin-left: 8.34rem;
         transition: 0.5s;
-        letter-spacing: 5px;
+        letter-spacing: 0.05rem;
         cursor: pointer;
     }
     .zyh-button:hover {
-        width: 281px;
-        height: 62px;
+        width: 2.81rem;
+        height: 0.62rem;
         border: 1px solid transparent;
         background-color: white;
-        font-size: 22px;
+        font-size: 0.22rem;
         text-align: center;
-        line-height: 62px;
+        line-height: 0.62rem;
         color: rgb(117, 117, 117);
-        margin-left: 834px;
-        letter-spacing: 5px;
+        margin-left: 8.34rem;
+        letter-spacing: 0.05rem;
         cursor: pointer;
     }
     .zyh-decline {
-        width: 29px;
-        height: 17px;
+        width: 0.29rem;
+        height: 0.17rem;
         cursor: pointer;
         background-image: url("./images/jt.png");
         background-size: 100% 100%;
         margin: 0 auto;
-        margin-top: 206px;
+        margin-top: 2.06rem;
     }
     #zyhSpan{
         font-family: 微软雅黑;
-        font-size: 40px;
+        font-size: 0.4rem;
         font-weight: normal;
         font-style: normal;
         color: #c3c3c3;
@@ -165,92 +165,84 @@ a:active {color: #950304;}
     .zyh-responsive {
         width: 100%;
     }
-
     .zyh-responsiveIn {
         width: 100%;
-        padding: 0 40px;
+        padding: 0 0.4rem;
         box-sizing: border-box;
         margin: 0 auto;
     }
-
     .zyh-responsiveTop {
-        width: 278px;
-        height: 164px;
+        width: 2.78rem;
+        height: 1.64rem;
         margin: 0 auto;
-        margin-top: 90px;
+        margin-top: 0.9rem;
     }
-
     .zyh-resPFirst {
-        margin-top: 5px;
-        font-size: 44px;
+        margin-top: 0.05rem;
+        font-size: 0.44rem;
         color: #494949;
-        letter-spacing: 1px;
+        letter-spacing: 0.01rem;
         font-family: 微软雅黑;
         opacity: 0;
     }
-
     .zyh-respFSpan {
         font-family: 黑体;
-        /*letter-spacing: 0px;*/
     }
     .zyh-resPSecond {
-        margin-top: 35px;
-        font-size: 18px;
+        margin-top: 0.35rem;
+        font-size: 0.18rem;
         color: #696969;
-        letter-spacing: 1px;
+        letter-spacing: 0.01rem;
         font-family: 微软雅黑;
         text-align: center;
         opacity: 0;
     }
     .zyh-resPThird {
-        margin-top: 18px;
-        font-size: 18px;
+        margin-top: 0.18rem;
+        font-size: 0.18rem;
         color: #696969;
-        letter-spacing: 1px;
+        letter-spacing: 0.01rem;
         font-family: 微软雅黑;
         text-align: center;
         opacity: 0;
     }
     .zyh-respTSpan {
         font-family: 黑体;
-        /*letter-spacing: 0px;*/
     }
     .zyh-responsiveBottom {
         width: 100%;
-        padding: 0 40px;
+        padding: 0 0.4rem;
         box-sizing: border-box;
     }
     .zyh-resBotImg {
         width: 100%;
-        height: 725px;
+        height: 7.25rem;
     }
     /*responsive结束*/
     /*main开始*/
     .zyh-main{
-
     }
     .zyh-mai{
         width: 100%;
-        height: 500px;
-        padding: 50px 0px;
+        height: 5rem;
+        padding: 0.5rem 0rem;
         box-sizing: border-box;
     }
     .zyh-maiIn{
-        width: 1257px;
+        width: 12.57rem;
         margin: 0 auto;
     }
     .zyh-maiFirst,.zyh-maiThird{
         width: 100%;
         background: #F9F9F9;
-
     }
     .zyh-mainImg{
-        width: 618px;
-        height: 386px;
+        width: 6.18rem;
+        height: 3.86rem;
     }
     .zyh-Rtitle{
         font-family: 微软雅黑;
-        font-size: 34px;
+        font-size: 0.34rem;
         font-weight: normal;
         font-style: normal;
         color: #333333;
@@ -259,18 +251,18 @@ a:active {color: #950304;}
         font-family: 微软雅黑;
         line-height: 2;
         color: rgb(105, 105, 105);
-        letter-spacing: 1px;
-        font-size: 15px;
+        letter-spacing: 0.01rem;
+        font-size: 0.15rem;
         word-wrap: break-word;
-        margin-top: 19px;
+        margin-top: 0.19rem;
     }
     .zyh-textR{
-        width: 505px;
-        padding-top: 71px;
+        width: 5.05rem;
+        padding-top: 0.71rem;
         box-sizing: border-box;
     }
     .zyh-MaL{
-        margin-left: 65px;
+        margin-left: 0.65rem;
     }
     .zyh-left{
         float: left;
@@ -280,20 +272,20 @@ a:active {color: #950304;}
     }
     #Firstleft,#Thiredleft{
         position: relative;
-        left: -618px;
+        left: -6.18rem;
         transition: 1.5s;
-        height: 386px;
+        height: 3.86rem;
     }
     #Firstright,#Secondleft,#Thiredright,#Fourthleft{
         opacity: 0;
         transition: 1.5s;
-        height: 386px;
+        height: 3.86rem;
     }
     #Secondright,#Fourthright{
         position: relative;
-        right: -618px;
+        right: -6.18rem;
         transition: 1.5s;
-        height: 386px;
+        height: 3.86rem;
     }
     /*main结束*/
     /*onesecond开始*/
@@ -302,19 +294,19 @@ a:active {color: #950304;}
         background: #F6F6F6;
     }
     .zyh-onesecondIn{
-        width: 1200px;
+        width: 12rem;
         margin: 0 auto;
     }
     .zyh-onesecondTop{
         width: 100%;
-        height: 290px;
-        padding-top: 137px;
+        height: 2.9rem;
+        padding-top: 1.37rem;
         box-sizing: border-box;
     }
     .zyh-onesecondBottom{
-        width: 1000px;
+        width: 10rem;
         margin: 0 auto;
-        height: 528px;
+        height: 5.28rem;
     }
     .zyh-oneTopP{
         text-align: center;
@@ -324,15 +316,15 @@ a:active {color: #950304;}
         overflow-wrap: normal !important;
     }
     .zyh-oneTopPFirst{
-        letter-spacing: 3px;
-        font-size: 36px;
+        letter-spacing: 0.03rem;
+        font-size: 0.36rem;
         color: #393939;
-        margin-bottom: 20px;
+        margin-bottom: 0.2rem;
     }
     .zyh-oneTopPSecond{
         text-align: center;
-        letter-spacing: 1px;
-        font-size: 16px;
+        letter-spacing: 0.01rem;
+        font-size: 0.16rem;
         color: #494949;
     }
     .zyh-oneTopPSpan{
@@ -341,309 +333,310 @@ a:active {color: #950304;}
         word-break: break-all !important;
         overflow-wrap: normal !important;
     }
+
     /*onesecond结束*/
 }
-@media only screen and (min-width:993px) and (max-width:1200px){
-    /*banner开始*/
-    .zyh-banner {
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-    .zyh-background-video {
-        width: 100%;
-        height: 850px;
-        object-fit: cover;
-        object-position: center center;
-    }
-    .zyh-bannerIn {
-        width: 100%;
-        height: 850px;
-        background-color: rgba(48, 38, 38, 0.7);
-        position: absolute;
-        top: 0px;
-    }
-    .zyh-container {
-        width: 993px;
-        height: 374px;
-        margin: 0 auto;
-        margin-top: 160px;
-    }
-    #zyhTextFirst{
-        display: none;
-    }
-    #zyhTextSecond{
-        display: none;
-    }
-    .zyh-text {
-        font-family: 微软雅黑;
-        font-size: 40px;
-        font-weight: normal;
-        font-style: normal;
-        color: #c3c3c3;
-    }
-    .zyh-text-first {
-        margin-bottom: -5px;
-    }
-    .zyhP{
-        width: 0px;
-        height: 52px;
-        overflow: hidden;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .zyh-logo{
-        width: 413px;
-        height: 104px;
-        margin-bottom: 72px;
-        float: right;
-        margin-right: 30px;
-    }
-    .zyh-text-second {
-    }
-    .zyh-tSecond {
-        width: 351px;
-        height: auto;
-        font-size: 22px;
-        color: #c3c3c3;
-        letter-spacing: 2px;
-        text-align: center;
-        margin-left: 598px;
-    }
-    .zyh-tSecondTop {
-        margin-top: 70px;
-        margin-bottom: 10px;
-    }
-    .zyh-tSecondBottom {
-        margin-bottom: 53px;
-    }
-    .zyh-button {
-        width: 281px;
-        height: 62px;
-        border: 1px solid #FFFFFF;
-        font-size: 22px;
-        text-align: center;
-        line-height: 62px;
-        color: white;
-        margin-left: 627px;
-        transition: 0.5s;
-        letter-spacing: 5px;
-        cursor: pointer;
-    }
-    .zyh-button:hover {
-        width: 281px;
-        height: 62px;
-        border: 1px solid transparent;
-        background-color: white;
-        font-size: 22px;
-        text-align: center;
-        line-height: 62px;
-        color: rgb(117, 117, 117);
-        margin-left: 627px;
-        letter-spacing: 5px;
-        cursor: pointer;
-    }
-    .zyh-decline {
-        width: 29px;
-        height: 17px;
-        cursor: pointer;
-        background-image: url("./images/jt.png");
-        background-size: 100% 100%;
-        margin: 0 auto;
-        margin-top: 206px;
-    }
-    #zyhSpan{
-        font-family: 微软雅黑;
-        font-size: 40px;
-        font-weight: normal;
-        font-style: normal;
-        color: #c3c3c3;
-        transition: 0.5s;
-        float: left;
-    }
-    /*banner结束*/
-    /*responsive开始*/
-    .zyh-responsive {
-        width: 100%;
-    }
+/*@media only screen and (min-width:993px) and (max-width:1200px){*/
+    /*!*banner开始*!*/
+    /*.zyh-banner {*/
+        /*width: 100%;*/
+        /*position: relative;*/
+        /*overflow: hidden;*/
+    /*}*/
+    /*.zyh-background-video {*/
+        /*width: 100%;*/
+        /*height: 850px;*/
+        /*object-fit: cover;*/
+        /*object-position: center center;*/
+    /*}*/
+    /*.zyh-bannerIn {*/
+        /*width: 100%;*/
+        /*height: 850px;*/
+        /*background-color: rgba(48, 38, 38, 0.7);*/
+        /*position: absolute;*/
+        /*top: 0px;*/
+    /*}*/
+    /*.zyh-container {*/
+        /*width: 993px;*/
+        /*height: 374px;*/
+        /*margin: 0 auto;*/
+        /*margin-top: 160px;*/
+    /*}*/
+    /*#zyhTextFirst{*/
+        /*display: none;*/
+    /*}*/
+    /*#zyhTextSecond{*/
+        /*display: none;*/
+    /*}*/
+    /*.zyh-text {*/
+        /*font-family: 微软雅黑;*/
+        /*font-size: 40px;*/
+        /*font-weight: normal;*/
+        /*font-style: normal;*/
+        /*color: #c3c3c3;*/
+    /*}*/
+    /*.zyh-text-first {*/
+        /*margin-bottom: -5px;*/
+    /*}*/
+    /*.zyhP{*/
+        /*width: 0px;*/
+        /*height: 52px;*/
+        /*overflow: hidden;*/
+        /*margin: 0 auto;*/
+        /*text-align: center;*/
+    /*}*/
+    /*.zyh-logo{*/
+        /*width: 413px;*/
+        /*height: 104px;*/
+        /*margin-bottom: 72px;*/
+        /*float: right;*/
+        /*margin-right: 30px;*/
+    /*}*/
+    /*.zyh-text-second {*/
+    /*}*/
+    /*.zyh-tSecond {*/
+        /*width: 351px;*/
+        /*height: auto;*/
+        /*font-size: 22px;*/
+        /*color: #c3c3c3;*/
+        /*letter-spacing: 2px;*/
+        /*text-align: center;*/
+        /*margin-left: 598px;*/
+    /*}*/
+    /*.zyh-tSecondTop {*/
+        /*margin-top: 70px;*/
+        /*margin-bottom: 10px;*/
+    /*}*/
+    /*.zyh-tSecondBottom {*/
+        /*margin-bottom: 53px;*/
+    /*}*/
+    /*.zyh-button {*/
+        /*width: 281px;*/
+        /*height: 62px;*/
+        /*border: 1px solid #FFFFFF;*/
+        /*font-size: 22px;*/
+        /*text-align: center;*/
+        /*line-height: 62px;*/
+        /*color: white;*/
+        /*margin-left: 627px;*/
+        /*transition: 0.5s;*/
+        /*letter-spacing: 5px;*/
+        /*cursor: pointer;*/
+    /*}*/
+    /*.zyh-button:hover {*/
+        /*width: 281px;*/
+        /*height: 62px;*/
+        /*border: 1px solid transparent;*/
+        /*background-color: white;*/
+        /*font-size: 22px;*/
+        /*text-align: center;*/
+        /*line-height: 62px;*/
+        /*color: rgb(117, 117, 117);*/
+        /*margin-left: 627px;*/
+        /*letter-spacing: 5px;*/
+        /*cursor: pointer;*/
+    /*}*/
+    /*.zyh-decline {*/
+        /*width: 29px;*/
+        /*height: 17px;*/
+        /*cursor: pointer;*/
+        /*background-image: url("./images/jt.png");*/
+        /*background-size: 100% 100%;*/
+        /*margin: 0 auto;*/
+        /*margin-top: 206px;*/
+    /*}*/
+    /*#zyhSpan{*/
+        /*font-family: 微软雅黑;*/
+        /*font-size: 40px;*/
+        /*font-weight: normal;*/
+        /*font-style: normal;*/
+        /*color: #c3c3c3;*/
+        /*transition: 0.5s;*/
+        /*float: left;*/
+    /*}*/
+    /*!*banner结束*!*/
+    /*!*responsive开始*!*/
+    /*.zyh-responsive {*/
+        /*width: 100%;*/
+    /*}*/
 
-    .zyh-responsiveIn {
-        width: 100%;
-        padding: 0 40px;
-        box-sizing: border-box;
-        margin: 0 auto;
-    }
+    /*.zyh-responsiveIn {*/
+        /*width: 100%;*/
+        /*padding: 0 40px;*/
+        /*box-sizing: border-box;*/
+        /*margin: 0 auto;*/
+    /*}*/
 
-    .zyh-responsiveTop {
-        width: 278px;
-        height: 164px;
-        margin: 0 auto;
-        margin-top: 90px;
-    }
+    /*.zyh-responsiveTop {*/
+        /*width: 278px;*/
+        /*height: 164px;*/
+        /*margin: 0 auto;*/
+        /*margin-top: 90px;*/
+    /*}*/
 
-    .zyh-resPFirst {
-        margin-top: 5px;
-        font-size: 44px;
-        color: #494949;
-        letter-spacing: 1px;
-        font-family: 微软雅黑;
-        opacity: 0;
-    }
+    /*.zyh-resPFirst {*/
+        /*margin-top: 5px;*/
+        /*font-size: 44px;*/
+        /*color: #494949;*/
+        /*letter-spacing: 1px;*/
+        /*font-family: 微软雅黑;*/
+        /*opacity: 0;*/
+    /*}*/
 
-    .zyh-respFSpan {
-        font-family: 黑体;
-        /*letter-spacing: 0px;*/
-    }
-    .zyh-resPSecond {
-        margin-top: 35px;
-        font-size: 18px;
-        color: #696969;
-        letter-spacing: 1px;
-        font-family: 微软雅黑;
-        text-align: center;
-        opacity: 0;
-    }
-    .zyh-resPThird {
-        margin-top: 18px;
-        font-size: 18px;
-        color: #696969;
-        letter-spacing: 1px;
-        font-family: 微软雅黑;
-        text-align: center;
-        opacity: 0;
-    }
-    .zyh-respTSpan {
-        font-family: 黑体;
-    }
-    .zyh-responsiveBottom {
-        width: 899px;
-        margin: 0 auto;
-    }
-    .zyh-resBotImg {
-        width: 100%;
-        height: 557px;
-    }
-    /*responsive结束*/
-    /*main开始*/
-    .zyh-main{
+    /*.zyh-respFSpan {*/
+        /*font-family: 黑体;*/
+        /*!*letter-spacing: 0px;*!*/
+    /*}*/
+    /*.zyh-resPSecond {*/
+        /*margin-top: 35px;*/
+        /*font-size: 18px;*/
+        /*color: #696969;*/
+        /*letter-spacing: 1px;*/
+        /*font-family: 微软雅黑;*/
+        /*text-align: center;*/
+        /*opacity: 0;*/
+    /*}*/
+    /*.zyh-resPThird {*/
+        /*margin-top: 18px;*/
+        /*font-size: 18px;*/
+        /*color: #696969;*/
+        /*letter-spacing: 1px;*/
+        /*font-family: 微软雅黑;*/
+        /*text-align: center;*/
+        /*opacity: 0;*/
+    /*}*/
+    /*.zyh-respTSpan {*/
+        /*font-family: 黑体;*/
+    /*}*/
+    /*.zyh-responsiveBottom {*/
+        /*width: 899px;*/
+        /*margin: 0 auto;*/
+    /*}*/
+    /*.zyh-resBotImg {*/
+        /*width: 100%;*/
+        /*height: 557px;*/
+    /*}*/
+    /*!*responsive结束*!*/
+    /*!*main开始*!*/
+    /*.zyh-main{*/
 
-    }
-    .zyh-mai{
-        width: 100%;
-        height: 500px;
-        padding: 50px 0px;
-        box-sizing: border-box;
-    }
-    .zyh-maiIn{
-        width: 899px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    .zyh-maiFirst,.zyh-maiThird{
-        width: 100%;
-        background: #F9F9F9;
+    /*}*/
+    /*.zyh-mai{*/
+        /*width: 100%;*/
+        /*height: 500px;*/
+        /*padding: 50px 0px;*/
+        /*box-sizing: border-box;*/
+    /*}*/
+    /*.zyh-maiIn{*/
+        /*width: 899px;*/
+        /*margin: 0 auto;*/
+        /*overflow: hidden;*/
+    /*}*/
+    /*.zyh-maiFirst,.zyh-maiThird{*/
+        /*width: 100%;*/
+        /*background: #F9F9F9;*/
 
-    }
-    .zyh-mainImg{
-        width: 449px;
-        height: 280px;
-        margin-top: 80px;
-    }
-    .zyh-Rtitle{
-        font-family: 微软雅黑;
-        font-size: 34px;
-        font-weight: normal;
-        font-style: normal;
-        color: #333333;
-    }
-    .zyh-RtitleB{
-        font-family: 微软雅黑;
-        line-height: 2;
-        color: rgb(105, 105, 105);
-        letter-spacing: 1px;
-        font-size: 15px;
-        word-wrap: break-word;
-        margin-top: 19px;
-    }
-    .zyh-textR{
-        width: 450px;
-        padding-top: 71px;
-        box-sizing: border-box;
-    }
-    .zyh-MaL{
-        /*margin-left: 65px;*/
-    }
-    .zyh-left{
-        float: left;
-    }
-    .zyh-right{
-        float: right;
-    }
-    #Firstleft,#Thiredleft{
-        position: relative;
-        left: -618px;
-        transition: 1.5s;
-        height: 386px;
-    }
-    #Firstright,#Secondleft,#Thiredright,#Fourthleft{
-        opacity: 0;
-        transition: 1.5s;
-        height: 386px;
-    }
-    #Secondright,#Fourthright{
-        position: relative;
-        right: -618px;
-        transition: 1.5s;
-        height: 386px;
-    }
-    /*main结束*/
-    /*onesecond开始*/
-    .zyh-onesecond{
-        width: 100%;
-        background: #F6F6F6;
-        overflow: hidden;
-    }
-    .zyh-onesecondIn{
-        width: 1000px;
-        margin: 0 auto;
+    /*}*/
+    /*.zyh-mainImg{*/
+        /*width: 449px;*/
+        /*height: 280px;*/
+        /*margin-top: 80px;*/
+    /*}*/
+    /*.zyh-Rtitle{*/
+        /*font-family: 微软雅黑;*/
+        /*font-size: 34px;*/
+        /*font-weight: normal;*/
+        /*font-style: normal;*/
+        /*color: #333333;*/
+    /*}*/
+    /*.zyh-RtitleB{*/
+        /*font-family: 微软雅黑;*/
+        /*line-height: 2;*/
+        /*color: rgb(105, 105, 105);*/
+        /*letter-spacing: 1px;*/
+        /*font-size: 15px;*/
+        /*word-wrap: break-word;*/
+        /*margin-top: 19px;*/
+    /*}*/
+    /*.zyh-textR{*/
+        /*width: 450px;*/
+        /*padding-top: 71px;*/
+        /*box-sizing: border-box;*/
+    /*}*/
+    /*.zyh-MaL{*/
+        /*!*margin-left: 65px;*!*/
+    /*}*/
+    /*.zyh-left{*/
+        /*float: left;*/
+    /*}*/
+    /*.zyh-right{*/
+        /*float: right;*/
+    /*}*/
+    /*#Firstleft,#Thiredleft{*/
+        /*position: relative;*/
+        /*left: -618px;*/
+        /*transition: 1.5s;*/
+        /*height: 386px;*/
+    /*}*/
+    /*#Firstright,#Secondleft,#Thiredright,#Fourthleft{*/
+        /*opacity: 0;*/
+        /*transition: 1.5s;*/
+        /*height: 386px;*/
+    /*}*/
+    /*#Secondright,#Fourthright{*/
+        /*position: relative;*/
+        /*right: -618px;*/
+        /*transition: 1.5s;*/
+        /*height: 386px;*/
+    /*}*/
+    /*!*main结束*!*/
+    /*!*onesecond开始*!*/
+    /*.zyh-onesecond{*/
+        /*width: 100%;*/
+        /*background: #F6F6F6;*/
+        /*overflow: hidden;*/
+    /*}*/
+    /*.zyh-onesecondIn{*/
+        /*width: 1000px;*/
+        /*margin: 0 auto;*/
 
-    }
-    .zyh-onesecondTop{
-        width: 100%;
-        height: 290px;
-        padding-top: 137px;
-        box-sizing: border-box;
-    }
-    .zyh-onesecondBottom{
-        width: 1000px;
-        margin: 0 auto;
-        /*margin-left: -20px;*/
-        height: 528px;
-    }
-    .zyh-oneTopP{
-        text-align: center;
-        font-family: 微软雅黑;
-        word-wrap: break-word;
-        word-break: break-all !important;
-        overflow-wrap: normal !important;
-    }
-    .zyh-oneTopPFirst{
-        letter-spacing: 3px;
-        font-size: 36px;
-        color: #393939;
-        margin-bottom: 20px;
-    }
-    .zyh-oneTopPSecond{
-        text-align: center;
-        letter-spacing: 1px;
-        font-size: 16px;
-        color: #494949;
-    }
-    .zyh-oneTopPSpan{
-        font-family: 黑体;
-        word-wrap: break-word;
-        word-break: break-all !important;
-        overflow-wrap: normal !important;
-    }
-    /*onesecond结束*/
-}
+    /*}*/
+    /*.zyh-onesecondTop{*/
+        /*width: 100%;*/
+        /*height: 290px;*/
+        /*padding-top: 137px;*/
+        /*box-sizing: border-box;*/
+    /*}*/
+    /*.zyh-onesecondBottom{*/
+        /*width: 1000px;*/
+        /*margin: 0 auto;*/
+        /*!*margin-left: -20px;*!*/
+        /*height: 528px;*/
+    /*}*/
+    /*.zyh-oneTopP{*/
+        /*text-align: center;*/
+        /*font-family: 微软雅黑;*/
+        /*word-wrap: break-word;*/
+        /*word-break: break-all !important;*/
+        /*overflow-wrap: normal !important;*/
+    /*}*/
+    /*.zyh-oneTopPFirst{*/
+        /*letter-spacing: 3px;*/
+        /*font-size: 36px;*/
+        /*color: #393939;*/
+        /*margin-bottom: 20px;*/
+    /*}*/
+    /*.zyh-oneTopPSecond{*/
+        /*text-align: center;*/
+        /*letter-spacing: 1px;*/
+        /*font-size: 16px;*/
+        /*color: #494949;*/
+    /*}*/
+    /*.zyh-oneTopPSpan{*/
+        /*font-family: 黑体;*/
+        /*word-wrap: break-word;*/
+        /*word-break: break-all !important;*/
+        /*overflow-wrap: normal !important;*/
+    /*}*/
+    /*!*onesecond结束*!*/
+/*}*/

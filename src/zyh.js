@@ -77,10 +77,10 @@ class Zyh extends Component {
                 fast.style.marginTop = '0';
                 technology.style.opacity = '1';
                 technology.style.transition = '1.5s';
-                technology.style.marginTop = '30px';
+                technology.style.marginTop = '0.3rem';
                 edit.style.opacity = '1';
                 edit.style.transition = '1.5s';
-                edit.style.marginTop = '13px';
+                edit.style.marginTop = '0.13rem';
             }
             if(num>=1240 && num<=2140){
                 Firstleft.style.left='0';

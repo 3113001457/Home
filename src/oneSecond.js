@@ -19,26 +19,26 @@ class Onesecond extends Component {
             let dt=document.createElement('dt');
             let dd=document.createElement('dd');
             let img=document.createElement('img');
-            dl.style.width='291px';
-            dl.style.height='170px';
+            dl.style.width='2.91rem';
+            dl.style.height='1.70rem';
             dl.style.border='1px solid #cccccc';
             dl.style.boxSizing='border-box';
             dl.style.float='left';
-            dl.style.margin='21px';
-            dl.style.padding='30px';
+            dl.style.margin='0.21rem';
+            dl.style.padding='0.3rem';
             dl.style.transition='0.8s';
             dl.style.cursor='pointer';
             img.src=pic[i];
             dd.innerHTML=title[i];
             dd.style.fontFamily='微软雅黑';
             dd.style.color='rgb(73, 73, 73)';
-            dd.style.fontSize='15px';
+            dd.style.fontSize='0.15rem';
             dd.style.fontWeight='700';
             dd.style.textAlign='center';
             dd.style.wordWrap='break-word';
             dt.style.margin='0 auto';
-            dt.style.width='90px';
-            dt.style.height='90px';
+            dt.style.width='0.9rem';
+            dt.style.height='0.9rem';
             dt.appendChild(img);
             dl.appendChild(dt);
             dl.appendChild(dd);
@@ -50,13 +50,13 @@ class Onesecond extends Component {
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMTQ2Y2Q3MjA1ZDk2Yzk1ZmUyYmUzYmUyMzA3NGI0MTUtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYzAyZWE4ZjQ0YTQ1MmQ1N2RlN2Y5YzQ1YzEwMzcwNDQtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvOGJiODg2NjEwMzc5MGEwNWEyYmU4YWEzYTQzNjBkYzktODJ4NzAucG5n.png'];
-                dl.style.width='291px';
-                dl.style.height='170px';
+                dl.style.width='2.91rem';
+                dl.style.height='1.7rem';
                 dl.style.border='1px solid #0088c2';
                 dl.style.boxSizing='border-box';
                 dl.style.float='left';
-                dl.style.margin='21px';
-                dl.style.padding='30px';
+                dl.style.margin='0.21rem';
+                dl.style.padding='0.3rem';
                 dl.style.background='white';
                 img.src=pic[i];
             };
@@ -67,13 +67,13 @@ class Onesecond extends Component {
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMmE3Yzk5NTE4ZDAyZWQ1N2U3ZWJkYjliMDY2ZjVhOGQtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMmFiYjY1ZjczYmQ2YmVhODNiZGQ3MTY4NTNlMmE4NGYtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvM2RhYzY0OWU0NDQxMzYyZDljYzUyZmU2Yzc2NDFiMGItODJ4NzAucG5n.png'];
-                dl.style.width='291px';
-                dl.style.height='170px';
+                dl.style.width='2.91rem';
+                dl.style.height='1.7rem';
                 dl.style.border='1px solid #cccccc';
                 dl.style.boxSizing='border-box';
                 dl.style.float='left';
-                dl.style.margin='21px';
-                dl.style.padding='30px';
+                dl.style.margin='0.21rem';
+                dl.style.padding='0.3rem';
                 dl.style.background='';
                 img.src=pic[i];
             }
