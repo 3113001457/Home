@@ -4,14 +4,14 @@
 import React, {Component} from 'react';
 
 class Sy extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
     render() {
-
         return (
             <div className="Sy">
+                <Sy_wrap />
                 <Sy_query />
                 <Sy_friend />
                 <Sy_Contain />
@@ -20,62 +20,65 @@ class Sy extends Component {
     }
 }
 class Sy_Contain extends Component {
-    constructor(props){
+
+    constructor(props) {
         super(props);
-        this.state= {
-            Json:false
+        this.state = {
+            Json: false
 
         }
     }
-    componentDidMount(){
-        function Ajax(opt){
-            if(window.XMLHttpRequest){
+
+    componentDidMount() {
+        function Ajax(opt) {
+            if (window.XMLHttpRequest) {
                 var xhr = new XMLHttpRequest();
             }
-            else{
+            else {
                 var xhr = new window.ActiveXObject("Microsoft.XMLHTTP");
             }
-            if(opt.type=='get'){
-                xhr.open(opt.type,opt.url+'?'+JsonToString(opt.data),true);
+            if (opt.type == 'get') {
+                xhr.open(opt.type, opt.url + '?' + JsonToString(opt.data), true);
                 xhr.send();
             }
-            else if(opt.type=='post'){
-                xhr.open(opt.type,opt.url,true);
-                xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            else if (opt.type == 'post') {
+                xhr.open(opt.type, opt.url, true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.send(JsonToString(opt.data));
             }
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState == 4){
-                    if(xhr.status>=200&&xhr.status<300||xhr.status==304){
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
                         opt.success(xhr.responseText);
                     }
-                    else{
-                        opt.error()
+                    else {
+                        // opt.error()
                     }
                 }
             };
-            function JsonToString(json){
+            function JsonToString(json) {
                 var arr = [];
-                for(var i in json){
-                    arr.push(i+'='+json[i])
+                for (var i in json) {
+                    arr.push(i + '=' + json[i])
                 }
                 return arr.join('&');
             };
         };
         Ajax({
-            type:'get',
-            data:{},
-            url:'http://localhost:6416/demod/demo',
-            success:function(da){
-                var Json=JSON.parse(da);
+            type: 'get',
+            data: {},
+            url: 'http://localhost:6416/demod/demo',
+            success: function (da) {
+                var Json = JSON.parse(da);
                 this.setState({
-                    Json:Json,
+                    Json: Json,
                 });
             }.bind(this)
         });
     }
+
     render() {
-        if(this.state.Json){
+        if (this.state.Json) {
             return (
                 <div className="sy_Con">
                     <div className="sy_Con_tit">
@@ -110,110 +113,72 @@ class Sy_Contain extends Component {
                                     <b>{this.state.Json[2].name}</b>
                                 </p>
                             </div>
-                        </div>
-                        <a className="left sy_btnLeftCon" href="#myCarousel"
-                           data-slide="prev">
+                            <a className="left sy_btnLeftCon" href="#myCarousel"
+                               data-slide="prev">
 
-                        </a>
-                        <a className="right sy_btnRightCon" href="#myCarousel"
-                           data-slide="next">
-                        </a>
+                            </a>
+                            <a className="right sy_btnRightCon" href="#myCarousel"
+                               data-slide="next">
+                            </a>
+                        </div>
                     </div>
                 </div>
-
             )
-        }else{
+        } else {
             return (
-                <div className="sy_Con">
-                    <div className="sy_Con_tit">
-                        <h2>客户反馈</h2>
-                    </div>
-
-                    <div id="myCarousel" className="carousel slide sy_carousel">
-                        <ol className="carousel-indicators" id="sy_carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" className="active sy_active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <div className="carousel-inner">
-                            <div className="item active sy_item">
-                                <span></span>
-                                <p>
-                                    <span></span>
-                                    <b></b>
-
-                                </p>
-                            </div>
-                            <div className="item sy_item">
-                                <span></span>
-                                <p>
-                                    <span></span>
-                                    <b></b>
-                                </p>
-                            </div>
-                            <div className="item sy_item">
-                                <span></span>
-                                <p>
-                                    <span></span>
-                                    <b></b>
-                                </p>
-                            </div>
-                        </div>
-                        <a className="left sy_btnLeftCon" href="#myCarousel"
-                           data-slide="prev">
-
-                        </a>
-                        <a className="right sy_btnRightCon" href="#myCarousel"
-                           data-slide="next">
-                        </a>
-                    </div>
-                </div>
+                <div></div>
 
             )
         }
 
     }
+
+
+
 }
+
 class Sy_friend extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-            jsonFri:{
-                fri_img:['http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvNTIwYzI5NDcwZjIwNmUxNjQwZDhhZTNkNjdlYTNhZjktMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png','http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZTI3N2RjNmI2NmZhZjQ2OTZlMGNiMTgwNjlmZjMxZWQtMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png','http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvY2E1ZmEzYjYxMTU1ZDZkYmRmZjc1YjQ1OTE2ZDBlZmItMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png','http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZGJlOWIyYjQxMTAzMDJlMzNiMDExYTZlMjhhZmZmNDgtMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png'],
-                fir_part:['贝宝合作伙伴','阿里云金牌合作伙伴','中国电信指定供应商','亚马逊合作伙伴'],
-                fir_engName:['PayPal','aliyun','China telecom','amazon']
-               }
+        this.state = {
+            jsonFri: {
+                fri_img: ['http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvNTIwYzI5NDcwZjIwNmUxNjQwZDhhZTNkNjdlYTNhZjktMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZTI3N2RjNmI2NmZhZjQ2OTZlMGNiMTgwNjlmZjMxZWQtMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvY2E1ZmEzYjYxMTU1ZDZkYmRmZjc1YjQ1OTE2ZDBlZmItMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZGJlOWIyYjQxMTAzMDJlMzNiMDExYTZlMjhhZmZmNDgtMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png'],
+                fir_part: ['贝宝合作伙伴', '阿里云金牌合作伙伴', '中国电信指定供应商', '亚马逊合作伙伴'],
+                fir_engName: ['PayPal', 'aliyun', 'China telecom', 'amazon']
+            }
 
         }
     }
+
     render() {
         return (
-        <div className="sy_friend">
-            <div className="sy_friendSm">
-                <h2>合作伙伴</h2>
-                <ul>
-                    {
-                        this.state.jsonFri.fri_img.map(function (arr,i) {
-                            return <li>
-                                <img src={arr} alt=""/>
-                                <span>{this.state.jsonFri.fir_part[i]}</span>
-                                <b>{this.state.jsonFri.fir_engName[i]}</b>
-                            </li>
-                        }.bind(this))
+            <div className="sy_friend">
+                <div className="sy_friendSm">
+                    <h2>合作伙伴</h2>
+                    <ul>
+                        {
+                            this.state.jsonFri.fri_img.map(function (arr, i) {
+                                return <li key={arr}>
+                                    <img src={arr} alt=""/>
+                                    <span>{this.state.jsonFri.fir_part[i]}</span>
+                                    <b>{this.state.jsonFri.fir_engName[i]}</b>
+                                </li>
+                            }.bind(this))
 
-                    }
-                </ul>
+                        }
+                    </ul>
+                </div>
+
             </div>
 
-
-        </div>
         )
     }
 }
 class Sy_query extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
+
     render() {
         return (
             <div className="sy_query">
@@ -222,14 +187,126 @@ class Sy_query extends Component {
                     <em></em>
                     <span>起飞页不仅是一个方便快捷的构建网站的自助建站平台，更重要的是，我们为中国用户提供了更多贴心的服务：网站备案、自动备份、快速恢复以及网站代建服务。 我们使用了国内、香港和海外最好的网络和云服务器，以确保您的网站能够快速完美地呈现在世界各地的访客面前。</span>
 
-                    <div>                    <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZjMxN2YzZmIyZWRhYTU3MGZhNDE5YTQ1OGY2OTM2ZjYtMTAyNHg1NTQucG5n.png" alt=""/></div>
 
-
+                    <div><img
+                        src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZjMxN2YzZmIyZWRhYTU3MGZhNDE5YTQ1OGY2OTM2ZjYtMTAyNHg1NTQucG5n.png"
+                        alt=""/></div>
                 </div>
+            </div>
+        )
+    }
+}
+class Sy_wrap extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            wrap_img:[
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMjQ3YzNhNzYyODRlMGQ5YjUyMzFkYzRkMThhOGY0ZDEucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMGQ2MDM5OTExZWFmZjAwNDE2ZWE0ZTU3ZWUxMmI5NzkucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvM2ZiNzg4OTgxZTI0NWFkZDM3ZTM4Zjg4NzZlNDU4ODgucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZDkxODg1Y2RmMDVhYWZlOTZjYWJlM2FjNWMxY2NiMTcucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZTc0NjA3YTA3ZmRiNzRmNjYzOTMyNjc5MjkxZjEyYjIucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvOTA4ZThhOTI0NzQ5ZmJlOGMyMDViMDhmMmRhYTE0YWMucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZjRlZDNlYTFhNGE1Y2JhYTE5MGI0MTY4OWI3Y2FlMGEucG5n.png'
+            ],
+            wrap_num:0,
+            wrap_boo:true,
+            wrap_time:null,
+            wrap_timeTw:null,
+            wrap_fun:null
+        }
+    }
+    componentDidMount(){
+        this.state.wrap_fun=function () {
+            if(this.state.wrap_num>3){
+                this.state.wrap_num=0;
+                clearInterval(this.state.wrap_time);
+                this.state.wrap_time = setTimeout(function () {
+                    this.state.wrap_boo=true;
+                }.bind(this),700);
+            }else{
+                this.setState({
+                    wrap_num:++this.state.wrap_num
+                });
+                clearInterval(this.state.wrap_time);
+                this.state.wrap_time = setTimeout(function () {
+                    this.state.wrap_boo=true;
+                }.bind(this),700);
 
+            }
+            this.refs.aa.style.left=-this.state.wrap_num*440+'px';
+        }.bind(this);
+       clearInterval(this.state.wrap_timeTw);
+        this.state.wrap_timeTw=setInterval(function () {
+            this.state.wrap_fun()
+        }.bind(this),1000)
 
+    }
+    handleClickRight(){
+        if(this.state.wrap_boo==true){
+            this.state.wrap_boo=false;
+            this.state.wrap_fun()
+        }
+    }
+    handleClickLeft(){
+
+        if(this.state.wrap_boo==true) {
+            this.state.wrap_boo = false;
+            if (this.state.wrap_num <= 0) {
+                this.state.wrap_num = 4;
+                clearInterval(this.state.wrap_time);
+                this.state.wrap_time = setTimeout(function () {
+                    this.state.wrap_boo=true;
+                }.bind(this),700);
+            } else {
+                this.setState({
+                    wrap_num: --this.state.wrap_num
+                });
+                clearInterval(this.state.wrap_time);
+                this.state.wrap_time = setTimeout(function () {
+                    this.state.wrap_boo=true;
+                }.bind(this),700);
+            }
+            this.refs.aa.style.left = -this.state.wrap_num * 445 + 'px';
+        }
+
+    }
+    handleOver(){
+        clearInterval(this.state.wrap_timeTw);
+    }
+    // handleOut(){
+    //     this.state.wrap_fun()
+    //
+    // }
+
+    render() {
+        return (
+            <div className="sy_wrap">
+                <div className="sy_wrapSm">
+                    <h2>免费海量模板随您挑选</h2>
+                    <h3>您可以从众多出色的H5模板中挑选出您最喜欢的</h3>
+                    <div  onMouseOver={this.handleOver.bind(this)}>
+                        <span className="glyphicon glyphicon-chevron-left" onClick={this.handleClickLeft.bind(this)}></span>
+                        <span className="glyphicon glyphicon-chevron-right" onClick={this.handleClickRight.bind(this)}></span>
+                        <div>
+                            <ul ref='aa' style={{left:'0'}}>
+                                {
+                                    this.state.wrap_img.map(function (arr) {
+                                        return (
+                                            <li key={arr}>
+                                                <a href=""><img src={arr} alt="" /></a>
+                                            </li>
+                                        )
+
+                                    }.bind(this))
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
 }
 export default Sy;
+
