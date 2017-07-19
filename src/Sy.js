@@ -234,12 +234,12 @@ class Sy_wrap extends Component {
                 }.bind(this),700);
 
             }
-            this.refs.aa.style.left=-this.state.wrap_num*440+'px';
+            this.refs.aa.style.left=-this.state.wrap_num*444+'px';
         }.bind(this);
        clearInterval(this.state.wrap_timeTw);
         this.state.wrap_timeTw=setInterval(function () {
-            this.state.wrap_fun()
-        }.bind(this),1000)
+            // this.state.wrap_fun()
+        }.bind(this),3000)
 
     }
     handleClickRight(){
