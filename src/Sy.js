@@ -199,8 +199,8 @@ class Sy_query extends Component {
 class Sy_wrap extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            wrap_img:[
+        this.state = {
+            wrap_img: [
                 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMjQ3YzNhNzYyODRlMGQ5YjUyMzFkYzRkMThhOGY0ZDEucG5n.png',
                 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMGQ2MDM5OTExZWFmZjAwNDE2ZWE0ZTU3ZWUxMmI5NzkucG5n.png',
                 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvM2ZiNzg4OTgxZTI0NWFkZDM3ZTM4Zjg4NzZlNDU4ODgucG5n.png',
@@ -209,43 +209,50 @@ class Sy_wrap extends Component {
                 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvOTA4ZThhOTI0NzQ5ZmJlOGMyMDViMDhmMmRhYTE0YWMucG5n.png',
                 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZjRlZDNlYTFhNGE1Y2JhYTE5MGI0MTY4OWI3Y2FlMGEucG5n.png'
             ],
-            wrap_num:0,
-            wrap_boo:true,
-            wrap_time:null,
-            wrap_timeTw:null,
-            wrap_fun:null
+            wrap_num: 0,
+            wrap_boo: true,
+            wrap_time: null,
+            wrap_timeTw: null,
+            wrap_fun: null
         }
     }
-    componentDidMount(){
-        this.state.wrap_fun=function () {
-            if(this.state.wrap_num>3){
-                this.state.wrap_num=0;
-                clearInterval(this.state.wrap_time);
-                this.state.wrap_time = setTimeout(function () {
-                    this.state.wrap_boo=true;
-                }.bind(this),700);
-            }else{
-                this.setState({
-                    wrap_num:++this.state.wrap_num
-                });
-                clearInterval(this.state.wrap_time);
-                this.state.wrap_time = setTimeout(function () {
-                    this.state.wrap_boo=true;
-                }.bind(this),700);
 
+    componentDidMount() {
+        var sy_wrap_ul = document.getElementById('sy_wrap_ul');
+        this.state.wrap_fun = function () {
+            if (this.state.wrap_num > 3) {
+                this.state.wrap_num = 0;
             }
-            this.refs.aa.style.left=-this.state.wrap_num*4.44+'rem';
+            this.setState={
+                wrap_num: ++this.state.wrap_num
+            };
+            clearInterval(this.state.wrap_time);
+            this.state.wrap_time = setTimeout(function () {
+                this.state.wrap_boo = true;
+            }.bind(this), 700);
+            sy_wrap_ul.style.left = -this.state.wrap_num * 4.44 + 'rem';
         }.bind(this);
-
         clearInterval(this.state.wrap_timeTw);
-        this.state.wrap_timeTw=setInterval(function () {
+        this.state.wrap_timeTw = setInterval(function () {
             this.state.wrap_fun()
-        }.bind(this),3000)
+        }.bind(this), 3000)
+
     }
     handleClickRight(){
-        if(this.state.wrap_boo==true){
-            this.state.wrap_boo=false;
-            this.state.wrap_fun()
+        if(this.state.wrap_boo==true) {
+            this.state.wrap_boo = false;
+            if (this.state.wrap_num > 3) {
+                this.state.wrap_num = 0;
+            } else {
+                this.setState({
+                    wrap_num: ++this.state.wrap_num
+                });
+            }
+            clearInterval(this.state.wrap_time);
+            this.state.wrap_time = setTimeout(function () {
+                this.state.wrap_boo=true;
+            }.bind(this),700);
+            this.refs.aa.style.left = -this.state.wrap_num * 4.45 + 'rem';
         }
     }
     handleClickLeft(){
@@ -274,10 +281,12 @@ class Sy_wrap extends Component {
         clearInterval(this.state.wrap_timeTw);
     }
     handleOut(){
+        var sy_wrap_ul=document.getElementById('sy_wrap_ul');
         clearInterval(this.state.wrap_timeTw);
-        this.state.wrap_timeTw=setInterval(function () {
+        this.state.wrap_timeTw = setInterval(function () {
             this.state.wrap_fun()
-        }.bind(this),3000)
+        }.bind(this), 3000);
+
 
     }
 
@@ -291,7 +300,7 @@ class Sy_wrap extends Component {
                         <span className="glyphicon glyphicon-chevron-left" onClick={this.handleClickLeft.bind(this)} ></span>
                         <span className="glyphicon glyphicon-chevron-right" onClick={this.handleClickRight.bind(this)} ></span>
                         <div>
-                            <ul ref='aa' style={{left:'0'}}>
+                            <ul ref='aa' style={{left:'0'}} id="sy_wrap_ul">
                                 {
                                     this.state.wrap_img.map(function (arr) {
                                         return (
