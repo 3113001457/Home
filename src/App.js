@@ -11,6 +11,10 @@ import {
 class App extends Component {
     componentDidMount(){
       let flag=true;
+      document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
+      window.onresize=function(){
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
+      };
       function addEvent(obj,type,fn){
           if(obj.attachEvent){
               obj.attachEvent('on'+type,function(){
@@ -36,7 +40,6 @@ class App extends Component {
 
             var time=setInterval(function(){
               num+=0.01;
-              console.log(num);
               publick_header[0].style.top=num+"rem";
               if(num>0){
                 publick_header[0].style.top=0;
