@@ -7,7 +7,6 @@ class Sy extends Component {
     constructor(props) {
         super(props);
     }
-
     render() {
         return (
             <div className="Sy">
@@ -20,7 +19,6 @@ class Sy extends Component {
     }
 }
 class Sy_Contain extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -127,14 +125,9 @@ class Sy_Contain extends Component {
         } else {
             return (
                 <div></div>
-
             )
         }
-
     }
-
-
-
 }
 
 class Sy_friend extends Component {
@@ -149,7 +142,6 @@ class Sy_friend extends Component {
 
         }
     }
-
     render() {
         return (
             <div className="sy_friend">
@@ -164,13 +156,10 @@ class Sy_friend extends Component {
                                     <b>{this.state.jsonFri.fir_engName[i]}</b>
                                 </li>
                             }.bind(this))
-
                         }
                     </ul>
                 </div>
-
             </div>
-
         )
     }
 }
