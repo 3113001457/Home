@@ -27,17 +27,25 @@ class Zyh extends Component {
         let Thiredright=document.getElementById('Thiredright');
         let Fourthleft=document.getElementById('Fourthleft');
         let Fourthright=document.getElementById('Fourthright');
+        let zyhBanner=document.getElementById('zyh-bannerIn');
+        let banner=document.getElementById('banner');
+        let responsive=document.getElementById('responsive');
+        let main=document.getElementById('main');
+        let bannerH=banner.offsetHeight;
+        let responsiveH=responsive.offsetHeight;
+        let mainH=main.offsetHeight;
+        console.log(bannerH,responsiveH,mainH);
         let timer=null;
         let timer2=null;
         let num=0;
         let num2=0;
         timer=setInterval(function () {
             zyhTextFirst.style.display='block';
-            if(num>=300){
+            if(num>=320){
                 clearInterval(timer);
             }
             num+=40;
-            zyhTextFirst.style.width=num+'px';
+            zyhTextFirst.style.width=num/100+'rem';
         },250);
         setTimeout(function () {
             zyhTextSecond.style.display='block';
@@ -46,7 +54,7 @@ class Zyh extends Component {
                     clearInterval(timer2);
                 }
                 num2+=40;
-                zyhTextSecond.style.width=num2+'px';
+                zyhTextSecond.style.width=num2/100+'rem';
             },250);
         },3000);
         function addEvent(obj,type,fn){
@@ -62,16 +70,18 @@ class Zyh extends Component {
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             let num=scrollTop;
             let timer=null;
+            let height=zyhBanner.offsetHeight;
             zyhButton.onclick= () => {
-                timer=setInterval(function () {
-                    if(num>=850){
+                console.log(height);
+                timer=setInterval( () => {
+                    if(num>=height){
                         clearInterval(timer)
                     }
                     num += 10;
                     document.body.scrollTop = document.documentElement.scrollTop = num;
                 },10)
             };
-            if(num >= 520) {
+            if(num >= mainH) {
                 fast.style.opacity = '1';
                 fast.style.transition = '1.5s';
                 fast.style.marginTop = '0';
@@ -82,22 +92,38 @@ class Zyh extends Component {
                 edit.style.transition = '1.5s';
                 edit.style.marginTop = '0.13rem';
             }
-            if(num>=1240 && num<=2140){
+            if(num>=bannerH+responsiveH-responsiveH/2 && num<=bannerH+responsiveH+responsiveH/2){
                 Firstleft.style.left='0';
                 Firstright.style.opacity='1';
             }
-            if(num>=1740 && num<=2640){
+            if(num>=bannerH+responsiveH-responsiveH/2+mainH && num<=bannerH+responsiveH+responsiveH/2+mainH){
                 Secondright.style.right='0';
                 Secondleft.style.opacity='1';
             }
-            if(num>=2240 && num<=3140){
+            if(num>=bannerH+responsiveH-responsiveH/2+mainH*2 && num<=bannerH+responsiveH+responsiveH/2+mainH*2){
                 Thiredleft.style.left='0';
                 Thiredright.style.opacity='1';
             }
-            if(num>=2740 && num<=3640){
+            if(num>=bannerH+responsiveH-responsiveH/2+mainH*3 && num<=bannerH+responsiveH+responsiveH/2+mainH*3){
                 Fourthright.style.right='0';
                 Fourthleft.style.opacity='1';
             }
+            // if(num>=1240 && num<=2140){
+            //     Firstleft.style.left='0';
+            //     Firstright.style.opacity='1';
+            // }
+            // if(num>=1740 && num<=2640){
+            //     Secondright.style.right='0';
+            //     Secondleft.style.opacity='1';
+            // }
+            // if(num>=2240 && num<=3140){
+            //     Thiredleft.style.left='0';
+            //     Thiredright.style.opacity='1';
+            // }
+            // if(num>=2740 && num<=3640){
+            //     Fourthright.style.right='0';
+            //     Fourthleft.style.opacity='1';
+            // }
         });
     }
     render() {
