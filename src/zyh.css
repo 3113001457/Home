@@ -51,22 +51,22 @@ a:active {color: #950304;}
     }
     .zyh-background-video {
         width: 100%;
-        height: 850px;
+        height: 8.5rem;
         object-fit: cover;
         object-position: center center;
     }
     .zyh-bannerIn {
         width: 100%;
-        height: 850px;
+        height: 8.5rem;
         background-color: rgba(48, 38, 38, 0.7);
         position: absolute;
-        top: 0px;
+        top: 0rem;
     }
     .zyh-container {
-        width: 1200px;
-        height: 374px;
+        width: 12rem;
+        height: 3.74rem;
         margin: 0 auto;
-        margin-top: 160px;
+        margin-top: 1.6rem;
     }
     #zyhTextFirst{
         display: none;
@@ -76,83 +76,93 @@ a:active {color: #950304;}
     }
     .zyh-text {
         font-family: 微软雅黑;
-        font-size: 40px;
+        font-size: 0.4rem;
         font-weight: normal;
         font-style: normal;
         color: #c3c3c3;
     }
     .zyh-text-first {
-        margin-bottom: -5px;
+        margin-bottom: -0.05rem;
     }
     .zyhP{
-        width: 0px;
-        height: 52px;
+        width: 0rem;
+        height: 0.52rem;
         overflow: hidden;
         margin: 0 auto;
         text-align: center;
     }
     .zyh-logo{
-        width: 413px;
-        height: 104px;
-        margin-bottom: 72px;
-        float: right;
-        margin-right: 30px;
+        width: 3.6rem;
+        height: 1.04rem;
+        margin-bottom: 0.72rem;
+        margin-left:7.91rem;
     }
     .zyh-text-second {
     }
     .zyh-tSecond {
-        width: 351px;
+        width: 3.51rem;
         height: auto;
-        font-size: 22px;
+        font-size: 0.22rem;
         color: #c3c3c3;
-        letter-spacing: 2px;
+        letter-spacing: 0.02rem;
         text-align: center;
-        margin-left: 800px;
+        margin-left: 8rem;
     }
     .zyh-tSecondTop {
-        margin-top: 70px;
+        margin-top: 0.7rem;
+        margin-bottom: 0.1rem;
     }
     .zyh-tSecondBottom {
-        margin-bottom: 53px;
+        margin-bottom: 0.53rem;
     }
     .zyh-button {
-        width: 281px;
-        height: 62px;
+        width: 2.81rem;
+        height: 0.62rem;
+        margin-left: 8.34rem;
         border: 1px solid #FFFFFF;
-        font-size: 22px;
-        text-align: center;
-        line-height: 62px;
-        color: white;
-        margin-left: 834px;
+    }
+    .zyh-button:hover{
+        width: 2.81rem;
+        height: 0.62rem;
+        margin-left: 8.34rem;
+        border: 1px solid #FFFFFF;
+        background: white;
         transition: 0.5s;
-        letter-spacing: 5px;
+    }
+    .zyh-buttonIn{
+        width: 2.81rem;
+        height: 0.62rem;
+        font-size: 0.22rem;
+        text-align: center;
+        line-height: 0.62rem;
+        color: white;
+        transition: 0s;
+        letter-spacing: 0.05rem;
         cursor: pointer;
     }
-    .zyh-button:hover {
-        width: 281px;
-        height: 62px;
-        border: 1px solid transparent;
+    .zyh-buttonIn:hover {
+        width: 2.81rem;
+        height: 0.62rem;
         background-color: white;
-        font-size: 22px;
+        font-size: 0.22rem;
         text-align: center;
-        line-height: 62px;
+        line-height: 0.62rem;
         color: rgb(117, 117, 117);
-        margin-left: 834px;
-        letter-spacing: 5px;
+        letter-spacing: 0.05rem;
         cursor: pointer;
     }
     .zyh-decline {
-        width: 29px;
-        height: 17px;
+        width: 0.29rem;
+        height: 0.17rem;
         cursor: pointer;
         background-image: url("./images/jt.png");
         background-size: 100% 100%;
         margin: 0 auto;
-        margin-top: 206px;
+        margin-top: 2.06rem;
     }
     #zyhSpan{
         font-family: 微软雅黑;
-        font-size: 40px;
+        font-size: 0.4rem;
         font-weight: normal;
         font-style: normal;
         color: #c3c3c3;
@@ -164,112 +174,162 @@ a:active {color: #950304;}
     .zyh-responsive {
         width: 100%;
     }
-
     .zyh-responsiveIn {
         width: 100%;
-        padding: 0 40px;
+        padding: 0 0.4rem;
         box-sizing: border-box;
         margin: 0 auto;
     }
-
     .zyh-responsiveTop {
-        width: 278px;
-        height: 164px;
+        width: 2.78rem;
+        height: 1.64rem;
         margin: 0 auto;
-        margin-top: 90px;
+        margin-top: 0.9rem;
     }
-
     .zyh-resPFirst {
-        margin-top: 5px;
-        font-size: 44px;
+        width: 2.97rem;
+        height: 0.64rem;
+        margin-top: 0.05rem;
+        overflow: hidden;
+    }
+    .zyh-fastDiv{
+
         color: #494949;
-        letter-spacing: 1px;
+        letter-spacing: 0.01rem;
         font-family: 微软雅黑;
         opacity: 0;
+        text-align: center;
+        transition: 1.5s;
     }
-
     .zyh-respFSpan {
         font-family: 黑体;
-        /*letter-spacing: 0px;*/
     }
     .zyh-resPSecond {
-        margin-top: 35px;
-        font-size: 18px;
+        width: 2.97rem;
+        height: 0.25rem;
+        margin-top: 0.35rem;
+    }
+    .zyh-technologyDiv{
+
         color: #696969;
-        letter-spacing: 1px;
+        letter-spacing: 0.01rem;
         font-family: 微软雅黑;
         text-align: center;
         opacity: 0;
+        transition: 1.5s;
     }
     .zyh-resPThird {
-        margin-top: 18px;
-        font-size: 18px;
+        width: 2.97rem;
+        height: 0.26rem;
+        margin-top: 0.18rem;
+    }
+    .zyh-editDiv{
+
         color: #696969;
-        letter-spacing: 1px;
+        letter-spacing: 0.01rem;
         font-family: 微软雅黑;
         text-align: center;
         opacity: 0;
+        transition: 1.5s;
     }
     .zyh-respTSpan {
         font-family: 黑体;
-        /*letter-spacing: 0px;*/
     }
     .zyh-responsiveBottom {
         width: 100%;
-        padding: 0 40px;
+        padding: 0 0.4rem;
         box-sizing: border-box;
     }
     .zyh-resBotImg {
         width: 100%;
-        height: 725px;
+        height: 7.25rem;
+    }
+    .zyh-text-third{
+        display: none;
+    }
+    #fast,#technology,#edit{
+        transition: 1.5s;
+    }
+    .zyh-tranTextFirst{
+        font-size: 0.44rem;
+        transition: 0s;
+    }
+    .zyh-tranTextSecond{
+        font-size: 0.18rem;
+        transition: 0s;
+    }
+    .zyh-tranTextThird{
+        font-size: 0.18rem;
+        transition: 0s;
     }
     /*responsive结束*/
     /*main开始*/
     .zyh-main{
-
     }
     .zyh-mai{
         width: 100%;
-        height: 500px;
-        padding: 50px 0px;
+        height: 5rem;
+        padding: 0.5rem 0rem;
         box-sizing: border-box;
     }
     .zyh-maiIn{
-        width: 1257px;
+        width: 12.57rem;
         margin: 0 auto;
     }
     .zyh-maiFirst,.zyh-maiThird{
         width: 100%;
         background: #F9F9F9;
-
     }
     .zyh-mainImg{
-        width: 618px;
-        height: 386px;
+        width: 6.18rem;
+        height: 3.86rem;
+        transition: 0s;
+     }
+    .zyh-maiLeftPic{
+        width: 6.18rem;
+        height: 3.78rem;
+        overflow: hidden;
+        transition: 0s;
+     }
+    .zyh-maiRightText{
+        width: 5.66rem;
+        height: 3.78rem;
+        overflow: hidden;
+        transition: 0s;
+    }
+    .zyh-maiLeftText{
+        width: 5.66rem;
+        height: 3.78rem;
+        overflow: hidden;
+        transition: 0s;
+    }
+    .zyh-maiRightPic{
+        width: 6.18rem;
+        height: 3.78rem;
+        overflow: hidden;
+        transition: 0s;
     }
     .zyh-Rtitle{
         font-family: 微软雅黑;
-        font-size: 34px;
         font-weight: normal;
         font-style: normal;
         color: #333333;
+
     }
     .zyh-RtitleB{
         font-family: 微软雅黑;
         line-height: 2;
         color: rgb(105, 105, 105);
-        letter-spacing: 1px;
-        font-size: 15px;
+        letter-spacing: 0.01rem;
         word-wrap: break-word;
-        margin-top: 19px;
     }
     .zyh-textR{
-        width: 505px;
-        padding-top: 71px;
+        width: 5.05rem;
+        padding-top: 0.71rem;
         box-sizing: border-box;
     }
     .zyh-MaL{
-        margin-left: 65px;
+        margin-left: 0.65rem;
     }
     .zyh-left{
         float: left;
@@ -279,20 +339,36 @@ a:active {color: #950304;}
     }
     #Firstleft,#Thiredleft{
         position: relative;
-        left: -618px;
+        left: -6.18rem;
         transition: 1.5s;
-        height: 386px;
+        /*height: 3.86rem;*/
     }
     #Firstright,#Secondleft,#Thiredright,#Fourthleft{
         opacity: 0;
-        transition: 1.5s;
-        height: 386px;
     }
     #Secondright,#Fourthright{
         position: relative;
-        right: -618px;
+        right: -6.18rem;
         transition: 1.5s;
-        height: 386px;
+        /*height: 3.86rem;*/
+    }
+    .zyh-img{
+        transition: 0s;
+    }
+    .zyh-textRTran{
+        height: 3.86rem;
+        transition: 0s;
+    }
+    .zyh-RTSpan{
+        width: 4.94rem;
+        font-size: 0.34rem;
+        transition: 0s;
+    }
+    .zyh-RTBSpan{
+        margin-top: 0.19rem;
+        width: 4.94rem;
+        font-size: 0.15rem;
+        transition: 0s;
     }
     /*main结束*/
     /*onesecond开始*/
@@ -301,19 +377,19 @@ a:active {color: #950304;}
         background: #F6F6F6;
     }
     .zyh-onesecondIn{
-        width: 1200px;
+        width: 12rem;
         margin: 0 auto;
     }
     .zyh-onesecondTop{
         width: 100%;
-        height: 290px;
-        padding-top: 137px;
+        height: 2.9rem;
+        padding-top: 1.37rem;
         box-sizing: border-box;
     }
     .zyh-onesecondBottom{
-        width: 1000px;
+        width: 10rem;
         margin: 0 auto;
-        height: 528px;
+        height: 5.28rem;
     }
     .zyh-oneTopP{
         text-align: center;
@@ -323,15 +399,15 @@ a:active {color: #950304;}
         overflow-wrap: normal !important;
     }
     .zyh-oneTopPFirst{
-        letter-spacing: 3px;
-        font-size: 36px;
+        letter-spacing: 0.03rem;
+        font-size: 0.36rem;
         color: #393939;
-        margin-bottom: 20px;
+        margin-bottom: 0.2rem;
     }
     .zyh-oneTopPSecond{
         text-align: center;
-        letter-spacing: 1px;
-        font-size: 16px;
+        letter-spacing: 0.01rem;
+        font-size: 0.16rem;
         color: #494949;
     }
     .zyh-oneTopPSpan{
@@ -340,154 +416,318 @@ a:active {color: #950304;}
         word-break: break-all !important;
         overflow-wrap: normal !important;
     }
+
     /*onesecond结束*/
 }
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 993px){
+    .Zyh{
+        overflow: hidden;
+    }
     /*banner开始*/
     .zyh-banner {
         width: 100%;
         position: relative;
+        overflow: hidden;
+        float: left;
     }
-
     .zyh-background-video {
-        width: 100%;
-        height: 850px;
+        width: 972px;
         object-fit: cover;
-        object-position: center center;
+        object-position: left center;
     }
-
     .zyh-bannerIn {
         width: 100%;
-        height: 850px;
-        background-color: rgba(48, 38, 38, 0.7);
+        height: 505px;
+        background-color: rgba(48, 38, 38, .4);
         position: absolute;
-        top: 0px;
+        top: 0rem;
     }
-
     .zyh-container {
-        width: 1200px;
-        height: 374px;
+        width: 100%;
+        height: 3.74rem;
         margin: 0 auto;
-        margin-top: 160px;
+        margin-top: 1.6rem;
     }
-
-    .zyh-text {
-        font-family: 微软雅黑;
-        font-size: 40px;
-        font-weight: normal;
-        font-style: normal;
-        color: #c3c3c3;
+    .zyh-logo{
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 0.72rem;
     }
-
-    .zyh-text-first {
-        margin-left: 815px;
-        margin-bottom: -5px;
+    .zyh-text{
+        opacity: 0;
+        font-size: 0px;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
     }
-
-    .zyh-text-second {
-        margin-left: 789px;
-    }
-
-    .zyh-tSecond {
-        width: 351px;
-        height: auto;
-        font-size: 22px;
-        color: #c3c3c3;
-        letter-spacing: 2px;
-        text-align: center;
-        margin-left: 800px;
-    }
-
-    .zyh-tSecondTop {
-        margin-top: 70px;
-    }
-
-    .zyh-tSecondBottom {
-        margin-bottom: 53px;
-    }
-
-    .zyh-button {
-        width: 281px;
-        height: 62px;
-        border: 1px solid #FFFFFF;
-        font-size: 22px;
-        text-align: center;
-        line-height: 62px;
+    .zyh-text-third{
+        width: 100%;
+        font-family: 微軟正黑體;
+        font-size: 44px;
+        font-weight: 700;
         color: white;
-        margin-left: 834px;
-        transition: 0.5s;
-        letter-spacing: 5px;
-        cursor: pointer;
-    }
-
-    .zyh-button:hover {
-        width: 281px;
-        height: 62px;
-        border: 1px solid transparent;
-        background-color: white;
-        font-size: 22px;
         text-align: center;
-        line-height: 62px;
-        color: rgb(117, 117, 117);
-        margin-left: 834px;
-        letter-spacing: 5px;
+        margin-top: -0.7rem;
+        display: block;
+    }
+    .zyh-text-thirdF{
+        margin-top: 30px;
+    }
+    .zyh-text-thirdS{
+        margin-top: 0;
+    }
+    .zyh-tSecond {
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+        color: white;
+        letter-spacing: 0.02rem;
+        text-align: center;
+        margin: 0 auto;
+        font-weight: 600;
+    }
+    .zyh-tSecondTop {
+        margin-top: 0.7rem;
+        margin-bottom: 0.1rem;
+    }
+    .zyh-tSecondBottom {
+        margin-bottom: 0.53rem;
+    }
+    .zyh-button {
+        width: 230px;
+        height: 48px;
+        margin: 0 auto;
+        font-size: 22px;
+        background: #3685BE;
+        color: white;
+        line-height: 48px;
+        text-align: center;
+        border-radius: 10px;
         cursor: pointer;
     }
-
+    .zyh-buttonIn{
+        cursor: pointer;
+        font-family: 华文细黑;
+        color: rgb(255, 255, 255);
+        font-size: 21px;
+        font-weight: normal;
+    }
+    .zyh-buttonIn:hover {
+        width: 230px;
+        height: 48px;
+        margin: 0 auto;
+        font-size: 24px;
+        background-color: #00648F;
+        color: white;
+        line-height: 48px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+    }
     .zyh-decline {
-        width: 29px;
-        height: 17px;
+        width: 0.29rem;
+        height: 0.17rem;
         cursor: pointer;
         background-image: url("./images/jt.png");
         background-size: 100% 100%;
         margin: 0 auto;
-        margin-top: 206px;
+        margin-top: 2.06rem;
     }
-
+    #zyhSpan{
+        font-family: 微软雅黑;
+        font-size: 0.4rem;
+        font-weight: normal;
+        font-style: normal;
+        color: #c3c3c3;
+        transition: 0.5s;
+        float: left;
+    }
     /*banner结束*/
     /*responsive开始*/
     .zyh-responsive {
         width: 100%;
+        float: left;
+        padding-bottom: 20px;
     }
-
     .zyh-responsiveIn {
         width: 100%;
-        padding: 0 40px;
+        padding: 0 0.4rem;
         box-sizing: border-box;
         margin: 0 auto;
     }
-
     .zyh-responsiveTop {
-        width: 278px;
-        height: 134px;
-        margin: 0 auto;
-        margin-top: 110px;
-    }
-
-    .zyh-resBotImg {
         width: 100%;
-        padding: 0 40px;
-        box-sizing: border-box;
-        height: 725px;
+        /*height: 1.64rem;*/
+        /*margin: 0 auto;*/
+        margin-top: 0.9rem;
     }
-
     .zyh-resPFirst {
-        font-size: 44px;
-        color: #494949;
-        letter-spacing: 1px;
-        font-family: 微软雅黑;
+        width: 100%;
+        margin-top: 0.05rem;
+        margin-bottom: 1rem;
+        text-align: center;
     }
-
+    .zyh-fastDiv{
+        font-size: 20px;
+        color: #494949;
+        letter-spacing: 0.01rem;
+        font-family: 微软雅黑;
+        opacity: 0;
+        text-align: center;
+    }
     .zyh-respFSpan {
         font-family: 黑体;
-        /*letter-spacing: 0px;*/
     }
-
+    .zyh-resPSecond {
+        width: 100%;
+        margin-top: 0.35rem;
+        text-align: center;
+    }
+    .zyh-technologyDiv{
+        font-size: 12px;
+        color: #696969;
+        letter-spacing: 0.01rem;
+        font-family: 微软雅黑;
+        text-align: center;
+        opacity: 0;
+    }
+    .zyh-resPThird {
+        width: 100%;
+        margin-top: 0.18rem;
+        text-align: center;
+    }
+    .zyh-editDiv{
+        font-size: 12px;
+        color: #696969;
+        letter-spacing: 0.01rem;
+        font-family: 微软雅黑;
+        text-align: center;
+        opacity: 0;
+    }
+    .zyh-respTSpan {
+        font-family: 黑体;
+    }
     .zyh-responsiveBottom {
         width: 100%;
-        padding: 0 40px;
+        padding: 0 0.4rem;
         box-sizing: border-box;
     }
-
+    .zyh-resBotImg {
+        width: 100%;
+        height: 7.25rem;
+    }
+    #fast,#technology,#edit{
+        transition: 1.5s;
+    }
+    .zyh-tranTextFirst{
+        font-size: 20px;
+        transition: 0s;
+    }
+    .zyh-tranTextSecond{
+        font-size: 12px;
+        transition: 0s;
+    }
+    .zyh-tranTextThird{
+        font-size: 12px;
+        transition: 0s;
+    }
     /*responsive结束*/
+    /*main开始*/
+    .zyh-main{
+        float: left;
+    }
+    .zyh-mai{
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .zyh-maiIn{
+        width: 100%;
+    }
+    .zyh-maiFirst,.zyh-maiThird{
+        width: 100%;
+        background: #F9F9F9;
+    }
+    .zyh-mainImg{
+        width: 100%;
+        transition: 0s;
+    }
+    .zyh-maiLeftPic{
+        width: 100%;
+        transition: 0s;
+    }
+    .zyh-maiRightText{
+        width: 100%;
+        transition: 0s;
+    }
+    .zyh-maiLeftText{
+        width: 100%;
+        transition: 0s;
+    }
+    .zyh-maiRightPic{
+        width: 100%;
+        transition: 0s;
+    }
+    .zyh-Rtitle{
+        font-family: 微软雅黑;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        color: #333333;
+        width: 95%;
+    }
+    .zyh-RtitleB{
+        font-family: 微软雅黑;
+        line-height: 2;
+        color: rgb(105, 105, 105);
+        letter-spacing: 0.01rem;
+        font-size: 0.15rem;
+        word-wrap: break-word;
+        margin-top: 0.19rem;
+        width: 95%;
+    }
+    .zyh-textR{
+        width: 95%;
+        padding-top: 0.71rem;
+        box-sizing: border-box;
+    }
+    .zyh-MaL{
+        margin-left: 0.65rem;
+    }
+    .zyh-left{
+        float: left;
+    }
+    .zyh-right{
+        float: right;
+    }
+    #Firstleft,#Thiredleft{
+        position: relative;
+        left: -6.18rem;
+        transition: 1.5s;
+    }
+    #Firstright,#Secondleft,#Thiredright,#Fourthleft{
+        opacity: 0;
+    }
+    #Secondright,#Fourthright{
+        position: relative;
+        right: -6.18rem;
+        transition: 1.5s;
+    }
+    .zyh-textRTran{
+        transition: 0s;
+    }
+    .zyh-RTSpan{
+        font-size: 0.34rem;
+        transition: 0s;
+    }
+    .zyh-RTBSpan{
+        margin-top: 0.19rem;
+        font-size: 0.15rem;
+        transition: 0s;
+    }
+    /*main结束*/
+    /*onesecond开始*/
+    .zyh-onesecond{
+        display: none;
+    }
+    /*onesecond结束*/
 }

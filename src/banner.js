@@ -7,18 +7,20 @@ import './zyh.css';
 class Banner extends Component {
     render() {
         return (
-            <div className="banner">
+            <div className="banner" id="banner">
                 <video src="https://www.qifeiye.com/qfy-content/uploads/2016/03/1234.webm" autoPlay='autoPlay' muted="muted" poster="https://www.qifeiye.com/qfy-content/uploads/2016/03/dd8fdac72904e0efbcc4e738fbba329a.jpg" loop="loop" className="zyh-background-video">
                 </video>
-                <div className="zyh-bannerIn">
+                <div className="zyh-bannerIn" id="zyh-bannerIn">
                     <div className="zyh-container">
-                        <div className="zyh-logo">
+                        <div className="zyh-logo" id="zyh-logo">
                             <div className="zyh-text zyh-text-first zyhP" id="zyhTextFirst">做一个响应式网站</div>
                             <div className="zyh-text zyh-text-second zyhP" id="zyhTextSecond">让世界更好的了解您</div>
+                            <div className="zyh-text-third zyh-text-thirdF">自己做网站</div>
+                            <div className="zyh-text-third zyh-text-thirdS">简单又省钱</div>
                         </div>
                         <p className="zyh-tSecond zyh-tSecondTop">真「响应式」自助建站平台</p>
                         <p className="zyh-tSecond zyh-tSecondBottom">艺术品级模板 引领自助建站潮流</p>
-                        <p className="zyh-button">免费创建账户</p>
+                        <p className="zyh-button"><div className="zyh-buttonIn">查看模板</div></p>
                         <p className="zyh-decline" id="zyhButton"></p>
                     </div>
                 </div>
