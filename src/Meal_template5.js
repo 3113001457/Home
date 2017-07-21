@@ -21,7 +21,7 @@ class MealtemplateFive extends Component{
 								<li>您需要提供资料和图片</li>
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_fx">/</li>
-								<li>200元</li>
+								<li className="wjt_a">200元</li>
 								<li className="wjt_tem_on"><a href="
 								c">购买套餐</a></li>
 							</ul>
@@ -32,7 +32,7 @@ class MealtemplateFive extends Component{
 								<li>您需要提供资料和图片</li>
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_sx wjt_tem_fx">一次购买3年翱翔版立刻就送！</li>
-								<li>400元</li>
+								<li className="wjt_a">400元</li>
 								<li className="wjt_tem_on"><a href="
 								c">购买套餐</a></li>
 							</ul>
@@ -43,7 +43,7 @@ class MealtemplateFive extends Component{
 								<li>您需要提供资料和图片</li>
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_sx wjt_tem_fx">一次购买3年太空版立刻就送！</li>
-								<li>800元</li>
+								<li className="wjt_a">800元</li>
 								<li className="wjt_tem_on"><a href="
 								c">购买套餐</a></li>
 							</ul>
@@ -54,7 +54,7 @@ class MealtemplateFive extends Component{
 								<li>您需要提供资料和图片</li>
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_fx"> /</li>
-								<li>20元/页</li>
+								<li className="wjt_a">20元/页</li>
 								<li className="wjt_tem_on"><a href="
 								c">购买套餐</a></li>
 							</ul>

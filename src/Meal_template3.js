@@ -4,7 +4,7 @@ class MealtemplateThree extends Component{
 		return(
 				<div className="wjt_modole">
 						<div className="wjt_template2">
-							<ul className="wjt_col_a">
+							<ul className="wjt_col_a wjt_xs">
 								<li className="template2_font">套餐名称</li>
 								<li>适用对象</li>
 								<li>域名</li>
@@ -27,7 +27,7 @@ class MealtemplateThree extends Component{
 								<li>/</li><li  className="wjt_temshop">/</li>
 								<li>/</li>
 								<li>邮件</li><li className="wjt_temmaney">0元/年</li>
-								<li className="template2_con temb"><p>*选择海外机房可绑定域名(仅限于在起飞页购买的域名)并发布网站
+								<li className="template2_con temb"><p>*选择<span>海外机房</span>可绑定域名(仅限于在起飞页购买的域名)并发布网站
 			*网站有起飞页底标</p></li>
 								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
