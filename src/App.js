@@ -11,6 +11,10 @@ import {
 class App extends Component {
     componentDidMount(){
       let flag=true;
+      document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
+      window.onresize=function(){
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
+      };
       function addEvent(obj,type,fn){
           if(obj.attachEvent){
               obj.attachEvent('on'+type,function(){
@@ -23,20 +27,22 @@ class App extends Component {
       addEvent(window,'scroll',function(){
         let publick_header=document.getElementsByClassName('publick_header');
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        let num=-70;
+        let num=-0.7;
         if(scrollTop>=70){
           if(flag){
             flag=false;
             publick_header[0].style.position="fixed";
-            publick_header[0].style.top="-70px";
+            publick_header[0].style.top="-0.7rem";
             publick_header[0].style.left="0";
             publick_header[0].style.zIndex="999";
-            publick_header[0].style.height="60px";
-            publick_header[0].style.marginTop="-10px";
+            publick_header[0].style.height="0.6rem";
+            publick_header[0].style.marginTop="-0.1rem";
+
             var time=setInterval(function(){
-              num++;
-              publick_header[0].style.top=num+"px";
-              if(num===0){
+              num+=0.01;
+              publick_header[0].style.top=num+"rem";
+              if(num>0){
+                publick_header[0].style.top=0;
                 clearInterval(time);
               }
             },7);
@@ -45,8 +51,8 @@ class App extends Component {
           flag=true;
           publick_header[0].style.position="static";
           publick_header[0].style.zIndex="999";
-          publick_header[0].style.height="70px";
-          publick_header[0].style.marginTop="0px";
+          publick_header[0].style.height="0.7rem";
+          publick_header[0].style.marginTop="0";
         }
       });
     }
@@ -62,8 +68,8 @@ class App extends Component {
                 <li className="H_about"><span>关于</span>
                     <ul className="aboutList">
                       <p className="line"></p>
-                      <div className="H_listC">
-                        <div className="aboutL">
+                      <div className="H_listC clear">
+                        <div className="aboutL clear">
                           <li><a href="" className="list_O">公司信息</a></li>
                           <li><a href="">公司介绍</a></li>
                           <li><a href="">服务条款</a></li>
@@ -71,26 +77,26 @@ class App extends Component {
                           <li><a href="">可接受服务</a></li>
                           <li><a href="">免责声明</a></li>
                         </div>
-                        <div className="aboutC">
+                        <div className="aboutC clear">
                           <li><a href="" className="list_O">荣誉资质</a></li>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt=""/>
                             <span></span>
                           </a></div>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
                             <span></span>
                           </a></div>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
                             <span></span>
                           </a></div>
-                          <div className="clear"><a href="">
+                          <div className="clear"><a href="" className="clear">
                             <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
                             <span></span>
                           </a></div>
                         </div>
-                        <div className="aboutR">
+                        <div className="aboutR clear">
                           <li><a href="" className="list_O">联系客服</a></li>
                           <p><a href="">客户服务热线</a></p>
                           <p><a href="" className="color_r">4006-285-729</a></p>

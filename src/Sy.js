@@ -42,6 +42,7 @@ class Sy extends Component {
             }
         });
     }
+
     render() {
         return (
             <div className="Sy">
@@ -297,9 +298,9 @@ class Sy_wrap extends Component {
             if (this.state.wrap_num > 3) {
                 this.state.wrap_num = 0;
             } else {
-                this.setState({
+                this.setState={
                     wrap_num: ++this.state.wrap_num
-                });
+                };
             }
             clearInterval(this.state.wrap_time);
             this.state.wrap_time = setTimeout(function () {
@@ -318,9 +319,9 @@ class Sy_wrap extends Component {
                     this.state.wrap_boo=true;
                 }.bind(this),700);
             } else {
-                this.setState({
+                this.setState={
                     wrap_num: --this.state.wrap_num
-                });
+                };
                 clearInterval(this.state.wrap_time);
                 this.state.wrap_time = setTimeout(function () {
                     this.state.wrap_boo=true;
