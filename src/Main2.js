@@ -21,10 +21,12 @@ class Main2 extends Component {
                             </div>
                         </div>
                         <div className="zyh-maiRightPic">
-                            <div className=" zyh-MaL" id="Secondright">
+                            <div className="zyh-MaL" id="Secondright">
                                 <div className="zyh-img">
-                                <img className="zyh-mainImg" src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZGIzNWE5ODRiZWRhOTBlM2RmNjIyNmNjMzQ5MTNlZDktMTAyNHg2ODYucG5n.png" alt=""/>
-                            </div>
+                                    <img className="zyh-mainImg"
+                                         src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZGIzNWE5ODRiZWRhOTBlM2RmNjIyNmNjMzQ5MTNlZDktMTAyNHg2ODYucG5n.png"
+                                         alt=""/>
+                                </div>
                             </div>
                         </div>
 

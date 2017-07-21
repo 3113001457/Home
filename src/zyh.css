@@ -420,9 +420,6 @@ a:active {color: #950304;}
     /*onesecond结束*/
 }
 @media only screen and (max-width: 993px){
-    .publick_header{
-        display: none;
-    }
     /*banner开始*/
     .zyh-banner {
         width: 100%;
