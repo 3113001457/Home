@@ -520,11 +520,12 @@ body, html {
      transition: all .2s ease-in-out;
 }
  .wht_rigther{
-     width: 2.1rem;
+     width: 2.095rem;
      height: 5.16rem;
      float: right;
      border: 1px solid #E2E2E2;
      box-sizing: border-box;
+     background: red;
 }
  .wht_rigther>div{
      width: 0.94rem;
@@ -969,7 +970,7 @@ body, html {
 @media only screen and (max-width: 992px){
         .wjt_banner{
          width: 100%;
-         height: 2.2rem;
+         height: 121px;
          background-image: url('http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDYvZGQ0NTEzYzJiOWNhMDNiYWMzNWUzNGQxNWQ4YjFiNjUuanBn.jpg');
          background-repeat:no-repeat;
          background-size:cover;
@@ -994,20 +995,19 @@ body, html {
          ;
     }
      .wjt_firsttext{
-         height: 0.2rem;
+         height: 40px;
          /*line-height: 6.2rem;*/
          font-size:0.6rem;
          color: white;
          font-weight: bold;
          text-align: center;
-         margin-top: 0.45rem;
+         margin-top: 28px;
     }
      .wjt_sendtext{
-         height: 2.5rem;
          text-align: center;
-         margin-top: 1rem;
-         font-size: 0.16rem;
-         color: #D3D3D3 
+         font-size: 0.3rem;
+         color: #D3D3D3;
+         margin-top: 20px;
     }
      .wjt_bannerul{
          width: 100%;
@@ -1050,15 +1050,15 @@ body, html {
     }
      .wjt_template1{
          width: 12.5rem;
-         height: 2.33rem;
+         height: 170px;
          background: #EAEAEA;
          margin: 0 auto;
          overflow: hidden;position: relative;
     }
      .wjt_tem_left{
          float: left;
-         width: 1.7rem;
-         height: 1.7rem;
+         width: 103px;
+         height: 103px;
          margin: 0.35rem  0.1rem 0 0.05rem;
     }
      .wjt_tem_left>img{
@@ -1069,11 +1069,13 @@ body, html {
      .wjt_template1>h2{
          height: 100%;
          line-height: 2rem;
-         font-size: 0.45rem;
+         font-size: 25px;
          font-weight: bold;
          color: #000;
          float: left;
          margin-left: 0.2rem;
+         margin-top: 20px;
+
     }
      .wjt_template1>h3{
         width: 100%;
@@ -1085,7 +1087,7 @@ body, html {
          word-break: break-word;
          box-sizing: border-box;
          position: absolute;
-         top: 0.6rem;
+         top: 0.9rem;
          left: 0;}
      .wjt_template2{
          width: 12.5rem;
@@ -1100,20 +1102,20 @@ body, html {
     }
      .wjt_template2>ul>li{
          width: 100%;
-         height: 0.8rem;
+         height: 54px;
          border-top: 1px solid #E2E2E2;
          box-sizing: border-box;
          text-align: center;
-         font-size: 0.215rem;
+         font-size: 13px;
          color: rgb(51,51,51);
-         line-height: 0.8rem;
+         line-height: 54px;
     }
      .wjt_template2>ul>li.template2_font{
          font-size: 0.23rem;
          font-weight: bold;
     }
      .wjt_template2>ul>li.template2_con{
-         height: 3rem;
+         height: 200px;
          line-height: 0.24rem;
     }
      .wjt_template2>ul>li.tema,.wjt_template2>ul>li.temc{
@@ -1240,9 +1242,9 @@ body, html {
         line-height: 2.06rem;
     }
      .wjt_template2>ul>li.wjt_tem_on{
-         height: 1.2rem;
-         line-height:1.2rem;
-         font-size: 0.22rem;
+         height: 73px;
+         line-height:73px;
+         font-size: 14px;
     }
      .wht_rigther>div:hover{
          background:#3EA3FF;
@@ -1310,8 +1312,7 @@ body, html {
          background: #f9f9f9;
          padding: 0 0 0.55rem 0;
          overflow: hidden; 
-    } .publick_header{display: none;
-    } 
+    }
     .wjt_xs{display: none;}
      .wjt_template2>ul>li.temb>p{width: 6.6rem;height: 100%;text-align: left;padding: 0 0 0 0.2rem;line-height:0.7rem;}
      .wjt_template2>ul>li.temb>p>span{color: #333;font-weight: bold;}
@@ -1319,8 +1320,46 @@ body, html {
     .wjt_template2>ul>li.teme>p{width: 6.6rem;height:100%;text-align: left;float: left;text-align: left;line-height:0.7rem;}
     .wjt_template2>ul>li.wjt_a{color: #FF6600}
 }
+@media only screen  and (max-width: 500px){
+     .wjt_template1>h3{
+        width: 100%;
+        height: 40px;
+        text-indent: 0;
+         line-height: 0.95rem;
+         font-size: 13px;
+         color: #595959;
+         float: left;
+         word-break: break-word;
+         box-sizing: border-box;
+         position: absolute;
+         top: 106px;
+         left: 0;}
+         .wjt_template3{
+         width: 12.5rem;
+         height: 60px;
+         margin: 0 auto;
+         font-size: 0.17rem;
+         color: #FF6600;
+         margin-bottom: 0.1rem;
 
-
-
-
-
+    }
+.wjt_template1>h2{
+    width: 180px;
+         line-height: 1rem;
+         font-size: 23px;
+         font-weight: bold;
+         color: #000;
+         margin-left: 0.2rem;
+         margin-top: 40px;
+         float: right;
+    }
+   .wjt_template2>ul>li.temb>p,.wjt_template2>ul>li.temd>p,.wjt_template2>ul>li.teme>p{
+        width: 100%;
+    }
+     .wjt_template2>ul>li.temb,.wjt_template2>ul>li.temd,.wjt_template2>ul>li.teme{
+         padding: 3rem 0;
+    }
+    .wjt_template2>ul>li.temc>p{
+         height: 200px;line-height: 200px;
+    }
+}
