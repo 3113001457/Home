@@ -4,7 +4,7 @@ class MealtemplateThree extends Component{
 		return(
 				<div className="wjt_modole">
 						<div className="wjt_template2">
-							<ul className="wjt_col_a">
+							<ul className="wjt_col_a wjt_xs">
 								<li className="template2_font">套餐名称</li>
 								<li>适用对象</li>
 								<li>域名</li>
@@ -27,9 +27,9 @@ class MealtemplateThree extends Component{
 								<li>/</li><li  className="wjt_temshop">/</li>
 								<li>/</li>
 								<li>邮件</li><li className="wjt_temmaney">0元/年</li>
-								<li className="template2_con temb"><p>*选择海外机房可绑定域名(仅限于在起飞页购买的域名)并发布网站
+								<li className="template2_con temb"><p>*选择<span>海外机房</span>可绑定域名(仅限于在起飞页购买的域名)并发布网站
 			*网站有起飞页底标</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_c">
 								<li className="template2_font">起飞版</li>
@@ -42,7 +42,7 @@ class MealtemplateThree extends Component{
 								<li>每日自动备份</li>
 								<li>邮件/QQ/电话</li><li className="wjt_temmaney">365元/年</li>
 								<li className="template2_con temc"><p>*可绑定国际域名</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_d">
 								<li className="template2_font">翱翔版</li>
@@ -55,7 +55,7 @@ class MealtemplateThree extends Component{
 								<li>每日自动备份</li>
 								<li>邮件/QQ/电话</li><li className="wjt_temmaney">600元/年</li>
 								<li className="template2_con temd"><p>一次性购买3年套餐立享95折优惠，并赠送400元代建费！</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_e">
 								<li className="template2_font">太空版</li>
@@ -68,11 +68,11 @@ class MealtemplateThree extends Component{
 								<li>每日自动备份</li>
 								<li>邮件/QQ/电话</li><li className="wjt_temmaney">1200元/年</li>
 								<li className="template2_con teme"><p>一次性购买3年套餐立享95折优惠，并赠送800元代建费！</p></li>
-								<li className="wjt_tem_on"><a href="javascript:;">购买套餐</a></li>
+								<li className="wjt_tem_on"><a href="">购买套餐</a></li>
 							</ul>
 							<div className="wjt_tem_right">
 								<div className="wjt_tem_right_con">
-									<img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMzc1OGVlOGJmYWRjY2NjODhlMTRhMmUzMmU3NzZkYmQucG5nP2F0dGFjaG1lbnRfaWQ9MzI2NTA_p_p100_p_3D.png"/>
+									<img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMzc1OGVlOGJmYWRjY2NjODhlMTRhMmUzMmU3NzZkYmQucG5nP2F0dGFjaG1lbnRfaWQ9MzI2NTA_p_p100_p_3D.png" alt=""/>
 									<p>支持30日无理由退换</p>
 									<p className="wjt_cha">查看所有套餐</p>
 								</div>

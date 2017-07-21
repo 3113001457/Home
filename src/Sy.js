@@ -4,81 +4,374 @@
 import React, {Component} from 'react';
 
 class Sy extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-            "con":[
-                "我们尝试使用起飞页系统做了大概20个网站。目前为止，起飞页是我们使用过的功能较为完善的一个响应式自助建站系统，基本上可以满足我的企业客户的不同建站需求。有的时候，周末发给客服的问题，也能得到即时的回答，对我们这种帮助客户做网站的公司来说，后期服务是最重要的。",
-                "如果和WIX, Weebly或者Squarespace进行比较，我觉得起飞页更像是一个综合体。它和Squarespace一样能做出很多华丽的效果，又像weebly一样能很快的搭建博客，又和wix一样容易上手，而且还是响应式的。总之，起飞页是一个很适合我的平台。",
-                "选用起飞页一是因为他们就在我们隔壁，二是他们的价格确实很吸引人。在试用了3个月后，我们果断的购买了5年的套餐。起飞页不仅提供了一个美观大方的网站，也提供了稳定的后期服务。我们不断的在为客户介绍起飞页。"
-            ],
-            "tit":["U-Share – 台湾知名建站公司","北欧维森商旅","苏州金蝶软件"]
-        }
     }
+    componentDidMount(){
+         var sy_fre_h2=document.getElementById('sy_fre_h2');
+
+         var sy_wrap_h2=document.getElementById('sy_wrap_h2');
+         var sy_wrap_h3=document.getElementById('sy_wrap_h3');
+         var sy_que_h2=document.getElementById('sy_que_h2');
+         var sy_que_em=document.getElementById('sy_que_em');
+         var sy_que_span=document.getElementById('sy_que_span');
+
+        function addEvent(obj,type,fn){
+            if(obj.attachEvent){
+                obj.attachEvent('on'+type,function(){
+                    fn.call(obj);
+                })
+            }else{
+                obj.addEventListener(type,fn,false);
+            }
+        }
+        addEvent(window,'scroll',function(){
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+             console.log(scrollTop);
+
+            scrollTop>5800&&scrollTop<6100?sy_fre_h2.style.transform='scale(1)':null;
+            if(scrollTop>=4700&&scrollTop<5000){
+                sy_que_h2.style.opacity='1';
+                sy_que_em.style.opacity='1';
+                sy_que_span.style.opacity='1';
+            }
+            if(scrollTop>=4198&&scrollTop<4492){
+                sy_wrap_h2.style.opacity='1';
+                sy_wrap_h3.style.opacity='1';
+
+            }
+        });
+    }
+
     render() {
         return (
             <div className="Sy">
-
-                <Sy_Contain data={this.state}/>
+                <Sy_wrap />
+                <Sy_query />
+                <Sy_friend />
+                <Sy_Contain />
             </div>
         )
     }
 }
 class Sy_Contain extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            Json: false
+
+        }
+    }
+
+    componentDidMount() {
+
+
+        function Ajax(opt) {
+            if (window.XMLHttpRequest) {
+                var xhr = new XMLHttpRequest();
+            }
+            else {
+                var xhr = new window.ActiveXObject("Microsoft.XMLHTTP");
+            }
+            if (opt.type == 'get') {
+                xhr.open(opt.type, opt.url + '?' + JsonToString(opt.data), true);
+                xhr.send();
+            }
+            else if (opt.type == 'post') {
+                xhr.open(opt.type, opt.url, true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.send(JsonToString(opt.data));
+            }
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                        opt.success(xhr.responseText);
+                    }
+                    else {
+                        // opt.error()
+                    }
+                }
+            };
+            function JsonToString(json) {
+                var arr = [];
+                for (var i in json) {
+                    arr.push(i + '=' + json[i])
+                }
+                return arr.join('&');
+            };
+        };
+        Ajax({
+            type: 'get',
+            data: {},
+            url: 'http://localhost:8282/demod/demo',
+            success: function (da) {
+                var Json = JSON.parse(da);
+                this.setState({
+                    Json: Json,
+                });
+            }.bind(this)
+        });
+
+
+    }
+    componentDidUpdate(){
+        var sy_Con_h2=document.getElementById('sy_Con_h2');
+        console.log(sy_Con_h2);
+        function addEvent(obj,type,fn){
+            if(obj.attachEvent){
+                obj.attachEvent('on'+type,function(){
+                    fn.call(obj);
+                })
+            }else{
+                obj.addEventListener(type,fn,false);
+            }
+        }
+        addEvent(window,'scroll',function(){
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            console.log(scrollTop);
+
+            if(scrollTop>=6323&&scrollTop<6623){
+
+                sy_Con_h2.style.transform='scale(1)';
+
+            }
+        });
+    }
 
     render() {
-        return (
-            <div className="sy_Con">
-                <div className="sy_Con_tit">
-                    <h2>客户反馈</h2>
-                </div>
 
-                <div id="myCarousel" className="carousel slide sy_carousel">
-                    <ol className="carousel-indicators" id="sy_carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" className="active sy_active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-                    <div className="carousel-inner">
-                        <div className="item active sy_item">
-                            <span></span>
-                            <p>
-                                <span>{this.props.data.con[0]}</span>
-                                <b>{this.props.data.tit[0]}</b>
+        if (this.state.Json) {
+            return (
+                <div className="sy_Con">
+                    <div className="sy_Con_tit">
+                        <h2 ref="sy_Con_h2" id="sy_Con_h2">客户反馈</h2>
+                    </div>
+                    <div id="myCarousel" className="carousel slide sy_carousel">
+                        <ol className="carousel-indicators" id="sy_carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" className="active sy_active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div className="carousel-inner">
+                            <div className="item active sy_item">
+                                <span><img src={this.state.Json[0].img} alt=""/></span>
+                                <p>
+                                    <span>{this.state.Json[0].text}</span>
+                                    <b>{this.state.Json[0].name}</b>
+                                </p>
+                            </div>
+                            <div className="item sy_item">
+                                <span><img src={this.state.Json[1].img} alt=""/></span>
+                                <p>
+                                    <span>{this.state.Json[1].text}</span>
+                                    <b>{this.state.Json[1].name}</b>
+                                </p>
+                            </div>
+                            <div className="item sy_item">
+                                <span><img src={this.state.Json[2].img} alt=""/></span>
 
-                            </p>
-                        </div>
-                        <div className="item sy_item">
-                            <span></span>
-                            <p>
-                                <span>{this.props.data.con[1]}</span>
-                                <b>{this.props.data.tit[1]}</b>
-                            </p>
-                        </div>
-                        <div className="item sy_item">
-                            <span></span>
-                            <p>
-                                <span>{this.props.data.con[2]}</span>
-                                <b>{this.props.data.tit[2]}</b>
-                            </p>
+                                <p>
+                                    <span>{this.state.Json[2].text}</span>
+                                    <b>{this.state.Json[2].name}</b>
+                                </p>
+                            </div>
+                            <a className="left sy_btnLeftCon" href="#myCarousel"
+                               data-slide="prev">
+
+                            </a>
+                            <a className="right sy_btnRightCon" href="#myCarousel"
+                               data-slide="next">
+                            </a>
                         </div>
                     </div>
-                    <a className="left sy_btnLeftCon" href="#myCarousel"
-                       data-slide="prev">
-
-                    </a>
-                    <a className="right sy_btnRightCon" href="#myCarousel"
-                       data-slide="next">
-                    </a>
                 </div>
-            </div>
+            )
+        } else {
 
-        )
+            return (
+                <div></div>
+            )
+        }
     }
 }
 
+class Sy_friend extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            jsonFri: {
+                fri_img: ['http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvNTIwYzI5NDcwZjIwNmUxNjQwZDhhZTNkNjdlYTNhZjktMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZTI3N2RjNmI2NmZhZjQ2OTZlMGNiMTgwNjlmZjMxZWQtMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvY2E1ZmEzYjYxMTU1ZDZkYmRmZjc1YjQ1OTE2ZDBlZmItMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZGJlOWIyYjQxMTAzMDJlMzNiMDExYTZlMjhhZmZmNDgtMjIweDY2LnBuZw_p_p100_p_3D_p_p100_p_3D.png'],
+                fir_part: ['贝宝合作伙伴', '阿里云金牌合作伙伴', '中国电信指定供应商', '亚马逊合作伙伴'],
+                fir_engName: ['PayPal', 'aliyun', 'China telecom', 'amazon']
+            }
+
+        }
+    }
+    render() {
+        return (
+            <div className="sy_friend">
+                <div className="sy_friendSm">
+                    <h2 id="sy_fre_h2">合作伙伴</h2>
+                    <ul>
+                        {
+                            this.state.jsonFri.fri_img.map(function (arr, i) {
+                                return <li key={arr}>
+                                    <img src={arr} alt=""/>
+                                    <span>{this.state.jsonFri.fir_part[i]}</span>
+                                    <b>{this.state.jsonFri.fir_engName[i]}</b>
+                                </li>
+                            }.bind(this))
+                        }
+                    </ul>
+                </div>
+            </div>
+        )
+    }
+}
+class Sy_query extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="sy_query">
+                <div className="sy_querySm">
+                    <h2 id="sy_que_h2">我们提供的不仅仅是工具</h2>
+                    <em id="sy_que_em"></em>
+                    <span id="sy_que_span">起飞页不仅是一个方便快捷的构建网站的自助建站平台，更重要的是，我们为中国用户提供了更多贴心的服务：网站备案、自动备份、快速恢复以及网站代建服务。 我们使用了国内、香港和海外最好的网络和云服务器，以确保您的网站能够快速完美地呈现在世界各地的访客面前。</span>
+
+
+                    <div><img
+                        src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZjMxN2YzZmIyZWRhYTU3MGZhNDE5YTQ1OGY2OTM2ZjYtMTAyNHg1NTQucG5n.png"
+                        alt=""/></div>
+                </div>
+            </div>
+        )
+    }
+}
+class Sy_wrap extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            wrap_img: [
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMjQ3YzNhNzYyODRlMGQ5YjUyMzFkYzRkMThhOGY0ZDEucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMGQ2MDM5OTExZWFmZjAwNDE2ZWE0ZTU3ZWUxMmI5NzkucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvM2ZiNzg4OTgxZTI0NWFkZDM3ZTM4Zjg4NzZlNDU4ODgucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZDkxODg1Y2RmMDVhYWZlOTZjYWJlM2FjNWMxY2NiMTcucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZTc0NjA3YTA3ZmRiNzRmNjYzOTMyNjc5MjkxZjEyYjIucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvOTA4ZThhOTI0NzQ5ZmJlOGMyMDViMDhmMmRhYTE0YWMucG5n.png',
+                'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZjRlZDNlYTFhNGE1Y2JhYTE5MGI0MTY4OWI3Y2FlMGEucG5n.png'
+            ],
+            wrap_num: 0,
+            wrap_boo: true,
+            wrap_time: null,
+            wrap_timeTw: null,
+            wrap_fun: null
+        }
+    }
+
+    componentDidMount() {
+        var sy_wrap_ul = document.getElementById('sy_wrap_ul');
+        this.state.wrap_fun = function () {
+            if (this.state.wrap_num > 3) {
+                this.state.wrap_num = 0;
+            }
+            this.setState={
+                wrap_num: ++this.state.wrap_num
+            };
+            clearInterval(this.state.wrap_time);
+            this.state.wrap_time = setTimeout(function () {
+                this.state.wrap_boo = true;
+            }.bind(this), 700);
+            sy_wrap_ul.style.left = -this.state.wrap_num * 4.44 + 'rem';
+        }.bind(this);
+        clearInterval(this.state.wrap_timeTw);
+        this.state.wrap_timeTw = setInterval(function () {
+            this.state.wrap_fun()
+        }.bind(this), 3000)
+
+    }
+    handleClickRight(){
+        if(this.state.wrap_boo==true) {
+            this.state.wrap_boo = false;
+            if (this.state.wrap_num > 3) {
+                this.state.wrap_num = 0;
+            } else {
+                this.setState={
+                    wrap_num: ++this.state.wrap_num
+                };
+            }
+            clearInterval(this.state.wrap_time);
+            this.state.wrap_time = setTimeout(function () {
+                this.state.wrap_boo=true;
+            }.bind(this),700);
+            this.refs.aa.style.left = -this.state.wrap_num * 4.45 + 'rem';
+        }
+    }
+    handleClickLeft(){
+        if(this.state.wrap_boo==true) {
+            this.state.wrap_boo = false;
+            if (this.state.wrap_num <= 0) {
+                this.state.wrap_num = 4;
+                clearInterval(this.state.wrap_time);
+                this.state.wrap_time = setTimeout(function () {
+                    this.state.wrap_boo=true;
+                }.bind(this),700);
+            } else {
+                this.setState={
+                    wrap_num: --this.state.wrap_num
+                };
+                clearInterval(this.state.wrap_time);
+                this.state.wrap_time = setTimeout(function () {
+                    this.state.wrap_boo=true;
+                }.bind(this),700);
+            }
+            this.refs.aa.style.left = -this.state.wrap_num * 4.45 + 'rem';
+        }
+
+    }
+    handleOver(){
+        clearInterval(this.state.wrap_timeTw);
+    }
+    handleOut(){
+        var sy_wrap_ul=document.getElementById('sy_wrap_ul');
+        clearInterval(this.state.wrap_timeTw);
+        this.state.wrap_timeTw = setInterval(function () {
+            this.state.wrap_fun()
+        }.bind(this), 3000);
+
+
+    }
+
+    render() {
+        return (
+            <div className="sy_wrap">
+                <div className="sy_wrapSm">
+                    <h2 id="sy_wrap_h2">免费海量模板随您挑选</h2>
+                    <h3 id="sy_wrap_h3">您可以从众多出色的H5模板中挑选出您最喜欢的</h3>
+                    <div onMouseOver={this.handleOver.bind(this)} onMouseOut={this.handleOut.bind(this)}>
+                        <span className="glyphicon glyphicon-chevron-left" onClick={this.handleClickLeft.bind(this)} ></span>
+                        <span className="glyphicon glyphicon-chevron-right" onClick={this.handleClickRight.bind(this)} ></span>
+                        <div>
+                            <ul ref='aa' style={{left:'0'}} id="sy_wrap_ul">
+                                {
+                                    this.state.wrap_img.map(function (arr) {
+                                        return (
+                                            <li key={arr}>
+                                                <a href=""><img src={arr} alt="" /></a>
+                                            </li>
+                                        )
+
+                                    }.bind(this))
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 export default Sy;
-// window.onload=function () {
-//     console.log($)
-//
-// };
+

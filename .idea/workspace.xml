@@ -2,21 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1844e863-c857-458b-8a5c-46db053afd0b" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/contain.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/rs-default.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template5.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template6.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/jt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Meal_template8.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/banner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jquery-3.1.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/oneSecond.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/respon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/zyh.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/zyh.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Home.js" afterPath="$PROJECT_DIR$/src/Home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meal.js" afterPath="$PROJECT_DIR$/src/Meal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meal_template1.js" afterPath="$PROJECT_DIR$/src/Meal_template1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meal_template3.js" afterPath="$PROJECT_DIR$/src/Meal_template3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meal_template5.js" afterPath="$PROJECT_DIR$/src/Meal_template5.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sy.js" afterPath="$PROJECT_DIR$/src/Sy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template.js" afterPath="$PROJECT_DIR$/src/Template.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="index.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,20 +46,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4634">
-              <caret line="864" column="0" selection-start-line="864" selection-start-column="0" selection-end-line="864" selection-end-column="0" />
+            <state relative-caret-position="4131">
+              <caret line="2733" column="0" selection-start-line="2733" selection-start-column="0" selection-end-line="2733" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Template.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Template.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Template.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
+            <state relative-caret-position="911">
               <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
               <folding />
             </state>
@@ -66,8 +75,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Meal.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/Template.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
       </list>
     </option>
   </component>
@@ -235,15 +244,15 @@
       <workItem from="1500427339708" duration="11598000" />
       <workItem from="1500507946040" duration="621000" />
       <workItem from="1500509823862" duration="10255000" />
-      <workItem from="1500596146661" duration="7997000" />
+      <workItem from="1500596146661" duration="8246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61897000" />
+    <option name="totallyTimeSpent" value="62146000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1932" height="1048" extended-state="1" />
+    <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17398119" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -507,18 +516,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
+    <entry file="file://$PROJECT_DIR$/src/Template.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4634">
-          <caret line="864" column="0" selection-start-line="864" selection-start-column="0" selection-end-line="864" selection-end-column="0" />
+        <state relative-caret-position="911">
+          <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template.js">
+    <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
+        <state relative-caret-position="4131">
+          <caret line="2733" column="0" selection-start-line="2733" selection-start-column="0" selection-end-line="2733" selection-end-column="0" />
           <folding />
         </state>
       </provider>
