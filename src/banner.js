@@ -15,6 +15,8 @@ class Banner extends Component {
                         <div className="zyh-logo" id="zyh-logo">
                             <div className="zyh-text zyh-text-first zyhP" id="zyhTextFirst">做一个响应式网站</div>
                             <div className="zyh-text zyh-text-second zyhP" id="zyhTextSecond">让世界更好的了解您</div>
+                            <div className="zyh-text-third zyh-text-thirdF">自己做网站</div>
+                            <div className="zyh-text-third zyh-text-thirdS">简单又省钱</div>
                         </div>
                         <p className="zyh-tSecond zyh-tSecondTop">真「响应式」自助建站平台</p>
                         <p className="zyh-tSecond zyh-tSecondBottom">艺术品级模板 引领自助建站潮流</p>

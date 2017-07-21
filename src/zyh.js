@@ -83,13 +83,10 @@ class Zyh extends Component {
             };
             if(num >= mainH) {
                 fast.style.opacity = '1';
-                fast.style.transition = '1.5s';
                 fast.style.marginTop = '0';
                 technology.style.opacity = '1';
-                technology.style.transition = '1.5s';
                 technology.style.marginTop = '0.3rem';
                 edit.style.opacity = '1';
-                edit.style.transition = '1.5s';
                 edit.style.marginTop = '0.13rem';
             }
             if(num>=bannerH+responsiveH-responsiveH/2 && num<=bannerH+responsiveH+responsiveH/2){
@@ -97,7 +94,7 @@ class Zyh extends Component {
                 Firstright.style.opacity='1';
             }
             if(num>=bannerH+responsiveH-responsiveH/2+mainH && num<=bannerH+responsiveH+responsiveH/2+mainH){
-                Secondright.style.right='0';
+                Secondright.style.right='0.5rem';
                 Secondleft.style.opacity='1';
             }
             if(num>=bannerH+responsiveH-responsiveH/2+mainH*2 && num<=bannerH+responsiveH+responsiveH/2+mainH*2){
@@ -105,7 +102,7 @@ class Zyh extends Component {
                 Thiredright.style.opacity='1';
             }
             if(num>=bannerH+responsiveH-responsiveH/2+mainH*3 && num<=bannerH+responsiveH+responsiveH/2+mainH*3){
-                Fourthright.style.right='0';
+                Fourthright.style.right='0.5rem';
                 Fourthleft.style.opacity='1';
             }
             // if(num>=1240 && num<=2140){
