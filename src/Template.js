@@ -1,75 +1,296 @@
 import React from 'react'
-
-
-class D_container extends React.Component{
+//ajax 分装
+function Ajax(opt){
+    if(window.XMLHttpRequest){
+        var xhr = new XMLHttpRequest();
+    }
+    else{
+        var xhr = new window.ActiveXObject("Microsoft.XMLHTTP");
+    }
+    if(opt.type=='get'){
+        xhr.open(opt.type,opt.url+'?'+JsonToString(opt.data),true);
+        xhr.send();
+    }
+    else if(opt.type=='post'){
+        xhr.open(opt.type,opt.url,true);
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.send(JsonToString(opt.data));
+    }
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+            if(xhr.status>=200&&xhr.status<300||xhr.status==304){
+                opt.success(xhr.responseText);
+            }
+            else{
+                opt.error()
+            }
+        }
+    };
+    function JsonToString(json){
+        var arr = [];
+        for(var i in json){
+            arr.push(i+'='+json[i])
+        }
+        return arr.join('&');
+    }
+}
+//中间内容组件
+class D_sidebar extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            sidebarword: [],
-            sidebarid:[]
+            sidebarword:[], //设置初始一级下拉内容
+            containlist:[], //设置初始二级下拉内容
+            index:-1, // 设置样式
+            allcon:[], // 设置初始内容
+            seindex:-1
         };
+        //点击获取数据库二级下拉
+        this.click=function (i) {
+            this.setState({index:i-1});
+            this.setState({seindex:-1});
+
+            var n=1;
+            Ajax({
+                url:"http://localhost:8282/sec/sec",
+                type:"get",
+                data:{
+                    oid:i //向二级内容传oid
+                },
+                success:function (da) {
+                    var date=eval("("+da+")");
+                    this.setState({containlist:date});
+                }.bind(this)
+            });
+            // 一级导航点击更换数据
+            Ajax({
+                url:"http://localhost:8282/first/first",
+                type:"get",
+                data:{
+                    oid:i,  //总数据传oid
+                    start:0,
+                    end:6//截取数据数量
+                },
+                success:function (da) {
+                    var date=eval("("+da+")");
+                    this.setState({allcon:date});
+                }.bind(this)
+            });
+            window.onscroll=function () {
+                var ScrolHeight=document.body.scrollHeight;
+                var nowTop=document.body.scrollTop;
+                var ContainTop=document.documentElement.clientHeight;
+                if(parseInt(nowTop+ContainTop)>=ScrolHeight-400){
+
+                    n++;
+                    if(n<=60){
+                        this.refs.loading.style.display="block";
+                        Ajax({
+                            url:"http://localhost:8282/first/first",
+                            type:"get",
+                            data:{
+                                oid:i,  //总数据传oid
+                                start:0,
+                                end:n*2//截取数据数量
+                            },
+                            success:function (da) {
+                                var date=eval("("+da+")");
+                                this.setState({allcon:date});
+                                this.refs.loading.style.display="none";
+                            }.bind(this)
+                        })
+                    }
+
+                }
+            }.bind(this)
+        }.bind(this);
+        //点击搜索
+        this.search=function () {
+            var searchWord=this.refs.searchVal.value;
+            this.setState({seindex:-1});
+            var n=1;
+            Ajax({
+                url:"http://localhost:8282/search/search",
+                type:"get",
+                data:{
+                    keys:searchWord, //总数据传keys
+                    start:0,
+                    end:6 //截取数据数量
+                },
+                success:function (da) {
+                    var date=eval("("+da+")");
+                    this.setState({allcon:date});
+                }.bind(this)
+            });
+            window.onscroll=function () {
+                var ScrolHeight=document.body.scrollHeight;
+                var nowTop=document.body.scrollTop;
+                var ContainTop=document.documentElement.clientHeight;
+                if(parseInt(nowTop+ContainTop)>=ScrolHeight-400){
+
+                    n++;
+                    if(n<=60){
+                        this.refs.loading.style.display="block";
+                        Ajax({
+                            url:"http://localhost:8282/search/search",
+                            type:"get",
+                            data:{
+                                keys:searchWord, //总数据传keys
+                                start:0,
+                                end:n*2 //截取数据数量
+                            },
+                            success:function (da) {
+                                this.setState({index:-1});
+                                var date=eval("("+da+")");
+                                this.setState({allcon:date});
+                                this.refs.loading.style.display="none";
+                            }.bind(this)
+                        })
+                    }
+
+                }
+            }.bind(this)
+        }.bind(this);
+        this.SecClick=function (k,i) {
+            this.setState({seindex:k});
+            console.log(i.slice(0,2));
+            var n=1;
+            Ajax({
+                url:"http://localhost:8282/search/search",
+                type:"get",
+                data:{
+                    keys:i.slice(0,2), //总数据传keys
+                    start:0,
+                    end:6 //截取数据数量
+                },
+                success:function (da) {
+                    var date=eval("("+da+")");
+                    this.setState({allcon:date});
+                }.bind(this)
+            });
+            window.onscroll=function () {
+                var ScrolHeight=document.body.scrollHeight;
+                var nowTop=document.body.scrollTop;
+                var ContainTop=document.documentElement.clientHeight;
+                if(parseInt(nowTop+ContainTop)>=ScrolHeight-400){
+
+                    n++;
+                    if(n<=60){
+                        this.refs.loading.style.display="block";
+                        Ajax({
+                            url:"http://localhost:8282/search/search",
+                            type:"get",
+                            data:{
+                                keys:i.slice(0,2), //总数据传keys
+                                start:0,
+                                end:n*2 //截取数据数量
+                            },
+                            success:function (da) {
+                                this.setState({index:-1});
+                                var date=eval("("+da+")");
+                                this.setState({allcon:date});
+                                this.refs.loading.style.display="none";
+                            }.bind(this)
+                        })
+                    }
+
+                }
+            }.bind(this)
+        }.bind(this)
     }
     componentDidMount(){
-        function Ajax(opt){
-            if(window.XMLHttpRequest){
-                var xhr = new XMLHttpRequest();
-            }
-            else{
-                var xhr = new window.ActiveXObject("Microsoft.XMLHTTP");
-            }
-            if(opt.type=='get'){
-                xhr.open(opt.type,opt.url+'?'+JsonToString(opt.data),true);
-                xhr.send();
-            }
-            else if(opt.type=='post'){
-                xhr.open(opt.type,opt.url,true);
-                xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-                xhr.send(JsonToString(opt.data));
-            }
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState == 4){
-                    if(xhr.status>=200&&xhr.status<300||xhr.status==304){
-                        opt.success(xhr.responseText);
-                    }
-                    else{
-                        opt.error()
-                    }
-                }
-            };
-            function JsonToString(json){
-                var arr = [];
-                for(var i in json){
-                    arr.push(i+'='+json[i])
-                }
-                return arr.join('&');
-            };
-        };
+       this.refs.loading.style.display="none";
+        //获取一级下拉内容
         Ajax({
             url:"http://localhost:8282/login/lo",
             type:"get",
             success:function (da) {
-                var arr=[]
                 var date=eval("("+da+")");
-                for(var i=0;i<date.length;i++){
-                    arr.push(date[i].name)
-                }
-                this.setState({sidebarword:arr});
-                console.log(this.state.sidebarword)
+                this.setState({sidebarword:date});
             }.bind(this)
-             })
+        });
+        //获取所有数据
+        Ajax({
+            url:"http://localhost:8282/all/all",
+            type:"get",
+            data:{
+                start:0,
+                end:6 //截取数据数量
+            },
+            success:function (da) {
+                var date=eval("("+da+")");
+                this.setState({allcon:date});
+            }.bind(this)
+        });
+        var n=1;
+        window.onscroll=function () {
+            var ScrolHeight=document.body.scrollHeight;
+            var nowTop=document.body.scrollTop;
+            var ContainTop=document.documentElement.clientHeight;
+            if(parseInt(nowTop+ContainTop)>=ScrolHeight-400){
+                console.log(this.state.allcon);
+
+                        n++;
+                if(n<=60){
+                    this.refs.loading.style.display="block";
+                    Ajax({
+                        url:"http://localhost:8282/all/all",
+                        type:"get",
+                        data:{
+                            start:0,
+                            end:n*2 //截取数据数量
+                        },
+                        success:function (da) {
+                            var date=eval("("+da+")");
+                            this.setState({allcon:date});
+                            this.refs.loading.style.display="none"
+                        }.bind(this)
+                    });
+                }
+
+            }
+        }.bind(this)
     }
     render(){
-        return <div>
-            <ul>
-                {this.state.sidebarword.map(function (i,k) {
-                    return <li key={k}>{i}</li>
-                })}
-            </ul>
+        return <div >
+            <div className="D_container">
+                <div className="D_search">
+                    <input type="text" placeholder="搜索模版" ref="searchVal"/>
+                    <span className="glyphicon glyphicon-search" onClick={this.search.bind(this)}></span>
+                </div>
+                <ul className="D_sidelist" >
+                    {this.state.sidebarword.map(function (i,k) {
+                        return <li key={k} name={i.uid} onClick={this.click.bind(null,i.uid)} className={this.state.index==k?"D_stychange":"D_stychange_b"}>{i.name} <span ref={i.uid}  className="glyphicon glyphicon-circle-arrow-right"></span></li>
+                    }.bind(this))}
+                </ul>
+            </div>
+            <div className="D_project">
+                 <ul className="D_pro_list">
+                     {this.state.containlist.map(function (i,k) {
+                         return <li key={k} name={i.uid}  onClick={this.SecClick.bind(null,k,i.name)} className={this.state.seindex==k?"D_selist":"D_selist_b"}>{i.name}</li>
+                     }.bind(this))}
+                 </ul>
+                <div className="clrarly"></div>
+                  <ul className="D_allcon">
+                      {this.state.allcon.map(function (i,k) {
+                          return <li key={k} src={i.url}>
+                              <img src={require(''+i.image+'')} alt=""/>
+                               <div>
+                                   <p className="D_conTit">{i.name}</p>
+                                   <p className="D_conhref"><span>免费</span><button><a href={'http://'+i.url+''} target="_blank">预览</a></button></p>
+                               </div>
+                          </li>
+                      }.bind(this))}
+                      <div className="clrarly"></div>
+                  </ul>
+                <img src={require("./images/loading.gif")} alt="加载图片" ref="loading" className="D_loading"/>
+            </div>
+            <div className="clrarly"></div>
         </div>
     }
 }
 
-
+//头部组件
 class D_titleWord extends React.Component{
     render(){
         return <div>
@@ -80,11 +301,13 @@ class D_titleWord extends React.Component{
         </div>
     }
 }
+
+// template总父组件
 class Template extends React.Component{
     render(){
         return <div className="D_wrap">
             <D_titleWord/>
-            <D_container/>
+            <D_sidebar/>
         </div>
     }
 }
