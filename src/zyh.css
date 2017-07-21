@@ -420,6 +420,9 @@ a:active {color: #950304;}
     /*onesecond结束*/
 }
 @media only screen and (max-width: 993px){
+    .Zyh{
+        overflow: hidden;
+    }
     /*banner开始*/
     .zyh-banner {
         width: 100%;
