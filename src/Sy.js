@@ -2,14 +2,13 @@
  * Created by Administrator on 2017/7/17.
  */
 import React, {Component} from 'react';
-
+/*父组件*/
 class Sy extends Component {
     constructor(props) {
         super(props);
     }
     componentDidMount(){
          var sy_fre_h2=document.getElementById('sy_fre_h2');
-
          var sy_wrap_h2=document.getElementById('sy_wrap_h2');
          var sy_wrap_h3=document.getElementById('sy_wrap_h3');
          var sy_que_h2=document.getElementById('sy_que_h2');
@@ -27,18 +26,18 @@ class Sy extends Component {
         }
         addEvent(window,'scroll',function(){
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-             console.log(scrollTop);
-
-            scrollTop>5800&&scrollTop<6100?sy_fre_h2.style.transform='scale(1)':null;
-            if(scrollTop>=4700&&scrollTop<5000){
+            if(scrollTop+window.screen.height>=sy_fre_h2.offsetTop+200&&scrollTop+window.screen.height<sy_fre_h2.offsetTop+500){
+                sy_fre_h2.style.transform='scale(1)';
+            }
+            if(scrollTop+window.screen.height>=sy_que_h2.offsetTop+200&&scrollTop+window.screen.height<sy_que_h2.offsetTop+500){
                 sy_que_h2.style.opacity='1';
                 sy_que_em.style.opacity='1';
                 sy_que_span.style.opacity='1';
+
             }
-            if(scrollTop>=4198&&scrollTop<4492){
+            if(scrollTop+window.screen.height>=sy_wrap_h2.offsetTop+200&&scrollTop+window.screen.height<sy_wrap_h2.offsetTop+500){
                 sy_wrap_h2.style.opacity='1';
                 sy_wrap_h3.style.opacity='1';
-
             }
         });
     }
@@ -54,6 +53,7 @@ class Sy extends Component {
         )
     }
 }
+/*SY-最下面轮播 */
 class Sy_Contain extends Component {
     constructor(props) {
         super(props);
@@ -111,12 +111,10 @@ class Sy_Contain extends Component {
                 });
             }.bind(this)
         });
-
-
     }
     componentDidUpdate(){
         var sy_Con_h2=document.getElementById('sy_Con_h2');
-        console.log(sy_Con_h2);
+        var sy_Con=document.getElementById('sy_Con');
         function addEvent(obj,type,fn){
             if(obj.attachEvent){
                 obj.attachEvent('on'+type,function(){
@@ -128,12 +126,8 @@ class Sy_Contain extends Component {
         }
         addEvent(window,'scroll',function(){
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            console.log(scrollTop);
-
-            if(scrollTop>=6323&&scrollTop<6623){
-
+            if(scrollTop+window.screen.height>=sy_Con.offsetTop+200&&scrollTop+window.screen.height< sy_Con.offsetTop+500){
                 sy_Con_h2.style.transform='scale(1)';
-
             }
         });
     }
@@ -142,7 +136,7 @@ class Sy_Contain extends Component {
 
         if (this.state.Json) {
             return (
-                <div className="sy_Con">
+                <div className="sy_Con" id="sy_Con">
                     <div className="sy_Con_tit">
                         <h2 ref="sy_Con_h2" id="sy_Con_h2">客户反馈</h2>
                     </div>
@@ -194,7 +188,7 @@ class Sy_Contain extends Component {
         }
     }
 }
-
+/*SY-合作伙伴 */
 class Sy_friend extends Component {
     constructor(props) {
         super(props);
@@ -228,6 +222,7 @@ class Sy_friend extends Component {
         )
     }
 }
+/*SY-背景banner */
 class Sy_query extends Component {
     constructor(props) {
         super(props);
@@ -250,6 +245,7 @@ class Sy_query extends Component {
         )
     }
 }
+/*SY-第一个轮播 */
 class Sy_wrap extends Component {
     constructor(props) {
         super(props);

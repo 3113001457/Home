@@ -4,7 +4,7 @@ body, html {
     font-family: sans-serif;
     font-size: 62.5%;
     font-family: 微软雅黑;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 @media only screen and (min-width: 992px) {
@@ -741,7 +741,8 @@ body, html {
         font-style: normal;
         color: #393939;
         border-bottom: 0.01rem solid #E2E2E2;
-        transform: scale(0);transition: 1s;
+        transform: scale(0);
+        transition: 1.5s;
     }
 
     .sy_carousel {
@@ -944,7 +945,8 @@ body, html {
         width: 100%;
         height: 0.47rem;
         line-height: 0.47rem;
-        margin-top: 1.30rem;    opacity:0;
+        margin-top: 1.30rem;
+        opacity:0;
         transition:1.5s;
     }
 
@@ -1177,7 +1179,7 @@ body, html {
          font-size: 0.25rem;
          color: #595959;
          float: right;
-         word-break: break-word;
+         word-wrap: break-word;
          box-sizing: border-box;
          position: absolute;
          top: 0.6rem;
@@ -1445,6 +1447,7 @@ body, html {
         font-style: normal;
         color: #393939;
         margin-top: 1.2rem;
+        transform: scale(0);transition: 1.5s;
 
     }
     .sy_friendSm ul {
@@ -1512,7 +1515,8 @@ body, html {
         text-align: center;
         width: 100%;
         height: 0.5rem;
-        line-height: 0.5rem;
+        line-height: 0.5rem;  opacity:0;
+        transition:1.5s;
 
     }
     .sy_querySm em {
@@ -1520,7 +1524,8 @@ body, html {
         margin: 0.2rem auto;
         width: 0.90rem;
         height: 0.04rem;
-        background-color: #FFF;
+        background-color: #FFF;  opacity:0;
+        transition:1.5s;
     }
     .sy_querySm span {
         width: 11.30rem;
@@ -1532,7 +1537,8 @@ body, html {
         color: #FFF;
         margin: 0.32rem auto;
         line-height:0.4rem;
-        margin-bottom:0.6rem;
+        margin-bottom:0.6rem;  opacity:0;
+        transition:1.5s;
     }
     .sy_querySm div {
         width: 12.34rem;
@@ -1574,7 +1580,8 @@ body, html {
         text-align: center;
         width: 100%;
         height: 0.7rem;
-        line-height: 0.7rem;
+        line-height: 0.7rem;  opacity:0;
+        transition:1.5s;
     }
 
     .sy_querySm em {
@@ -1582,7 +1589,8 @@ body, html {
         margin: 0.4rem auto;
         width: 1.5rem;
         height: 0.04rem;
-        background-color: #FFF;
+        background-color: #FFF;  opacity:0;
+        transition:1.5s;
 
     }
 
@@ -1596,7 +1604,8 @@ body, html {
         color: #FFF;
         margin: 1.4rem auto;
         line-height: 0.65rem;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.6rem;  opacity:0;
+        transition:1.5s;
 
     }
 
@@ -1636,6 +1645,7 @@ body, html {
         font-style: normal;
         color: #393939;
         margin-top: 3rem;
+        transform: scale(0);transition: 1.5s;
     }
 
     .sy_friendSm ul {
