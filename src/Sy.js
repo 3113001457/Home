@@ -14,7 +14,6 @@ class Sy extends Component {
          var sy_que_h2=document.getElementById('sy_que_h2');
          var sy_que_em=document.getElementById('sy_que_em');
          var sy_que_span=document.getElementById('sy_que_span');
-
         function addEvent(obj,type,fn){
             if(obj.attachEvent){
                 obj.attachEvent('on'+type,function(){
@@ -33,7 +32,6 @@ class Sy extends Component {
                 sy_que_h2.style.opacity='1';
                 sy_que_em.style.opacity='1';
                 sy_que_span.style.opacity='1';
-
             }
             if(scrollTop+window.screen.height>=sy_wrap_h2.offsetTop+200&&scrollTop+window.screen.height<sy_wrap_h2.offsetTop+500){
                 sy_wrap_h2.style.opacity='1';
@@ -41,7 +39,6 @@ class Sy extends Component {
             }
         });
     }
-
     render() {
         return (
             <div className="Sy">
@@ -59,13 +56,9 @@ class Sy_Contain extends Component {
         super(props);
         this.state = {
             Json: false
-
         }
     }
-
     componentDidMount() {
-
-
         function Ajax(opt) {
             if (window.XMLHttpRequest) {
                 var xhr = new XMLHttpRequest();
@@ -86,8 +79,7 @@ class Sy_Contain extends Component {
                 if (xhr.readyState == 4) {
                     if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
                         opt.success(xhr.responseText);
-                    }
-                    else {
+                    }else {
                         // opt.error()
                     }
                 }
@@ -131,9 +123,7 @@ class Sy_Contain extends Component {
             }
         });
     }
-
     render() {
-
         if (this.state.Json) {
             return (
                 <div className="sy_Con" id="sy_Con">
@@ -163,7 +153,6 @@ class Sy_Contain extends Component {
                             </div>
                             <div className="item sy_item">
                                 <span><img src={this.state.Json[2].img} alt=""/></span>
-
                                 <p>
                                     <span>{this.state.Json[2].text}</span>
                                     <b>{this.state.Json[2].name}</b>
@@ -171,7 +160,6 @@ class Sy_Contain extends Component {
                             </div>
                             <a className="left sy_btnLeftCon" href="#myCarousel"
                                data-slide="prev">
-
                             </a>
                             <a className="right sy_btnRightCon" href="#myCarousel"
                                data-slide="next">
@@ -181,7 +169,6 @@ class Sy_Contain extends Component {
                 </div>
             )
         } else {
-
             return (
                 <div></div>
             )
@@ -198,7 +185,6 @@ class Sy_friend extends Component {
                 fir_part: ['贝宝合作伙伴', '阿里云金牌合作伙伴', '中国电信指定供应商', '亚马逊合作伙伴'],
                 fir_engName: ['PayPal', 'aliyun', 'China telecom', 'amazon']
             }
-
         }
     }
     render() {
@@ -227,7 +213,6 @@ class Sy_query extends Component {
     constructor(props) {
         super(props);
     }
-
     render() {
         return (
             <div className="sy_query">
@@ -235,8 +220,6 @@ class Sy_query extends Component {
                     <h2 id="sy_que_h2">我们提供的不仅仅是工具</h2>
                     <em id="sy_que_em"></em>
                     <span id="sy_que_span">起飞页不仅是一个方便快捷的构建网站的自助建站平台，更重要的是，我们为中国用户提供了更多贴心的服务：网站备案、自动备份、快速恢复以及网站代建服务。 我们使用了国内、香港和海外最好的网络和云服务器，以确保您的网站能够快速完美地呈现在世界各地的访客面前。</span>
-
-
                     <div><img
                         src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvZjMxN2YzZmIyZWRhYTU3MGZhNDE5YTQ1OGY2OTM2ZjYtMTAyNHg1NTQucG5n.png"
                         alt=""/></div>
@@ -266,7 +249,6 @@ class Sy_wrap extends Component {
             wrap_fun: null
         }
     }
-
     componentDidMount() {
         var sy_wrap_ul = document.getElementById('sy_wrap_ul');
         this.state.wrap_fun = function () {
@@ -325,7 +307,6 @@ class Sy_wrap extends Component {
             }
             this.refs.aa.style.left = -this.state.wrap_num * 4.45 + 'rem';
         }
-
     }
     handleOver(){
         clearInterval(this.state.wrap_timeTw);
@@ -336,10 +317,7 @@ class Sy_wrap extends Component {
         this.state.wrap_timeTw = setInterval(function () {
             this.state.wrap_fun()
         }.bind(this), 3000);
-
-
     }
-
     render() {
         return (
             <div className="sy_wrap">
@@ -355,11 +333,9 @@ class Sy_wrap extends Component {
                                     this.state.wrap_img.map(function (arr) {
                                         return (
                                             <li key={arr}>
-                                                
                                                 <a href=""><img src={arr} alt="" /></a>
                                             </li>
                                         )
-
                                     }.bind(this))
                                 }
                             </ul>

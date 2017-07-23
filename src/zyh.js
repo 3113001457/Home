@@ -34,7 +34,7 @@ class Zyh extends Component {
         let bannerH=banner.offsetHeight;
         let responsiveH=responsive.offsetHeight;
         let mainH=main.offsetHeight;
-        console.log(bannerH,responsiveH,mainH);
+        /*console.log(bannerH,responsiveH,mainH);*/
         let timer=null;
         let timer2=null;
         let num=0;
@@ -105,22 +105,6 @@ class Zyh extends Component {
                 Fourthright.style.right='0.5rem';
                 Fourthleft.style.opacity='1';
             }
-            // if(num>=1240 && num<=2140){
-            //     Firstleft.style.left='0';
-            //     Firstright.style.opacity='1';
-            // }
-            // if(num>=1740 && num<=2640){
-            //     Secondright.style.right='0';
-            //     Secondleft.style.opacity='1';
-            // }
-            // if(num>=2240 && num<=3140){
-            //     Thiredleft.style.left='0';
-            //     Thiredright.style.opacity='1';
-            // }
-            // if(num>=2740 && num<=3640){
-            //     Fourthright.style.right='0';
-            //     Fourthleft.style.opacity='1';
-            // }
         });
     }
     render() {

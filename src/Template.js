@@ -228,11 +228,14 @@ class D_sidebar extends React.Component{
             var nowTop=document.body.scrollTop;
             var ContainTop=document.documentElement.clientHeight;
             if(parseInt(nowTop+ContainTop)>=ScrolHeight-400){
-                console.log(this.state.allcon);
-
-                        n++;
+                /*console.log(this.state.allcon);*/
+                n++;
                 if(n<=60){
-                    this.refs.loading.style.display="block";
+                    if(this.refs.loading==undefined){
+                        return false;
+                    }else{
+                        this.refs.loading.style.display="block";
+                    }
                     Ajax({
                         url:"http://localhost:8282/all/all",
                         type:"get",
@@ -247,7 +250,6 @@ class D_sidebar extends React.Component{
                         }.bind(this)
                     });
                 }
-
             }
         }.bind(this)
     }

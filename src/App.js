@@ -11,6 +11,8 @@ import {
 class App extends Component {
     componentDidMount(){
       let flag=true;
+      let lis=document.querySelectorAll(".publick_header>li");
+      /*console.log(lis);*/
       document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
       window.onresize=function(){
         document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
@@ -26,21 +28,25 @@ class App extends Component {
       }
       addEvent(window,'scroll',function(){
         let publick_header=document.getElementsByClassName('publick_header');
+        let header_logo=document.getElementsByClassName('header_logo');
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        let num=-0.7;
+        let num=-70;
         if(scrollTop>=70){
           if(flag){
             flag=false;
             publick_header[0].style.position="fixed";
-            publick_header[0].style.top="-0.7rem";
+            publick_header[0].style.top="-70px";
             publick_header[0].style.left="0";
             publick_header[0].style.zIndex="999";
-            publick_header[0].style.height="0.6rem";
-            publick_header[0].style.marginTop="-0.1rem";
-
+            publick_header[0].style.height="60px";
+            publick_header[0].style.marginTop="-10px";
+            header_logo[0].style.top='15px';
+            header_logo[0].style.left='20px';
+            header_logo[0].style.marginTop='0';
+            header_logo[0].style.marginLeft='0';
             var time=setInterval(function(){
-              num+=0.01;
-              publick_header[0].style.top=num+"rem";
+              num+=1;
+              publick_header[0].style.top=num+"px";
               if(num>0){
                 publick_header[0].style.top=0;
                 clearInterval(time);
@@ -51,10 +57,37 @@ class App extends Component {
           flag=true;
           publick_header[0].style.position="static";
           publick_header[0].style.zIndex="999";
-          publick_header[0].style.height="0.7rem";
+          publick_header[0].style.height="70px";
           publick_header[0].style.marginTop="0";
+          header_logo[0].style.marginLeft='5.46rem';
         }
       });
+    }
+    click(){
+      document.body.scrollTop=0;
+      document.documentElement.scrollTop=0;
+    }
+    falseclick(){
+      let falgs=document.getElementsByClassName("falgs");
+      let box=document.getElementsByClassName("box");
+      let bool=null;
+      // if(falg){
+      //   falg=false;
+      //   box[0].style.display="block";
+      //   falgs[0].style.left="0.3rem";
+      // }else{
+      //   falg=true;
+      //   box[0].style.display="none";
+      // }
+      box[0].style.display=="block"?(box[0].style.display="none",bool=false):(box[0].style.display="block",bool=true)
+      if(bool){
+        falgs[0].style.left="0.3rem";
+        box[0].style.position="absolute";
+        box[0].style.zIndex="1002";
+        box[0].style.right="0";
+      }else{
+        falgs[0].style.left="12.7rem";
+      }
     }
     render() {
         return (
@@ -62,52 +95,55 @@ class App extends Component {
             <div>
               <ul id="div" className="publick_header clear">
                 <div className="header_logo"></div>
-                <li><Link to="/">首页</Link></li>
-                <li><Link to="/Template">模板</Link></li>
-                <li><Link to="/Meal">套餐</Link></li>
-                <li className="H_about"><span>关于</span>
-                    <ul className="aboutList">
-                      <p className="line"></p>
-                      <div className="H_listC clear">
-                        <div className="aboutL clear">
-                          <li><a href="" className="list_O">公司信息</a></li>
-                          <li><a href="">公司介绍</a></li>
-                          <li><a href="">服务条款</a></li>
-                          <li><a href="">法律声明</a></li>
-                          <li><a href="">可接受服务</a></li>
-                          <li><a href="">免责声明</a></li>
+                <div className="falgs" onClick={this.falseclick}></div>
+                <div className="box">
+                  <li onClick={this.click}><Link to="/">首页</Link></li>
+                  <li onClick={this.click}><Link to="/Template">模板</Link></li>
+                  <li onClick={this.click}><Link to="/Meal">套餐</Link></li>
+                  <li className="H_about"><span>关于</span>
+                      <ul className="aboutList">
+                        <p className="line"></p>
+                        <div className="H_listC clear">
+                          <div className="aboutL clear">
+                            <li><a href="" className="list_O">公司信息</a></li>
+                            <li><a href="">公司介绍</a></li>
+                            <li><a href="">服务条款</a></li>
+                            <li><a href="">法律声明</a></li>
+                            <li><a href="">可接受服务</a></li>
+                            <li><a href="">免责声明</a></li>
+                          </div>
+                          <div className="aboutC clear">
+                            <li><a href="" className="list_O">荣誉资质</a></li>
+                            <div className="clear"><a href="" className="clear">
+                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt=""/>
+                              <span></span>
+                            </a></div>
+                            <div className="clear"><a href="" className="clear">
+                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
+                              <span></span>
+                            </a></div>
+                            <div className="clear"><a href="" className="clear">
+                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
+                              <span></span>
+                            </a></div>
+                            <div className="clear"><a href="" className="clear">
+                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
+                              <span></span>
+                            </a></div>
+                          </div>
+                          <div className="aboutR clear">
+                            <li><a href="" className="list_O">联系客服</a></li>
+                            <p><a href="">客户服务热线</a></p>
+                            <p><a href="" className="color_r">4006-285-729</a></p>
+                            <p><a href="">QQ客户中心</a></p>
+                            <p><a href="" className="color_r">800088546</a></p>
+                            <p><a href="">公司地址</a></p>
+                            <p><a href="" className="color_r">苏州市工业园区加城大厦F4-D2</a></p>
+                          </div>
                         </div>
-                        <div className="aboutC clear">
-                          <li><a href="" className="list_O">荣誉资质</a></li>
-                          <div className="clear"><a href="" className="clear">
-                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt=""/>
-                            <span></span>
-                          </a></div>
-                          <div className="clear"><a href="" className="clear">
-                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
-                            <span></span>
-                          </a></div>
-                          <div className="clear"><a href="" className="clear">
-                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
-                            <span></span>
-                          </a></div>
-                          <div className="clear"><a href="" className="clear">
-                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
-                            <span></span>
-                          </a></div>
-                        </div>
-                        <div className="aboutR clear">
-                          <li><a href="" className="list_O">联系客服</a></li>
-                          <p><a href="">客户服务热线</a></p>
-                          <p><a href="" className="color_r">4006-285-729</a></p>
-                          <p><a href="">QQ客户中心</a></p>
-                          <p><a href="" className="color_r">800088546</a></p>
-                          <p><a href="">公司地址</a></p>
-                          <p><a href="" className="color_r">苏州市工业园区加城大厦F4-D2</a></p>
-                        </div>
-                      </div>
-                    </ul>
-                </li>
+                      </ul>
+                  </li>
+                </div>
               </ul>
               <Route exact path="/" component={Home}/>
               <Route path="/Template" component={Template}/>

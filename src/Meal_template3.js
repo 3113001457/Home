@@ -3,7 +3,7 @@ class MealtemplateThree extends Component{
 	render(){
 		return(
 				<div className="wjt_modole">
-						<div className="wjt_template2">
+						<div className="wjt_template2 clear">
 							<ul className="wjt_col_a wjt_xs">
 								<li className="template2_font">套餐名称</li>
 								<li>适用对象</li>
