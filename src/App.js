@@ -1,18 +1,21 @@
-import React, { Component } from 'react';
+import React,{ Component } from 'react';
 import Home from './Home'
 import Template from './Template'
 import Meal from './Meal'
+import About from './about'
+import About_2 from './about_2'
+import About_3 from './about_3'
+import About_4 from './about_4'
+import About_5 from './about_5'
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-
 class App extends Component {
     componentDidMount(){
       let flag=true;
       let lis=document.querySelectorAll(".publick_header>li");
-      /*console.log(lis);*/
       document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
       window.onresize=function(){
         document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
@@ -62,10 +65,10 @@ class App extends Component {
           flag=true;
           if(w<992){
           	header_logo[0].style.position="absolute";
-			header_logo[0].style.top="50%";
-			header_logo[0].style.left="50%";
-			header_logo[0].style.marginTop="-20px";
-			header_logo[0].style.marginLeft="-60px";
+      			header_logo[0].style.top="50%";
+      			header_logo[0].style.left="50%";
+      			header_logo[0].style.marginTop="-20px";
+      			header_logo[0].style.marginLeft="-60px";
 	        publick_header[0].style.marginTop="0";
 	        publick_header[0].style.height="70px";
           	falgs[0].style.top="20px";
@@ -87,14 +90,6 @@ class App extends Component {
       let falgs=document.getElementsByClassName("falgs");
       let box=document.getElementsByClassName("box");
       let bool=null;
-      // if(falg){
-      //   falg=false;
-      //   box[0].style.display="block";
-      //   falgs[0].style.left="0.3rem";
-      // }else{
-      //   falg=true;
-      //   box[0].style.display="none";
-      // }
       box[0].style.display=="block"?(box[0].style.display="none",bool=false):(box[0].style.display="block",bool=true)
       if(bool){
         box[0].style.position="fixed";
@@ -122,12 +117,12 @@ class App extends Component {
                         <p className="line"></p>
                         <div className="H_listC clear">
                           <div className="aboutL clear">
-                            <li><a className="list_O">公司信息</a></li>
-                            <li><a><Link to="/Template">公司介绍</Link></a></li>
-                            <li><a>服务条款</a></li>
-                            <li><a>法律声明</a></li>
-                            <li><a>可接受服务</a></li>
-                            <li><a>免责声明</a></li>
+                            <li><Link to="" className="list_O">公司信息</Link></li>
+                            <li><Link to="/About">公司介绍</Link></li>
+                            <li><Link to="/About_2">服务条款</Link></li>
+                            <li><Link to="/About_3">法律声明</Link></li>
+                            <li><Link to="/About_4">可接受服务</Link></li>
+                            <li><Link to="/About_5">免责声明</Link></li>
                           </div>
                           <div className="aboutC clear">
                             <li><a href="" className="list_O">荣誉资质</a></li>
@@ -165,6 +160,11 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route path="/Template" component={Template}/>
               <Route path="/Meal" component={Meal}/>
+              <Route path="/About" component={About}/>
+              <Route path="/About_2" component={About_2}/>
+              <Route path="/About_3" component={About_3}/>
+              <Route path="/About_4" component={About_4}/>
+              <Route path="/About_5" component={About_5}/>
               <div className="publick-footer">
                 <div className="h_footer">
                   <div className="line_t"></div>

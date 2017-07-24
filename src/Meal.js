@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import MealtemplateFirst from './Meal_template1'
+import './Meal.css'
 import MealtemplateSecond from './Meal_template2';
 import MealtemplateThree from './Meal_template3';
 import MealtemplateFour from './Meal_template4';
