@@ -7,7 +7,7 @@ import './zyh.css';
 class Main2 extends Component {
     render() {
         return (
-            <div className="Main2">
+            <div className="Main2" id="main2">
                 <div className="zyh-mai zyh-maiSecond">
                     <div className="zyh-maiIn">
                         <div className="zyh-left zyh-maiLeftText">

@@ -28,13 +28,11 @@ class Zyh extends Component {
         let Fourthleft=document.getElementById('Fourthleft');
         let Fourthright=document.getElementById('Fourthright');
         let zyhBanner=document.getElementById('zyh-bannerIn');
-        let banner=document.getElementById('banner');
         let responsive=document.getElementById('responsive');
         let main=document.getElementById('main');
-        let bannerH=banner.offsetHeight;
-        let responsiveH=responsive.offsetHeight;
-        let mainH=main.offsetHeight;
-        /*console.log(bannerH,responsiveH,mainH);*/
+        let main2=document.getElementById('main2');
+        let main3=document.getElementById('main3');
+        let main4=document.getElementById('main4');
         let timer=null;
         let timer2=null;
         let num=0;
@@ -72,7 +70,6 @@ class Zyh extends Component {
             let timer=null;
             let height=zyhBanner.offsetHeight;
             zyhButton.onclick= () => {
-                console.log(height);
                 timer=setInterval( () => {
                     if(num>=height){
                         clearInterval(timer)
@@ -81,7 +78,7 @@ class Zyh extends Component {
                     document.body.scrollTop = document.documentElement.scrollTop = num;
                 },10)
             };
-            if(num >= mainH) {
+            if(scrollTop+window.screen.height>=responsive.offsetTop+200&&scrollTop+window.screen.height<responsive.offsetTop+500) {
                 fast.style.opacity = '1';
                 fast.style.marginTop = '0';
                 technology.style.opacity = '1';
@@ -89,19 +86,19 @@ class Zyh extends Component {
                 edit.style.opacity = '1';
                 edit.style.marginTop = '0.13rem';
             }
-            if(num>=bannerH+responsiveH-responsiveH/2 && num<=bannerH+responsiveH+responsiveH/2){
+            if(scrollTop+window.screen.height>=main.offsetTop+200&&scrollTop+window.screen.height<main.offsetTop+500){
                 Firstleft.style.left='0';
                 Firstright.style.opacity='1';
             }
-            if(num>=bannerH+responsiveH-responsiveH/2+mainH && num<=bannerH+responsiveH+responsiveH/2+mainH){
+            if(scrollTop+window.screen.height>=main2.offsetTop+200&&scrollTop+window.screen.height<main2.offsetTop+500){
                 Secondright.style.right='0.5rem';
                 Secondleft.style.opacity='1';
             }
-            if(num>=bannerH+responsiveH-responsiveH/2+mainH*2 && num<=bannerH+responsiveH+responsiveH/2+mainH*2){
+            if(scrollTop+window.screen.height>=main3.offsetTop+200&&scrollTop+window.screen.height<main3.offsetTop+500){
                 Thiredleft.style.left='0';
                 Thiredright.style.opacity='1';
             }
-            if(num>=bannerH+responsiveH-responsiveH/2+mainH*3 && num<=bannerH+responsiveH+responsiveH/2+mainH*3){
+            if(scrollTop+window.screen.height>=main4.offsetTop+200&&scrollTop+window.screen.height<main4.offsetTop+500){
                 Fourthright.style.right='0.5rem';
                 Fourthleft.style.opacity='1';
             }

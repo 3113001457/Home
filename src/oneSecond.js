@@ -59,8 +59,6 @@ class Onesecond extends Component {
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMTQ2Y2Q3MjA1ZDk2Yzk1ZmUyYmUzYmUyMzA3NGI0MTUtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYzAyZWE4ZjQ0YTQ1MmQ1N2RlN2Y5YzQ1YzEwMzcwNDQtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvOGJiODg2NjEwMzc5MGEwNWEyYmU4YWEzYTQzNjBkYzktODJ4NzAucG5n.png'];
-                // dl.style.width='2.91rem';
-                // dl.style.height='1.7rem';
                 p.style.border='1px solid #0088c2';
                 p.style.boxSizing='border-box';
                 p.style.background='white';
@@ -74,8 +72,6 @@ class Onesecond extends Component {
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMmE3Yzk5NTE4ZDAyZWQ1N2U3ZWJkYjliMDY2ZjVhOGQtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvMmFiYjY1ZjczYmQ2YmVhODNiZGQ3MTY4NTNlMmE4NGYtODJ4NzAucG5n.png'
                     ,'http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvM2RhYzY0OWU0NDQxMzYyZDljYzUyZmU2Yzc2NDFiMGItODJ4NzAucG5n.png'];
-                // dl.style.width='2.91rem';
-                // dl.style.height='1.7rem';
                 p.style.border='1px solid #cccccc';
                 p.style.boxSizing='border-box';
                 p.style.padding='0.3rem';
