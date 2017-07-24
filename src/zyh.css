@@ -1,40 +1,64 @@
 @charset "utf-8";
 /* CSS Document */
+
 /* 公共样式表 */
+
 body{text-align:left; font-family:"宋体", arial; margin:0; padding:0; background:#FFF; font-size:12px; color:#666;}
+
+
 /*01. 整体颜色风格、字体设置：
     a. background:#FFF; 背景颜色，根据网页效果图来设定背景颜色，如果有图片就加图片。
 	b. 字体： font-size:12px;
 */
+
 div,form,img,ul,ol,li,dl,dt,dd,input{margin:0; padding:0; border:0; }
+
 /**{margin:0; padding:0; border:0; }*/
+
 li,dl{list-style-type:none;}
 h2,h3,h4,h5,h6 { margin:0; padding:0;font-size:12px; font-weight:normal;}
 p{margin:0;padding:0}
 h1{margin:0; padding:0;font-size:14px;}
+
 .margintop10{ margin-top:10px;}
 .margintop30{ margin-top:30px;}
+
 .marginleft30{ margin-left:20px;}
+
 /* 公共样式中的默认超链接 */
+
 a:link {color: #656565; text-decoration:none;}
 a:visited {color: #656565;text-decoration:none;}
 a:hover {color: #950304; text-decoration:underline;}
 a:active {color: #950304;}
+
 /* 系统样式表 */
+
 .floatl{ float:left;}
 .floatr{ float:right;}
 .clrarly{ clear:both;}
+
+
 /* 自定义样式表 */
+
 .bigone { margin:0 auto; width:1003px; height:800px; background:#CCC;}
+
 @media only screen and (min-width: 992px){
+    .Zyh{
+        overflow: hidden;
+    }
     /*banner开始*/
     .zyh-banner {
         width: 100%;
         position: relative;
     }
-    .zyh-background-video {
+    .banner{
         width: 100%;
         height: 8.5rem;
+    }
+    .zyh-background-video {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: center center;
     }
@@ -113,26 +137,24 @@ a:active {color: #950304;}
         transition: 0.5s;
     }
     .zyh-buttonIn{
-        width: 2.81rem;
-        height: 0.62rem;
-        font-size: 0.22rem;
-        text-align: center;
-        line-height: 0.62rem;
-        color: white;
-        transition: 0s;
-        letter-spacing: 0.05rem;
+        transition: 0.5s;
         cursor: pointer;
+        color: white;
     }
     .zyh-buttonIn:hover {
+        background-color: white;
+        color: rgb(117, 117, 117);
+        cursor: pointer;
+    }
+    .zyh-buttonIn > span{
         width: 2.81rem;
         height: 0.62rem;
-        background-color: white;
+        display: inline-block;
         font-size: 0.22rem;
+        transition: 0s;
         text-align: center;
         line-height: 0.62rem;
-        color: rgb(117, 117, 117);
         letter-spacing: 0.05rem;
-        cursor: pointer;
     }
     .zyh-decline {
         width: 0.29rem;
@@ -176,6 +198,7 @@ a:active {color: #950304;}
         overflow: hidden;
     }
     .zyh-fastDiv{
+
         color: #494949;
         letter-spacing: 0.01rem;
         font-family: 微软雅黑;
@@ -192,6 +215,7 @@ a:active {color: #950304;}
         margin-top: 0.35rem;
     }
     .zyh-technologyDiv{
+
         color: #696969;
         letter-spacing: 0.01rem;
         font-family: 微软雅黑;
@@ -205,6 +229,7 @@ a:active {color: #950304;}
         margin-top: 0.18rem;
     }
     .zyh-editDiv{
+
         color: #696969;
         letter-spacing: 0.01rem;
         font-family: 微软雅黑;
@@ -264,13 +289,13 @@ a:active {color: #950304;}
         width: 6.18rem;
         height: 3.86rem;
         transition: 0s;
-     }
+    }
     .zyh-maiLeftPic{
         width: 6.18rem;
         height: 3.78rem;
         overflow: hidden;
         transition: 0s;
-     }
+    }
     .zyh-maiRightText{
         width: 5.66rem;
         height: 3.78rem;
@@ -318,16 +343,17 @@ a:active {color: #950304;}
     }
     #Firstleft,#Thiredleft{
         position: relative;
-        left: -6.18rem;
+        left: -8.18rem;
         transition: 1.5s;
         /*height: 3.86rem;*/
     }
     #Firstright,#Secondleft,#Thiredright,#Fourthleft{
         opacity: 0;
+        transition: 1.5s;
     }
     #Secondright,#Fourthright{
         position: relative;
-        right: -6.18rem;
+        right: -8.18rem;
         transition: 1.5s;
         /*height: 3.86rem;*/
     }
@@ -395,6 +421,7 @@ a:active {color: #950304;}
         word-break: break-all !important;
         overflow-wrap: normal !important;
     }
+
     /*onesecond结束*/
 }
 @media only screen and (max-width: 993px){
@@ -402,6 +429,9 @@ a:active {color: #950304;}
         overflow: hidden;
     }
     /*banner开始*/
+    .Zyh{
+        overflow: hidden;
+    }
     .zyh-banner {
         width: 100%;
         position: relative;
@@ -415,7 +445,7 @@ a:active {color: #950304;}
     }
     .zyh-bannerIn {
         width: 100%;
-        height: 505px;
+        height: 546px;
         background-color: rgba(48, 38, 38, .4);
         position: absolute;
         top: 0rem;
@@ -627,23 +657,23 @@ a:active {color: #950304;}
     }
     .zyh-mainImg{
         width: 100%;
-        transition: 0s;
+        /*transition: 0s;*/
     }
     .zyh-maiLeftPic{
         width: 100%;
-        transition: 0s;
+        /*transition: 0s;*/
     }
     .zyh-maiRightText{
         width: 100%;
-        transition: 0s;
+        /*transition: 0s;*/
     }
     .zyh-maiLeftText{
         width: 100%;
-        transition: 0s;
+        /*transition: 0s;*/
     }
     .zyh-maiRightPic{
         width: 100%;
-        transition: 0s;
+        /*transition: 0s;*/
     }
     .zyh-Rtitle{
         font-family: 微软雅黑;
@@ -679,15 +709,16 @@ a:active {color: #950304;}
     }
     #Firstleft,#Thiredleft{
         position: relative;
-        left: -6.18rem;
+        left: -13.18rem;
         transition: 1.5s;
     }
     #Firstright,#Secondleft,#Thiredright,#Fourthleft{
         opacity: 0;
+        transition: 1.5s;
     }
     #Secondright,#Fourthright{
         position: relative;
-        right: -6.18rem;
+        right: -13.18rem;
         transition: 1.5s;
     }
     .zyh-textRTran{
