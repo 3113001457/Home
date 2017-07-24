@@ -30,6 +30,8 @@ class App extends Component {
         let publick_header=document.getElementsByClassName('publick_header');
         let header_logo=document.getElementsByClassName('header_logo');
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      	let falgs=document.getElementsByClassName("falgs");
         let num=-70;
         if(scrollTop>=70){
           if(flag){
@@ -40,10 +42,13 @@ class App extends Component {
             publick_header[0].style.zIndex="999";
             publick_header[0].style.height="60px";
             publick_header[0].style.marginTop="-10px";
-            header_logo[0].style.top='15px';
-            header_logo[0].style.left='20px';
-            header_logo[0].style.marginTop='0';
-            header_logo[0].style.marginLeft='0';
+	        if(w<992){
+	            header_logo[0].style.top='15px';
+	            header_logo[0].style.left='20px';
+	            header_logo[0].style.marginTop='0';
+	            header_logo[0].style.marginLeft='0';
+          		falgs[0].style.top="10px";
+            }
             var time=setInterval(function(){
               num+=1;
               publick_header[0].style.top=num+"px";
@@ -55,11 +60,22 @@ class App extends Component {
           }
         }else if(scrollTop<70){
           flag=true;
-          publick_header[0].style.position="static";
-          publick_header[0].style.zIndex="999";
-          publick_header[0].style.height="70px";
-          publick_header[0].style.marginTop="0";
-          header_logo[0].style.marginLeft='5.46rem';
+          if(w<992){
+          	header_logo[0].style.position="absolute";
+			header_logo[0].style.top="50%";
+			header_logo[0].style.left="50%";
+			header_logo[0].style.marginTop="-20px";
+			header_logo[0].style.marginLeft="-60px";
+	        publick_header[0].style.marginTop="0";
+	        publick_header[0].style.height="70px";
+          	falgs[0].style.top="20px";
+          }else if(w>992){
+          	  header_logo[0].style.position="static";
+	          publick_header[0].style.position="static";
+	          publick_header[0].style.zIndex="999";
+	          publick_header[0].style.height="70px";
+	          publick_header[0].style.marginTop="0";
+          }
         }
       });
     }
@@ -81,9 +97,10 @@ class App extends Component {
       // }
       box[0].style.display=="block"?(box[0].style.display="none",bool=false):(box[0].style.display="block",bool=true)
       if(bool){
+        box[0].style.position="fixed";
         falgs[0].style.left="0.3rem";
-        box[0].style.position="absolute";
         box[0].style.zIndex="1002";
+        box[0].style.top="0";
         box[0].style.right="0";
       }else{
         falgs[0].style.left="12.7rem";
@@ -105,12 +122,12 @@ class App extends Component {
                         <p className="line"></p>
                         <div className="H_listC clear">
                           <div className="aboutL clear">
-                            <li><a href="" className="list_O">公司信息</a></li>
-                            <li><a href="">公司介绍</a></li>
-                            <li><a href="">服务条款</a></li>
-                            <li><a href="">法律声明</a></li>
-                            <li><a href="">可接受服务</a></li>
-                            <li><a href="">免责声明</a></li>
+                            <li><a className="list_O">公司信息</a></li>
+                            <li><a><Link to="/Template">公司介绍</Link></a></li>
+                            <li><a>服务条款</a></li>
+                            <li><a>法律声明</a></li>
+                            <li><a>可接受服务</a></li>
+                            <li><a>免责声明</a></li>
                           </div>
                           <div className="aboutC clear">
                             <li><a href="" className="list_O">荣誉资质</a></li>

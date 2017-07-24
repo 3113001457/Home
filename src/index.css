@@ -3,6 +3,7 @@ body,html{
   padding: 0;
   font-family: sans-serif;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 .clear:after{
 	content: "";
@@ -23,11 +24,11 @@ body,html{
     background: #000;
 }
 .falgs{
-	position: absolute;
-	top: 0.3rem;
-	right: 0.3rem;
-	width: 0.44rem;
-	height: 0.47rem;
+	position: fixed;
+	top: 20px;
+	right: 15px;
+	width: 30px;
+	height: 30px;
 	background: #fff;
 }
 /*段超群*/
@@ -244,6 +245,9 @@ body,html{
 	.publick_panel_t_r li p {
 	    height: 30px;
 	}
+	.header_logo{
+		
+	}
 }
 @media only screen and (max-width: 992px) {
 	.publick_panel_t_r{
@@ -265,10 +269,19 @@ body,html{
 	.box,.aboutList{
 		display: none;
 	}
+	.box{
+		height: 10rem;
+		background: #efefef;
+	}
 	.box>li{
 		width: 12.92rem;
+		height: 1rem;
+		line-height: 1rem;
+		font-size: .3rem;
 		text-align: center;
-		background: red;
+	}
+	.box>li>a:hover{
+		color: #3cf;
 	}
 }
 /*段超群*/
@@ -356,12 +369,12 @@ body,html{
          letter-spacing: 0.1rem;
          text-decoration: none;
     }
-     .aboutList {
+    .aboutList {
          position: absolute;
-         width: 17.3rem;
+         width: 16rem;
          background: #333;
          top: 0.32rem;
-         left: -7rem;
+         left: -8rem;
          z-index: -1;
          display: none;
          font-size: 0.14rem;
