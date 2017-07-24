@@ -48,6 +48,10 @@ a:active {color: #950304;}
         overflow: hidden;
     }
     /*banner开始*/
+    #video-img{
+        width: 100%;
+        height: 8.5rem;
+    }
     .zyh-banner {
         width: 100%;
         position: relative;
@@ -429,6 +433,10 @@ a:active {color: #950304;}
         overflow: hidden;
     }
     /*banner开始*/
+    #video-img{
+        width: 972px;
+        height: 546px;
+    }
     .Zyh{
         overflow: hidden;
     }

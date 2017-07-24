@@ -11,8 +11,8 @@ class Banner extends Component {
         let videoImg=document.getElementById('video-img');
         if(navigator.userAgent.indexOf('MSIE')!=-1 || navigator.userAgent.indexOf('rv')!=-1){
             video.style.display='none';
-            videoImg.style.width='100%';
-            videoImg.style.height='8.5rem';
+            // videoImg.style.width='100%';
+            // videoImg.style.height='8.5rem';
             videoImg.style.display='block';
         }else{
             video.style.display='block';
