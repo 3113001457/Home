@@ -31,17 +31,16 @@ class About_2 extends Component{
                     <li><p><Link to="/Honor_and_qualification">荣誉资质</Link></p></li>
                     <li><p><Link to="/Contact_me">联系客服</Link></p></li>
                     <li><p><Link to="/New">新闻</Link></p></li>
-                    <Route exact path="/Company_introduction" component={Company_introduction}/>
-                    <Route exact path="/Terms_of_service" component={Terms_of_service}/>
-                    <Route exact path="/Legal_notice" component={Legal_notice}/>
-                    <Route exact path="/Disclaimer" component={Disclaimer}/>
-                    <Route exact path="/Adequate_service" component={Adequate_service}/>
-                    <Route exact path="/Honor_and_qualification" component={Honor_and_qualification}/>
-                    <Route exact path="/Contact_me" component={Contact_me}/>
-                    <Route exact path="/New" component={New}/>
                </ul>
                <div>
-                    <div>服务条款</div>
+                   <Route exact path="/Company_introduction" component={Company_introduction}/>
+                   <Route exact path="/Terms_of_service" component={Terms_of_service}/>
+                   <Route exact path="/Legal_notice" component={Legal_notice}/>
+                   <Route exact path="/Disclaimer" component={Disclaimer}/>
+                   <Route exact path="/Adequate_service" component={Adequate_service}/>
+                   <Route exact path="/Honor_and_qualification" component={Honor_and_qualification}/>
+                   <Route exact path="/Contact_me" component={Contact_me}/>
+                   <Route exact path="/New" component={New}/>
                </div>
            </div>
         </Router>)

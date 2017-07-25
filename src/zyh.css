@@ -427,6 +427,117 @@ a:active {color: #950304;}
     }
 
     /*onesecond结束*/
+
+    .divO{
+        width: 890px;
+        padding: 67px 50px;
+        box-sizing: border-box;
+        border:1px solid #E1E1E1;
+        margin: 0 auto;
+        border-top: none;
+        font-size: 15px;
+    }
+    .terms-h1{
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 微软雅黑;
+        color: #333;
+        margin-bottom: 35px;
+    }
+    .terms-div:nth-of-type(1) > h1{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;
+        margin-bottom: 51px;
+    }
+    .terms-p{
+        font-size: 16px;
+        font-family: 微软雅黑;
+        color: #595959;
+        margin-bottom: 35px;
+        line-height: 1.8;
+    }
+
+    .legal-div:nth-of-type(1) > p{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;
+        margin-bottom: 55px;
+    }
+    .legal-div{
+        font-size: 16px;
+        font-family: 微软雅黑;
+        color: #595959;
+        margin-bottom: 55px;
+        line-height: 1.8;
+    }
+
+
+    .dis-div:nth-of-type(1) > p{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;
+        margin-bottom: 55px;
+    }
+    .dis-div{
+        font-size: 16px;
+        font-family: 微软雅黑;
+        color: #595959;
+        margin-bottom: 55px;
+        line-height: 1.8;
+    }
+    .dis-span{
+        font-weight: 700;
+        margin-right: 5px;
+    }
+
+    .honor-divO{
+        width: 890px;
+        padding: 67px 50px;
+        box-sizing: border-box;
+        border:1px solid #E1E1E1;
+        margin: 0 auto;
+        border-top: none;
+        font-size: 15px;
+        overflow: hidden;
+    }
+    .honor-p{
+        width: 363px;
+        height: 58px;
+        line-height: 58px;
+        font-family: 微软雅黑;
+        border:1px solid #e2e2e2;
+        color: #494949;
+        float: left;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .honor-pF{
+        margin-right: 50px;
+    }
+    .honor-div{
+        width: 245px;
+        height: 175px;
+        border:1px solid #e2e2e2;
+        float: left;
+        margin-right: 20px;
+        padding: 6px;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    .honor-div:nth-of-type(3){
+        margin-right: 0px;
+    }
+    .honor-img{
+        width: 233px;
+        height: 161px;
+    }
 }
 @media only screen and (max-width: 993px){
     .Zyh{
@@ -747,4 +858,105 @@ a:active {color: #950304;}
         display: none;
     }
     /*onesecond结束*/
+    .divO{
+        width: 85%;
+        box-sizing: border-box;
+        border:1px solid #E1E1E1;
+        margin: 0 auto;
+        border-top: none;
+        font-size: 15px;
+    }
+    .terms-h1{
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 微软雅黑;
+        color: #333;
+        margin-bottom: 35px;
+    }
+    .terms-div:nth-of-type(1) > h1{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;
+        margin-bottom: 51px;
+    }
+    .terms-p{
+        font-size: 16px;
+        font-family: 微软雅黑;
+        color: #595959;
+        margin-bottom: 35px;
+        line-height: 1.8;
+    }
+
+    .legal-div:nth-of-type(1) > p{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;
+        margin-bottom: 55px;
+    }
+    .legal-div{
+        font-size: 16px;
+        font-family: 微软雅黑;
+        color: #595959;
+        margin-bottom: 55px;
+        line-height: 1.8;
+    }
+
+
+    .dis-div:nth-of-type(1) > p{
+        font-family: 微软雅黑;
+        font-size: 32px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;
+        margin-bottom: 55px;
+    }
+    .dis-div{
+        font-size: 16px;
+        font-family: 微软雅黑;
+        color: #595959;
+        margin-bottom: 55px;
+        line-height: 1.8;
+    }
+    .dis-span{
+        font-weight: 700;
+        margin-right: 5px;
+    }
+
+    .honor-divO{
+        width: 85%;
+        border:1px solid #E1E1E1;
+        margin: 0 auto;
+        border-top: none;
+        font-size: 15px;
+        overflow: hidden;
+    }
+    .honor-p{
+        width: 85%;
+        margin: 0 auto;
+        height: 58px;
+        line-height: 58px;
+        font-family: 微软雅黑;
+        border:1px solid #e2e2e2;
+        color: #494949;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .honor-div{
+        width: 85%;
+        border:1px solid #e2e2e2;
+        padding: 6px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .honor-img{
+        width: 100%;
+        display: inline-block;
+    }
 }
+
+

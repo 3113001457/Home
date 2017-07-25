@@ -71,6 +71,7 @@ class App extends Component {
       			header_logo[0].style.marginLeft="-60px";
 	        publick_header[0].style.marginTop="0";
 	        publick_header[0].style.height="72px";
+              publick_header[0].style.position="relative";
           	falgs[0].style.top="20px";
           }else if(w>992){
           	  header_logo[0].style.position="static";

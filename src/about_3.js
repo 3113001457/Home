@@ -33,7 +33,6 @@ class About_3 extends Component{
                     <li><p><Link to="/New">新闻</Link></p></li>
                </ul>
                <div>
-                    <div>法律声明</div>
                     <Route exact path="/Company_introduction" component={Company_introduction}/>
                     <Route exact path="/Terms_of_service" component={Terms_of_service}/>
                     <Route exact path="/Legal_notice" component={Legal_notice}/>
