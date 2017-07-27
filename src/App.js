@@ -109,8 +109,6 @@ class App extends Component {
               <ul id="div" className="publick_header clear">
                 <div className="header_logo"><img src={logo} alt=""/></div>
                 <div className="falgs" onClick={this.falseclick}><img src={gang} alt=""/></div>
-                <div className="header_logo"></div>
-                <div className="falgs" onClick={this.falseclick.bind(this)}></div>
                 <div className="box">
                   <li onClick={this.click}><Link to="/">首页</Link></li>
                   <li onClick={this.click}><Link to="/Template">模板</Link></li>
