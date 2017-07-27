@@ -106,7 +106,7 @@ class Sy_Contain extends Component {
     }
     componentDidUpdate(){
         var sy_Con_h2=document.getElementById('sy_Con_h2');
-        var sy_Con=document.getElementById('sy_Con');
+        this.sy_Con=document.getElementById('sy_Con');
         function addEvent(obj,type,fn){
             if(obj.attachEvent){
                 obj.attachEvent('on'+type,function(){
@@ -118,10 +118,11 @@ class Sy_Contain extends Component {
         }
         addEvent(window,'scroll',function(){
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            if(scrollTop+window.screen.height>=sy_Con.offsetTop+200&&scrollTop+window.screen.height< sy_Con.offsetTop+500){
+            console.log(this.sy_Con)
+            if(scrollTop+window.screen.height>=this.sy_Con.offsetTop+200&&scrollTop+window.screen.height< this.sy_Con.offsetTop+500){
                 sy_Con_h2.style.transform='scale(1)';
             }
-        });
+        }.bind(this));
     }
     render() {
         if (this.state.Json) {

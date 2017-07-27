@@ -44,7 +44,7 @@ class Disclaimer extends Component{
         };
         Ajax({
             type: 'get',
-            url: 'http://localhost:8282/disclaimers/disclaimer',
+            url: 'http://47.92.37.168:8282/disclaimers/disclaimer',
             success:  (da) => {
                 let Json = JSON.parse(da);
                 // console.log(Json);

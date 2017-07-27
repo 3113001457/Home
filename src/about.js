@@ -28,43 +28,34 @@ import {
 
 
 
-class About extends Component{
+const About=({match})=>(
+          <div>
+             <div className="wjt_nav">
+                <Route path={`${match.url}/Company_introduction`} component={Company_introduction}/>
+                <Route path={`${match.url}/Terms_of_service`} component={Terms_of_service}/>
+                <Route path={`${match.url}/Legal_notice`} component={Legal_notice}/>
+                <Route path={`${match.url}/Disclaimer`} component={Disclaimer}/>
+                <Route path={`${match.url}/Adequate_service`} component={Adequate_service}/>
+                <Route path={`${match.url}/Honor_and_qualification`} component={Honor_and_qualification}/>
+                <Route path={`${match.url}/Contact_me`} component={Contact_me}/>
+                <Route path={`${match.url}/New`} component={New}/>
+                 <ul id="box">
+                 <li>
+                     <p>公司信息</p>
+                     <ul>
+                         <Link to={`${match.url}/Company_introduction`}><li><span></span>公司介绍</li></Link>
+                         <Link to={`${match.url}/Terms_of_service`}><li><span></span>服务条款</li></Link>
+                         <Link to={`${match.url}/Legal_notice`}><li><span></span>法律声明</li></Link>
+                         <Link to={`${match.url}/Disclaimer`}><li><span></span>免责声明</li></Link>
+                         <Link to={`${match.url}/Adequate_service`}><li><span></span>起飞页可接受服务</li></Link>
+                     </ul>
+                 </li>
+                 <Link to={`${match.url}/Honor_and_qualification`}><li><p><span></span>荣誉资质</p></li></Link>
+                 <Link to={`${match.url}/Contact_me`}><li><p><span></span>联系客服</p></li></Link>
+                 <Link to={`${match.url}/New`}><li><p><span></span>新闻</p></li></Link>
+             </ul>
+             </div>
 
-  render(){
-        return(<Router>
-            <div>
-               <div className="wjt_nav">
-                  <Route exact path="/Company_introduction" component={Company_introduction}/>
-                  <Route exact path="/Terms_of_service" component={Terms_of_service}/>
-                  <Route exact path="/Legal_notice" component={Legal_notice}/>
-                  <Route exact path="/Disclaimer" component={Disclaimer}/>
-                  <Route exact path="/Adequate_service" component={Adequate_service}/>
-                  <Route exact path="/Honor_and_qualification" component={Honor_and_qualification}/>
-                  <Route exact path="/Contact_me" component={Contact_me}/>
-                  <Route exact path="/New" component={New}/>
-                   <ul id="box">
-                   <li>
-                       <p>公司信息</p>
-                       <ul>
-                           <Link to="/Company_introduction"><li><span></span>公司介绍</li></Link>
-                           <Link to="/Terms_of_service"><li><span></span>服务条款</li></Link>
-                           <Link to="/Legal_notice"><li><span></span>法律声明</li></Link>
-                           <Link to="/Disclaimer"><li><span></span>免责声明</li></Link>
-                           <Link to="/Adequate_service"><li><span></span>起飞页可接受服务</li></Link>
-                       </ul>
-                   </li>
-                   <Link to="/Honor_and_qualification"><li><p><span></span>荣誉资质</p></li></Link>
-                   <Link to="/Contact_me"><li><p><span></span>联系客服</p></li></Link>
-                   <Link to="/New"><li><p><span></span>新闻</p></li></Link>
-               </ul>
-               </div>
-
-           </div>
-
-        </Router>)
-
-    }
-
-}
-
+         </div>
+)
 export default About;

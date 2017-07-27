@@ -40,7 +40,7 @@ class Adequate_service extends Component{
 	}
 	componentDidMount(){
 		Ajax({
-			url:"http://localhost:7001/wabout2/about2",
+			url:"http://47.92.37.168:8282/wabout2/about2",
 			type:"get",
 			success:function(data){
 				var date=eval("("+data+")");
@@ -52,7 +52,7 @@ class Adequate_service extends Component{
 			}
 		})
 		Ajax({
-			url:"http://localhost:7001/wabout3/about3",
+			url:"http://47.92.37.168:8282/wabout3/about3",
 			type:"get",
 			success:function(data){
 				var date=eval("("+data+")");

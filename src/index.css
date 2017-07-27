@@ -21,7 +21,10 @@ body,html{
 .header_logo {
     width: 120px;
     height: 40px;
-    background: #000;
+}
+.header_logo > img{
+	width: 180px;
+	height: 40px;
 }
 .falgs{
 	position: fixed;
@@ -29,7 +32,10 @@ body,html{
 	right: 15px;
 	width: 30px;
 	height: 30px;
-	background: #fff;
+}
+.falgs > img{
+	width: 20px;
+	height: 20px;
 }
 /*段超群*/
 .D_wrap {
@@ -293,8 +299,8 @@ body,html{
 @media only screen and (min-width: 992px) {
     .wjt_nav{overflow: hidden;width: 12rem;margin: 0 auto;border: 1px solid #F0F0F0;box-sizing: border-box;}
      .wjt_nav>ul{width: 2.97rem;height:100%;float: right;}
-     .wjt_nav>ul>li>ul li{height: 0.52rem;line-height: 0.62rem;text-indent:0.4rem;font-size: 15px;}
-     .wjt_nav>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 15px;line-height: 0.62rem;}
+     .wjt_nav>ul>li>ul li{height: 0.52rem;line-height: 0.62rem;text-indent:0.4rem;font-size: 0.15rem;}
+     .wjt_nav>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 0.15rem;line-height: 0.62rem;}
     .wjt_xg{width: 8.72rem;float: left;}
     .wjt_nav>ul li>p:hover{background: #F0F0F0;cursor: pointer;}
     .wjt_nav ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}
@@ -327,9 +333,9 @@ body,html{
 /*段超群*/
 @media only screen and (max-width: 992px) {
     .wjt_nav{overflow: hidden;width: 12rem;margin: 0 auto;border: 1px solid #F0F0F0;box-sizing: border-box;}
-     .wjt_nav>ul{width: 8.97rem;height:auto;clear:both;padding:  0 0 20px 50px}
-     .wjt_nav>ul>li>ul li{height: 0.52rem;line-height: 0.52rem;text-indent:0.4rem;font-size: 15px;}
-     .wjt_nav>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 15px;line-height: 0.72rem    ;}
+     .wjt_nav>ul{width: 8.97rem;height:auto;clear:both;padding:  0 0 20px 0}
+     .wjt_nav>ul>li>ul li{height: 0.52rem;line-height: 0.52rem;text-indent:0.4rem;font-size: 0.15rem;}
+     .wjt_nav>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 0.15rem;line-height: 0.72rem    ;}
     .wjt_xg{width: 8.72rem;float: left;}
     .wjt_nav>ul li>p:hover{background: #F0F0F0;cursor: pointer;}
     .wjt_nav ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}

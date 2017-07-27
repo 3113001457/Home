@@ -3,10 +3,9 @@ import Home from './Home'
 import Template from './Template'
 import Meal from './Meal'
 import About from './about'
-import About_2 from './about_2'
-import About_3 from './about_3'
-import About_4 from './about_4'
-import About_5 from './about_5'
+import logo from './images/鲜橙logo_03.png'
+import cha from './images/cha.png'
+import gang from './images/gang.png'
 import {
   BrowserRouter as Router,
   Route,
@@ -71,7 +70,6 @@ class App extends Component {
       			header_logo[0].style.marginLeft="-60px";
 	        publick_header[0].style.marginTop="0";
 	        publick_header[0].style.height="72px";
-              publick_header[0].style.position="relative";
           	falgs[0].style.top="20px";
           }else if(w>992){
           	  header_logo[0].style.position="static";
@@ -107,8 +105,8 @@ class App extends Component {
           <Router>
             <div>
               <ul id="div" className="publick_header clear">
-                <div className="header_logo"></div>
-                <div className="falgs" onClick={this.falseclick}></div>
+                <div className="header_logo"><img src={logo} alt=""/></div>
+                <div className="falgs" onClick={this.falseclick}><img src={gang} alt=""/></div>
                 <div className="box">
                   <li onClick={this.click}><Link to="/">首页</Link></li>
                   <li onClick={this.click}><Link to="/Template">模板</Link></li>
@@ -119,11 +117,11 @@ class App extends Component {
                         <div className="H_listC clear">
                           <div className="aboutL clear">
                             <li><Link to="" className="list_O">公司信息</Link></li>
-                            <li><Link to="/About">公司介绍</Link></li>
-                            <li><Link to="/About_2">服务条款</Link></li>
-                            <li><Link to="/About_3">法律声明</Link></li>
-                            <li><Link to="/About_4">可接受服务</Link></li>
-                            <li><Link to="/About_5">免责声明</Link></li>
+                            <li><Link to="/About/Company_introduction">公司介绍</Link></li>
+                            <li><Link to="/About/Terms_of_service">服务条款</Link></li>
+                            <li><Link to="/About/Legal_notice">法律声明</Link></li>
+                            <li><Link to="/About/Adequate_service">可接受服务</Link></li>
+                            <li><Link to="/About/Disclaimer">免责声明</Link></li>
                           </div>
                           <div className="aboutC clear">
                             <li><a href="" className="list_O">荣誉资质</a></li>
@@ -162,10 +160,6 @@ class App extends Component {
               <Route path="/Template" component={Template}/>
               <Route path="/Meal" component={Meal}/>
               <Route path="/About" component={About}/>
-              <Route path="/About_2" component={About_2}/>
-              <Route path="/About_3" component={About_3}/>
-              <Route path="/About_4" component={About_4}/>
-              <Route path="/About_5" component={About_5}/>
               <div className="publick-footer">
                 <div className="h_footer">
                   <div className="line_t"></div>

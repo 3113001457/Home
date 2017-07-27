@@ -41,7 +41,7 @@ class Company_introduction extends Component{
 	}
 	componentDidMount(){
 		Ajax({
-			url:"http://localhost:7001/wabout/about",
+			url:"http://47.92.37.168:8282/wabout/about",
 			type:"get",
 			success:function(data){
 				var date=eval("("+data+")");
