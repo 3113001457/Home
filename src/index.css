@@ -39,152 +39,390 @@ body,html{
 }
 /*段超群*/
 .D_wrap {
-	padding: 0 0.4rem 0.3rem;
-	width: 100%;
-	box-sizing: border-box;
-	background: #F2F2F2;
-	overflow: hidden
+    padding: 0 0.4rem 0.3rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: #F2F2F2;
+    overflow: hidden
 }
 .D_temTit {
-	width: 7.16rem;
-	height: 0.66rem;
-	margin: 0.25rem auto 0 auto;
-	text-align: center;
-	font-size: 0.3rem;
+    width: 7.16rem;
+    height: 0.66rem;
+    margin: 0.25rem auto 0 auto;
+    text-align: center;
+    font-size: 0.4rem;
 }
 .D_tembut {
-	font-size: 14px;
-	text-align: center;
-	color: #666;
+    font-size: 0.14rem;
+    text-align: center;
+    color: #666;
 }
 .D_title {
-	padding-bottom: 0.24rem;
-	border-bottom: 1px solid #ccc
+    padding-bottom: 0.24rem;
+    border-bottom: 1px solid #ccc
 }
 .D_search{
-	border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 .D_search  input{
-	padding: 0.1rem 0.1rem;
-	border-radius: 3px;
-	border:1px solid #e0e0e0;
-	font-size: 0.14rem;
-	box-sizing: border-box;
+    padding: 0.1rem 0.1rem;
+    border-radius: 3px;
+    border:1px solid #e0e0e0;
+    font-size: 0.14rem;
+    box-sizing: border-box;
 }
 .D_search a:hover{
-	color: #0094CC;
+    color: #0094CC;
 }
 .D_search{
-	padding: 0.15rem 0.05rem;
+    padding: 0.15rem 0.05rem;
 }
 .D_container{
-	margin-top: 0.3rem;
-	border-right: 1px solid #ccc;
-	float: left;
-	box-sizing: border-box;
+    margin-top: 0.3rem;
+    border-right: 1px solid #ccc;
+    float: left;
+    box-sizing: border-box;
 }
 .D_project{
-	float: left;
-	box-sizing: border-box;
+    float: left;
+    box-sizing: border-box;
 }
 .D_sidelist{
-	margin-top: 0.3rem;
+    margin-top: 0.3rem;
 }
 .D_stychange{
-	font-size: 0.14rem;
-	padding: 0.1rem 0.05rem;
-	transition: .5s;
-	background: #ddd;
-	border-radius: 0.05rem;
-	color: #0088C2;
-	cursor: pointer;
+    font-size: 0.14rem;
+    padding: 0.1rem 0.05rem;
+    transition: .5s;
+    background: #ddd;
+    border-radius: 0.05rem;
+    color: #0088C2;
+    cursor: pointer;
 }
 .D_stychange_b{
-	font-size:  0.14rem;
-	padding: 0.1rem 0.05rem;
-	transition: .5s;
-	cursor: pointer;
+    font-size:  0.14rem;
+    padding: 0.1rem 0.05rem;
+    transition: .5s;
+    cursor: pointer;
 }
 .D_sidelist li span{
-	float: right;
+    float: right;
 }
 .D_pro_list{
-	padding: 0.2rem 0.1rem;
+    padding: 0.2rem 0.1rem;
+    font-size: 0.14rem;
 }
 .D_selist{
-	float: left;
-	padding: 0.1rem;
-	font-size: 13px;
-	border: 1px solid #ccc;
-	margin: 0.1rem 0 0 0.1rem;
-	border-radius: 5px;
-	background: #0088C2;
-	color: white;
-	transition: .5s;
-	cursor: pointer;
+    float: left;
+    padding: 0.1rem;
+    font-size: 0.13rem;
+    border: 1px solid #ccc;
+    margin: 0.1rem 0 0 0.1rem;
+    border-radius: 5px;
+    background: #0088C2;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
 }
 .D_selist_b{
-	float: left;
-	padding: 0.1rem;
-	font-size: 13px;
-	border: 1px solid #ccc;
-	margin: 0.1rem 0 0 0.1rem;
-	border-radius: 5px;
-	transition: .5s;
-	cursor: pointer;
+    float: left;
+    padding: 0.1rem;
+    font-size: 0.13rem;
+    border: 1px solid #ccc;
+    margin: 0.1rem 0 0 0.1rem;
+    border-radius: 5px;
+    transition: .5s;
+    cursor: pointer;
 }
-.D_allcon li:hover{
-	box-shadow: 0 0.05rem 0.1rem #ccc;
-}
+
 .D_allcon{
-	padding-bottom: 0.3rem;
-	margin-top: 0.2rem;
+    padding-bottom: 0.3rem;
+    margin-top: 0.2rem;
 }
 .D_allcon li{
-	float: left;
-	margin-right: 0.15rem;
-	margin-left: 0.3rem;
-	margin-bottom: 0.2rem;
-	transition: .5s;
-	box-shadow: 0 0.05rem 0.05rem #F2F2F2;
+    float: left;
+    margin-right: 0.15rem;
+    margin-left: 0.3rem;
+    margin-bottom: 0.25rem;
+    transition: .5s;
+    box-shadow: 0 0.05rem 0.05rem #F2F2F2;
+    position: relative;
+    z-index: 1;
+    background: #F2F2F2;
 }
 .D_allcon li img{
     display: block;
-	width: 100%;
+    width: 100%;
 }
-.D_allcon li div{
-	background: white;
-	width: 100%;
-	height: 1.4rem;
-	margin-top: 0.3rem;
-	padding: 0.1rem;
-	box-sizing: border-box;
+.D_allcon li div:nth-child(2){
+    background: white;
+    width: 100%;
+    height: 1.6rem;
+    padding: 0.3rem 0.1rem 0.1rem 0.1rem;
+    box-sizing: border-box;
+}
+.shadow{
+    background: #F2F2F2;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transform-origin: 0 100%;
+    transition: .3s;
+}
+.shadow_f{
+    background: #F2F2F2;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    transform-origin: 50% 50%;
+
+}
+.D_allcon li:hover{
+    transform: scale(1.03);
+}
+.D_allcon li:hover .shadow{
+    background: rgba(186,1,1,.3);;
+    transform: rotate(3deg) ;
+    transition: .5s;
+}
+.D_allcon li:hover .shadow_f{
+    background: rgba(15,197,66,.3);
+    transform: rotate(-5deg);
+    transition: .5s;
 }
 .D_conTit{
-	font-size: 14px;
+    font-size: 14px;
 }
 .D_conhref{
-	width: 100%;
-	margin-top: 0.4rem;
-	padding-top: 0.15rem;
-	border-top: 1px dotted #dedede;
+    width: 100%;
+    margin-top: 0.3rem;
+    padding-top: 0.15rem;
+    border-top: 1px dotted #dedede;
 }
 .D_conhref button{
-	width:0.7rem;
-	height:0.3rem;
-	border:1px solid #ccc;
-	float: right;
-	color: white;
-	background: black;
+    width:0.8rem;
+    padding: 0.05rem;
+    border:1px solid #ccc;
+    float: right;
+    color: white;
+    background: black;
 }
 .D_conhref a{
-	color: white;
-	text-decoration: none;
-	display: block;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.D_conhref a:visited{
+    color: white;
 }
 .D_loading{
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+}
+.D_searchlist li{
+    width: 1.6rem;
+    padding: 0.05rem;
+    border-right:1px solid #ccc;
+    box-sizing: border-box;
+    transition: .5s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.D_searchlist li:hover{
+    color: #0088C2;
+    box-shadow: 0 0 5px #ccc;
+}
+.D_sidebarWrap{
+    position: fixed;
+    z-index: 9999999999;
+    top:50vh;
+    right: -90px;
+    background: #ccc;
+}
+.D_sidebarWrap li{
+    width: 140px;
+    height:50px;
+    padding: 10px 0;
+    position: relative;
+    right: 0;
+    background: #ccc;
+    transition: .7s;
+    border-bottom: 1px solid #aaa;
+}
+.D_sidebarWrap li:nth-child(1):hover{
+    right: 90px;
+}
+.D_sidebarWrap li:nth-child(2):hover{
+    right: 90px;
+}
+.D_sidebarWrap li:nth-child(1) div{
+    width: 60%;
+    height: 30px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    font-family: 微软雅黑;
+}
+.D_sidebarWrap li:nth-child(2) div{
+    width: 60%;
+    height: 30px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: 微软雅黑;
+}
+.D_sidebarWrap li:nth-child(3) div{
+    width: 150px;
+    height:150px;
+    background: #ccc;
+    position: relative;
+    left: 0;
+    text-align: center;
+    line-height: 150px;
+    opacity: 0;
+    transition: 1s;
+
+}
+.D_sidebarWrap li:nth-child(3):hover div{
+    opacity: 1;
+    left: -180px;
+}
+.D_sidebarWrap li a:hover{
+    color: black;
+}
+.D_sidebarWrap li:nth-child(1) a p{
+    width: 30px;
+    height: 30px;
+    margin:0 10px;
+    float: left;
+    background: url("images/sidebar.png") no-repeat  0 -40px;
+}
+.D_sidebarWrap li:nth-child(2) a p{
+    width: 30px;
+    height: 30px;
+    margin:0 10px;
+    float: left;
+    background: url("images/sidebar.png") no-repeat  0 0;
+}
+.D_sidebarWrap li:nth-child(3) a p{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    float: left;
+    background: url("images/sidebar.png") no-repeat  0 -80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+    .D_container{
+        width: 15%;
+    }
+    .D_project{
+        width: 85%;
+    }
+    .D_search  input{
+        width: 1.6rem;
+    }
+    .D_stychange{
+        width: 1.8rem;
+    }
+    .D_stychange_b{
+        width: 1.6rem;
+    }
+    .D_allcon li{
+        width: 3rem;
+    }
+    .D_search span{
+        margin-top: 0.15rem;
+        margin-left: -0.25rem;
+    }
+}
+/*段超群*/
+@media only screen and (max-width: 992px) {
+    .D_sidebarWrap{
+        display: none;
+    }
+    .D_temTit {
+
+        font-size: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    .D_container{
+        width: 100%;
+    }
+    .D_project{
+        width: 100%;
+    }
+    .D_search  input{
+        width: 99.9%;
+    }
+    .D_stychange{
+        width: 99%;
+    }
+    .D_stychange_b{
+        width: 95%;
+    }
+    .D_allcon li{
+        width: 5.75rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.2rem;
+    }
+    .D_search span{
+        margin-top: 0.15rem;
+        margin-left: -0.3rem;
+    }
+    .D_searchlist li{
+        width: 100%;text-align: center;
+    }
+}
+/*段超群*/
+@media only screen and (max-width: 640px) {
+
+    .D_allcon li{
+        width: 12rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.4rem;
+    }
+    .D_search span{
+        margin-top: 0.15rem;
+        margin-left: -0.8rem;
+    }
+    .D_conhref button{
+        width:1.5rem;
+    }
 }
 /*侯宇杰*/
 /*首页尾部*/
@@ -235,6 +473,7 @@ body,html{
      border-top: 0.01rem solid #dbdbdb;
 }
 @media only screen and (min-width: 992px) {
+
 	.publick_panel_t_r {
 	     float: left;
 	}
@@ -252,7 +491,129 @@ body,html{
 	.publick_panel_t_r li p {
 	    height: 30px;
 	}
+	.header_logo{
+		
+	}
+    #sy_New{
+        width:8rem;
+        float: left;
+        margin-left:0.3rem;
+    }
+    #sy_New ul li{
+        width:100%;
+        position: relative;
+        padding:0.3rem 0 0.5rem 0;
+        font-family: 微软雅黑;
+        border-bottom: 0.01rem solid #CCC;
+    }
+    #sy_New ul li h1{
+        width:100%;
+        height:0.30rem;font-size: 0.30rem;font-weight: bold;
 
+    }
+    #sy_New ul li b{
+
+        position: absolute;
+        font-size:0.16rem;
+        right:0.20rem;
+        top:0.27rem;font-weight: normal;
+    }
+    #sy_New ul li h2{
+        width:100%;
+        height:0.16rem;font-size: 0.16rem;
+        margin-top:0.10rem;
+    }
+    #sy_New ul li div {
+        width:100%;
+        height:0.50rem;
+        overflow: hidden;
+        margin-top:0.10rem;
+    }
+    #sy_New ul li div img{
+        width:0.50rem;
+        height:0.50rem;
+        margin-right:0.20rem;
+        float: left;
+    }
+    #sy_New ul li div div{
+        width:6rem;
+        height:0.3rem;
+        line-height:0.3rem;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    #sy_New ul li a{
+        text-align: center;
+        position: absolute;
+        cursor: pointer;
+        display: block;
+        font-size: 0.12rem;
+        padding:0.05rem 0.09rem;
+        right:0.20rem;
+        border: 0.01rem solid #ccc;
+
+    }
+    .sy_touch{
+        width:0vw;
+        margin-left:-5.5vw;
+        height:0vh;
+        position: fixed;
+        z-index:1;
+        top:11vh;transition: 1s;
+        overflow: auto;
+        font-family: 微软雅黑;
+        background-color: #EFEFEF;
+        box-sizing: border-box;
+        padding-right:0.2rem;
+
+    }
+
+    .glyphicon{
+        position: absolute;
+        top:0.1rem;right: 0;
+        cursor: pointer;
+        width:0.5rem;
+        height:0.5rem;
+    }
+    .sy_touClo:before{
+
+        font-size: 0.3rem;
+    }
+    .sy_touch > h1{
+        font-size: 0.3rem;font-weight: bold;
+        margin:0.2rem auto;
+        text-align: center;
+        margin-left:0.2rem;
+    }
+    .sy_touch > span{
+        font-size: 0.16rem;
+        margin:0.20rem auto;
+        display: block;
+        margin-left:0.20rem;
+    }
+    .sy_touch > div{
+        font-size: 0.16rem;
+        margin:0.20rem auto;
+        margin-left:0.20rem;
+
+    }
+    .sy_touch > div img{
+        width:3rem;
+        height:2rem;
+        margin:0 auto;
+        margin-bottom:0.1rem;
+    }
+    .sy_touch > div div{
+        line-height:0.2rem;
+    }
+    .sy_touch > b{
+        display: block;
+        text-align: right;
+        font-size: 0.16rem;
+        margin-left:0.2rem;
+    }
 }
 @media only screen and (max-width: 992px) {
 	.publick_panel_t_r{
@@ -268,10 +629,29 @@ body,html{
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		margin-top: -0.20rem;
-		margin-left: -0.60rem;
+		margin-top: -20px;
+		margin-left: -60px;
 	}
-
+	.box,.aboutList{
+		display: none;
+	}
+	.box{
+		height: 10rem;
+		background: #efefef;
+	}
+	.box>li{
+		width: 12.92rem;
+		height: 1rem;
+		line-height: 1rem;
+		font-size: .3rem;
+		text-align: center;
+	}
+	.box>li>a:hover{
+		color: #3cf;
+	}
+	.box>li>a:hover{
+		color: #3cf;
+	}
 
 }
 /*段超群*/
@@ -284,28 +664,6 @@ body,html{
     .wjt_nav>ul li>p:hover{background: #F0F0F0;cursor: pointer;}
     .wjt_nav ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}
     .wjt_nav>ul>li>ul li:hover{background: #F0F0F0;cursor: pointer;}
-	.D_container{
-		width: 15%;	
-	}
-	.D_project{
-		width: 85%;
-	}
-	.D_search  input{
-		width: 1.6rem;
-	}
-	.D_stychange{
-		width: 1.8rem;
-	}
-	.D_stychange_b{
-		width: 1.6rem;
-	}
-	.D_allcon li{
-		width: 3rem;
-	}
-	.D_search span{
-		margin-top: 0.15rem;
-		margin-left: -0.25rem;
-	}
      
 }
 
@@ -320,39 +678,8 @@ body,html{
     .wjt_nav ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}
     .wjt_nav>ul>li>ul li:hover{background: #F0F0F0;cursor: pointer;}
     .wjt_nav ul li{margin-top: 3.5px}
-	.D_container{
-		width: 100%;	
-	}
-	.D_project{
-		width: 100%;
-	}
-	.D_search  input{
-		width: 99.9%;
-	}
-	.D_stychange{
-		width: 99%;
-	}
-	.D_stychange_b{
-		width: 40%;
-	}
-	.D_allcon li{
-		width: 5.9rem;
-	}
-	.D_search span{
-		margin-top: 0.15rem;
-		margin-left: -0.3rem;
-	}
 }
 /*段超群*/
-@media only screen and (max-width: 640px) {
-	.D_allcon li{
-		width: 12rem;
-	}
-	.D_search span{
-		margin-top: 0.15rem;
-		margin-left: -0.8rem;
-	}
-}
 @media only screen and (min-width: 992px) {
 	.falgs{
 		display: none;
@@ -844,127 +1171,6 @@ body,html{
         width:100%;
         height:100%;
     }
-	#sy_New{
-		width:8rem;
-		float: left;
-        margin-left:0.3rem;
-	}
-	#sy_New ul li{
-		width:100%;
-		position: relative;
-		padding:0.3rem 0 0.5rem 0;
-		font-family: 微软雅黑;
-		border-bottom: 0.01rem solid #CCC;
-	}
-	#sy_New ul li h1{
-		width:100%;
-		height:0.30rem;font-size: 0.30rem;font-weight: bold;
-
-	}
-	#sy_New ul li b{
-
-		position: absolute;
-		font-size:0.16rem;
-		right:0.20rem;
-		top:0.27rem;font-weight: normal;
-	}
-	#sy_New ul li h2{
-		width:100%;
-		height:0.16rem;font-size: 0.16rem;
-		margin-top:0.10rem;
-	}
-	#sy_New ul li div {
-		width:100%;
-		height:0.50rem;
-		overflow: hidden;
-		margin-top:0.10rem;
-	}
-	#sy_New ul li div img{
-		width:0.50rem;
-		height:0.50rem;
-		margin-right:0.20rem;
-		float: left;
-	}
-	#sy_New ul li div div{
-		width:6rem;
-		height:0.3rem;
-		line-height:0.3rem;
-		float: left;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	#sy_New ul li a{
-		text-align: center;
-		position: absolute;
-		cursor: pointer;
-		display: block;
-		font-size: 0.12rem;
-		padding:0.05rem 0.09rem;
-		right:0.20rem;
-		border: 0.01rem solid #ccc;
-
-	}
-	.sy_touch{
-		width:0vw;
-		margin-left:-5.5vw;
-		height:0vh;
-		position: fixed;
-		z-index:1;
-		top:11vh;transition: 1s;
-		overflow: auto;
-        font-family: 微软雅黑;
-        background-color: #CCC;
-		box-sizing: border-box;
-		padding-right:0.2rem;
-
-	}
-
-	.glyphicon{
-		position: absolute;
-		top:0.1rem;right: 0;
-		cursor: pointer;
-		width:0.5rem;
-		height:0.5rem;
-	}
-	.sy_touClo:before{
-
-		font-size: 0.3rem;
-	}
-    .sy_touch > h1{
-        font-size: 0.3rem;font-weight: bold;
-        margin:0.2rem auto;
-        text-align: center;
-		margin-left:0.2rem;
-    }
-    .sy_touch > span{
-        font-size: 0.16rem;
-        margin:0.20rem auto;
-        display: block;
-		margin-left:0.20rem;
-    }
-    .sy_touch > div{
-        font-size: 0.16rem;
-        margin:0.20rem auto;
-		margin-left:0.20rem;
-
-    }
-    .sy_touch > div img{
-		width:3rem;
-		height:2rem;
-        margin:0 auto;
-        margin-bottom:0.1rem;
-    }
-    .sy_touch > div div{
-        line-height:0.2rem;
-    }
-	.sy_touch > b{
-		display: block;
-		text-align: right;
-		font-size: 0.16rem;
-		margin-left:0.2rem;
-	}
-
 }
 @media only screen and (max-width: 992px) and (min-width: 640px) {
     .sy_Con,.sy_wrap{
@@ -1088,128 +1294,127 @@ body,html{
         height: 100%;
         margin: 0 auto;
     }
-	#sy_New{
-		width:100%;
-		float: left;
-		margin-left:0.3rem;
-		padding-right:0.6rem;box-sizing: border-box;
-	}
-	#sy_New ul li{
-		width:100%;
-		position: relative;
-		padding:0.3rem 0 0.7rem 0;
-		font-family: 微软雅黑;
-		border-bottom: 0.01rem solid #CCC;
-	}
-	#sy_New ul li h1{
-		width:100%;
-		height:0.30rem;font-size: 0.30rem;font-weight: bold;
+    #sy_New{
+        width:100%;
+        float: left;
+        margin-left:0.3rem;
+        padding-right:0.6rem;box-sizing: border-box;
+    }
+    #sy_New ul li{
+        width:100%;
+        position: relative;
+        padding:0.3rem 0 0.7rem 0;
+        font-family: 微软雅黑;
+        border-bottom: 0.01rem solid #CCC;
+    }
+    #sy_New ul li h1{
+        width:100%;
+        height:0.30rem;font-size: 0.30rem;font-weight: bold;
 
-	}
-	#sy_New ul li b{
+    }
+    #sy_New ul li b{
 
-		position: absolute;
-		font-size:0.16rem;
-		right:0.20rem;
-		top:0.35rem;font-weight: normal;
-	}
-	#sy_New ul li h2{
-		width:100%;
-		height:0.16rem;font-size: 0.16rem;
-		margin-top:0.2rem;
-	}
-	#sy_New ul li div {
-		width:100%;
-		height:0.60rem;
-		overflow: hidden;
-		margin-top:0.3rem;
+        position: absolute;
+        font-size:0.16rem;
+        right:0.20rem;
+        top:0.35rem;font-weight: normal;
+    }
+    #sy_New ul li h2{
+        width:100%;
+        height:0.16rem;font-size: 0.16rem;
+        margin-top:0.2rem;
+    }
+    #sy_New ul li div {
+        width:100%;
+        height:0.60rem;
+        overflow: hidden;
+        margin-top:0.3rem;
 
-	}
-	#sy_New ul li div img{
-		width:0.50rem;
-		height:0.50rem;
-		margin-right:0.20rem;
-		float: left;
-	}
-	#sy_New ul li div div{
-		width:6rem;
-		height:0.3rem;
-		line-height:0.3rem;
-		float: left;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	#sy_New ul li a{
-		text-align: center;
-		position: absolute;
-		cursor: pointer;
-		display: block;
-		font-size: 0.12rem;
-		padding:0.05rem 0.09rem;
-		right:0.20rem;
-		border: 0.01rem solid #ccc;
+    }
+    #sy_New ul li div img{
+        width:0.50rem;
+        height:0.50rem;
+        margin-right:0.20rem;
+        float: left;
+    }
+    #sy_New ul li div div{
+        width:6rem;
+        height:0.3rem;
+        line-height:0.3rem;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    #sy_New ul li a{
+        text-align: center;
+        position: absolute;
+        cursor: pointer;
+        display: block;
+        font-size: 0.12rem;
+        padding:0.05rem 0.09rem;
+        right:0.20rem;
+        border: 0.01rem solid #ccc;
 
-	}
-	.sy_touch{
-		width:0vw;
-		margin-left:-6.2vw;
-		height:0vh;
-		position: fixed;
-		z-index:1;
-		top:11vh;transition: 1s;
-		overflow: auto;
-		font-family: 微软雅黑;
-		background-color: #CCC;
-		box-sizing: border-box;
-		padding-right:0.2rem;
+    }
+    .sy_touch{
+        width:0vw;
+        margin-left:-6.2vw;
+        height:0vh;
+        position: fixed;
+        z-index:1;
+        top:11vh;transition: 1s;
+        overflow: auto;
+        font-family: 微软雅黑;
+        background-color: #EFEFEF;
+        box-sizing: border-box;
+        padding-right:0.2rem;
 
-	}
+    }
 
-	.glyphicon{
-		position: absolute;
-		top:0.1rem;right: 0;
-		cursor: pointer;
-		width:0.5rem;
-		height:0.5rem;
-	}
-	.glyphicon:before{
+    .glyphicon{
+        position: absolute;
+        top:0.1rem;right: 0;
+        cursor: pointer;
+        width:0.5rem;
+        height:0.5rem;
+    }
+    .glyphicon:before{
 
-		font-size: 0.3rem;
-	}
-	.sy_touch > h1{
-		font-size: 0.3rem;font-weight: bold;
-		margin:0.2rem auto;
-		text-align: center;
-		margin-left:0.2rem;
-	}
-	.sy_touch > span{
-		font-size: 0.16rem;
-		margin:0.20rem auto;
-		display: block;
-		margin-left:0.20rem;
-	}
-	.sy_touch > div{
-		font-size: 0.16rem;
-		margin:0.20rem auto;
-		margin-left:0.20rem;
+        font-size: 0.3rem;
+    }
+    .sy_touch > h1{
+        font-size: 0.3rem;font-weight: bold;
+        margin:0.2rem auto;
+        text-align: center;
+        margin-left:0.2rem;
+    }
+    .sy_touch > span{
+        font-size: 0.16rem;
+        margin:0.20rem auto;
+        display: block;
+        margin-left:0.20rem;
+    }
+    .sy_touch > div{
+        font-size: 0.16rem;
+        margin:0.20rem auto;
+        margin-left:0.20rem;
 
-	}
-	.sy_touch > div img{
-		margin:0 auto;
-		margin-bottom:0.1rem;width:3rem;
-		height:2rem;
-	}
-	.sy_touch > div div{
-		line-height:0.32rem;
-	}
-	.sy_touch > b{
-		display: block;
-		text-align: right;
-		font-size: 0.16rem;
-		margin-left:0.2rem;
-	}
-	
+    }
+    .sy_touch > div img{
+        margin:0 auto;
+        margin-bottom:0.1rem;width:3rem;
+        height:2rem;
+    }
+    .sy_touch > div div{
+        line-height:0.32rem;
+    }
+    .sy_touch > b{
+        display: block;
+        text-align: right;
+        font-size: 0.16rem;
+        margin-left:0.2rem;
+    }
 }
 @media only screen and (max-width: 640px) {
     .sy_Con, .sy_wrap {
@@ -1335,131 +1540,130 @@ body,html{
         margin-top: 0.05rem;
         display: none;
     }
-	#sy_New{
-		width:100%;
-		float: left;
-		margin-left:0.3rem;
-		padding-right:0.6rem;box-sizing: border-box;
-		margin-bottom:0.4rem;
-	}
-	#sy_New ul li{
-		width:100%;
-		position: relative;
-		padding:0.2rem 0 1rem 0;
-		font-family: 微软雅黑;
-		border-bottom: 0.01rem solid #CCC;
-	}
-	#sy_New ul li h1{
-		width:100%;
-		height:0.30rem;font-size: 0.30rem;font-weight: bold;
+    #sy_New{
+        width:100%;
+        float: left;
+        margin-left:0.3rem;
+        padding-right:0.6rem;box-sizing: border-box;
+        margin-bottom:0.4rem;
+    }
+    #sy_New ul li{
+        width:100%;
+        position: relative;
+        padding:0.2rem 0 1rem 0;
+        font-family: 微软雅黑;
+        border-bottom: 0.01rem solid #CCC;
+    }
+    #sy_New ul li h1{
+        width:100%;
+        height:0.30rem;font-size: 0.30rem;font-weight: bold;
 
-	}
-	#sy_New ul li b{
+    }
+    #sy_New ul li b{
 
-		position: absolute;
-		font-size:0.16rem;
-		right:0.20rem;
-		top:0.35rem;font-weight: normal;
-	}
-	#sy_New ul li h2{
-		width:100%;
-		height:0.16rem;font-size: 0.16rem;
-		margin-top:0.2rem;
-	}
-	#sy_New ul li div {
-		width:100%;
-		height:0.80rem;
-		overflow: hidden;
-		margin-top:0.3rem;
+        position: absolute;
+        font-size:0.16rem;
+        right:0.20rem;
+        top:0.35rem;font-weight: normal;
+    }
+    #sy_New ul li h2{
+        width:100%;
+        height:0.16rem;font-size: 0.16rem;
+        margin-top:0.2rem;
+    }
+    #sy_New ul li div {
+        width:100%;
+        height:0.80rem;
+        overflow: hidden;
+        margin-top:0.3rem;
 
 
-	}
-	#sy_New ul li div img{
-		width:0.50rem;
-		height:0.50rem;
-		margin-right:0.20rem;
-		float: left;
-		margin-top:0.3rem;
-	}
-	#sy_New ul li div div{
-		width:6rem;
-		height:0.8rem;
-		line-height:0.55rem;
-		float: left;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		font-size: 0.12rem;
-	}
-	#sy_New ul li a{
-		text-align: center;
-		position: absolute;
-		cursor: pointer;
-		display: block;
-		font-size: 0.12rem;
-		padding:0.05rem 0.09rem;
-		right:0.20rem;
-		border: 0.01rem solid #ccc;
+    }
+    #sy_New ul li div img{
+        width:0.50rem;
+        height:0.50rem;
+        margin-right:0.20rem;
+        float: left;
+        margin-top:0.3rem;
+    }
+    #sy_New ul li div div{
+        width:6rem;
+        height:0.8rem;
+        line-height:0.55rem;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 0.12rem;
+    }
+    #sy_New ul li a{
+        text-align: center;
+        position: absolute;
+        cursor: pointer;
+        display: block;
+        font-size: 0.12rem;
+        padding:0.05rem 0.09rem;
+        right:0.20rem;
+        border: 0.01rem solid #ccc;
 
-	}
-	.sy_touch{
-		width:0vw;
-		margin-left:-7vw;
-		height:0vh;
-		position: fixed;
-		z-index:1;
-		top:12vh;transition: 1s;
-		overflow: auto;
-		font-family: 微软雅黑;
-		background-color: #CCC;
-		box-sizing: border-box;
-		padding-right:0.2rem;
-		padding-bottom:0.2rem;
+    }
+    .sy_touch{
+        width:0vw;
+        margin-left:-7vw;
+        height:0vh;
+        position: fixed;
+        z-index:1;
+        top:12vh;transition: 1s;
+        overflow: auto;
+        font-family: 微软雅黑;
+        background-color: #EFEFEF;
+        box-sizing: border-box;
+        padding-right:0.2rem;
+        padding-bottom:0.2rem;
 
-	}
+    }
 
-	.glyphicon{
-		position: absolute;
-		top:0.1rem;right: 0.1rem;
-		cursor: pointer;
-		width:0.5rem;
-		height:0.5rem;
-	}
-	.glyphicon:before{
+    .glyphicon{
+        position: absolute;
+        top:0.1rem;right: 0.1rem;
+        cursor: pointer;
+        width:0.5rem;
+        height:0.5rem;
+    }
+    .glyphicon:before{
 
-		font-size: 0.3rem;
-	}
-	.sy_touch > h1{
-		font-size: 0.3rem;font-weight: bold;
-		margin:0.2rem auto;
-		text-align: center;
-		margin-left:0.2rem;
-	}
-	.sy_touch > span{
-		font-size: 0.16rem;
-		margin:0.20rem auto;
-		display: block;
-		margin-left:0.20rem;
-	}
-	.sy_touch > div{
-		font-size: 0.16rem;
-		margin:0.20rem auto;
-		margin-left:0.20rem;
+        font-size: 0.3rem;
+    }
+    .sy_touch > h1{
+        font-size: 0.3rem;font-weight: bold;
+        margin:0.2rem auto;
+        text-align: center;
+        margin-left:0.2rem;
+    }
+    .sy_touch > span{
+        font-size: 0.16rem;
+        margin:0.20rem auto;
+        display: block;
+        margin-left:0.20rem;
+    }
+    .sy_touch > div{
+        font-size: 0.16rem;
+        margin:0.20rem auto;
+        margin-left:0.20rem;
 
-	}
-	.sy_touch > div img{
-		margin:0 auto;
-		margin-bottom:0.1rem;width:3rem;
-		height:2rem;
-	}
-	.sy_touch > div div{
-		line-height:0.52rem;
-	}
-	.sy_touch > b{
-		display: block;
-		text-align: right;
-		font-size: 0.16rem;
-		margin-left:0.2rem;
-	}
-
+    }
+    .sy_touch > div img{
+        margin:0 auto;
+        margin-bottom:0.1rem;width:3rem;
+        height:2rem;
+    }
+    .sy_touch > div div{
+        line-height:0.52rem;
+    }
+    .sy_touch > b{
+        display: block;
+        text-align: right;
+        font-size: 0.16rem;
+        margin-left:0.2rem;
+    }
 }

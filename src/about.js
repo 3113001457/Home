@@ -51,7 +51,6 @@ const About=({match})=>(
                      </ul>
                  </li>
                  <Link to={`${match.url}/Honor_and_qualification`}><li><p><span></span>荣誉资质</p></li></Link>
-                 <Link to={`${match.url}/Contact_me`}><li><p><span></span>联系客服</p></li></Link>
                  <Link to={`${match.url}/New`}><li><p><span></span>新闻</p></li></Link>
              </ul>
              </div>

@@ -22,7 +22,7 @@ function Ajax(opt){
                 opt.success(xhr.responseText);
             }
             else{
-                opt.error()
+                /*opt.error()*/
             }
         }
     };
@@ -43,8 +43,29 @@ class D_sidebar extends React.Component{
             containlist:[], //设置初始二级下拉内容
             index:-1, // 设置样式
             allcon:[], // 设置初始内容
-            seindex:-1
+            seindex:-1,
+            searchlist:[]//设置搜索框提示
         };
+        //点击搜索提示内容
+        this.changelist=function (e) {
+            this.refs.searchVal.value=e.target.innerHTML
+        };
+        //输入搜索内容提示
+        this.searchlist=function (e) {
+            Ajax({
+                url:"http://47.92.37.168:8282/search/search",
+                type:"get",
+                data:{
+                    keys:e.target.value, //总数据传keys
+                    start:0,
+                    end:6 //截取数据数量
+                },
+                success:function (da) {
+                    var date=eval("("+da+")");
+                    this.setState({searchlist:date});
+                }.bind(this)
+            });
+        }.bind(this);
         //点击获取数据库二级下拉
         this.click=function (i) {
             this.setState({index:i-1});
@@ -52,7 +73,7 @@ class D_sidebar extends React.Component{
 
             var n=1;
             Ajax({
-                url:"http://localhost:8282/sec/sec",
+                url:"http://47.92.37.168:8282/sec/sec",
                 type:"get",
                 data:{
                     oid:i //向二级内容传oid
@@ -64,7 +85,7 @@ class D_sidebar extends React.Component{
             });
             // 一级导航点击更换数据
             Ajax({
-                url:"http://localhost:8282/first/first",
+                url:"http://47.92.37.168:8282/first/first",
                 type:"get",
                 data:{
                     oid:i,  //总数据传oid
@@ -81,12 +102,11 @@ class D_sidebar extends React.Component{
                 var nowTop=document.body.scrollTop;
                 var ContainTop=document.documentElement.clientHeight;
                 if(parseInt(nowTop+ContainTop)>=ScrolHeight-400){
-
                     n++;
                     if(n<=60){
                         this.refs.loading.style.display="block";
                         Ajax({
-                            url:"http://localhost:8282/first/first",
+                            url:"http://47.92.37.168:8282/first/first",
                             type:"get",
                             data:{
                                 oid:i,  //总数据传oid
@@ -110,7 +130,7 @@ class D_sidebar extends React.Component{
             this.setState({seindex:-1});
             var n=1;
             Ajax({
-                url:"http://localhost:8282/search/search",
+                url:"http://47.92.37.168:8282/search/search",
                 type:"get",
                 data:{
                     keys:searchWord, //总数据传keys
@@ -132,7 +152,7 @@ class D_sidebar extends React.Component{
                     if(n<=60){
                         this.refs.loading.style.display="block";
                         Ajax({
-                            url:"http://localhost:8282/search/search",
+                            url:"http://47.92.37.168:8282/search/search",
                             type:"get",
                             data:{
                                 keys:searchWord, //总数据传keys
@@ -153,10 +173,9 @@ class D_sidebar extends React.Component{
         }.bind(this);
         this.SecClick=function (k,i) {
             this.setState({seindex:k});
-            console.log(i.slice(0,2));
             var n=1;
             Ajax({
-                url:"http://localhost:8282/search/search",
+                url:"http://47.92.37.168:8282/search/search",
                 type:"get",
                 data:{
                     keys:i.slice(0,2), //总数据传keys
@@ -178,7 +197,7 @@ class D_sidebar extends React.Component{
                     if(n<=60){
                         this.refs.loading.style.display="block";
                         Ajax({
-                            url:"http://localhost:8282/search/search",
+                            url:"http://47.92.37.168:8282/search/search",
                             type:"get",
                             data:{
                                 keys:i.slice(0,2), //总数据传keys
@@ -199,10 +218,9 @@ class D_sidebar extends React.Component{
         }.bind(this)
     }
     componentDidMount(){
-       this.refs.loading.style.display="none";
         //获取一级下拉内容
         Ajax({
-            url:"http://localhost:8282/login/lo",
+            url:"http://47.92.37.168:8282/login/lo",
             type:"get",
             success:function (da) {
                 var date=eval("("+da+")");
@@ -211,7 +229,7 @@ class D_sidebar extends React.Component{
         });
         //获取所有数据
         Ajax({
-            url:"http://localhost:8282/all/all",
+            url:"http://47.92.37.168:8282/all/all",
             type:"get",
             data:{
                 start:0,
@@ -237,7 +255,7 @@ class D_sidebar extends React.Component{
                         this.refs.loading.style.display="block";
                     }
                     Ajax({
-                        url:"http://localhost:8282/all/all",
+                        url:"http://47.92.37.168:8282/all/all",
                         type:"get",
                         data:{
                             start:0,
@@ -257,8 +275,17 @@ class D_sidebar extends React.Component{
         return <div >
             <div className="D_container">
                 <div className="D_search">
-                    <input type="text" placeholder="搜索模版" ref="searchVal"/>
-                    <span className="glyphicon glyphicon-search" onClick={this.search.bind(this)}></span>
+                    <input type="text" placeholder="搜索模版" ref="searchVal" onKeyUp={this.searchlist.bind(this)}/>
+                    <span className="glyphicon glyphicon-search" onClick={this.search.bind(this)} ></span>
+                    <ul ref="search_list" className="D_searchlist">
+                        {this.state.searchlist.map(function (i,k) {
+                            return <li key={k} onClick={this.changelist.bind(this)}>
+                                    {i.name}
+                            </li>
+                               
+                        }.bind(this))}
+                        
+                    </ul>
                 </div>
                 <ul className="D_sidelist" >
                     {this.state.sidebarword.map(function (i,k) {
@@ -279,8 +306,10 @@ class D_sidebar extends React.Component{
                               <img src={require(''+i.image+'')} alt=""/>
                                <div>
                                    <p className="D_conTit">{i.name}</p>
-                                   <p className="D_conhref"><span>免费</span><button><a href={'http://'+i.url+''} target="_blank">预览</a></button></p>
+                                   <p className="D_conhref"><button><a href={'http://'+i.url+''} target="_blank">预览</a></button></p>
                                </div>
+                               <div className="shadow"></div>
+                              <div className="shadow_f"></div>
                           </li>
                       }.bind(this))}
                       <div className="clrarly"></div>
