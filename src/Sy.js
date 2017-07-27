@@ -95,7 +95,7 @@ class Sy_Contain extends Component {
         Ajax({
             type: 'get',
             data: {},
-            url: 'http://localhost:8282/demod/demo',
+            url: 'http://47.92.37.168:8282/demod/demo',
             success: function (da) {
                 var Json = JSON.parse(da);
                 this.setState({

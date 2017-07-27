@@ -85,11 +85,12 @@ class App extends Component {
       document.body.scrollTop=0;
       document.documentElement.scrollTop=0;
     }
+
     falseclick(){
       let falgs=document.getElementsByClassName("falgs");
       let box=document.getElementsByClassName("box");
       let bool=null;
-      box[0].style.display=="block"?(box[0].style.display="none",bool=false):(box[0].style.display="block",bool=true)
+      box[0].style.display=="block"?(box[0].style.display="none",bool=false):(box[0].style.display="block",bool=true);
       if(bool){
         box[0].style.position="fixed";
         falgs[0].style.left="0.3rem";
@@ -100,6 +101,7 @@ class App extends Component {
         falgs[0].style.left="12.7rem";
       }
     }
+
     render() {
         return (
           <Router>
@@ -107,12 +109,14 @@ class App extends Component {
               <ul id="div" className="publick_header clear">
                 <div className="header_logo"><img src={logo} alt=""/></div>
                 <div className="falgs" onClick={this.falseclick}><img src={gang} alt=""/></div>
+                <div className="header_logo"></div>
+                <div className="falgs" onClick={this.falseclick.bind(this)}></div>
                 <div className="box">
                   <li onClick={this.click}><Link to="/">首页</Link></li>
                   <li onClick={this.click}><Link to="/Template">模板</Link></li>
                   <li onClick={this.click}><Link to="/Meal">套餐</Link></li>
                   <li className="H_about"><span>关于</span>
-                      <ul className="aboutList">
+                      <ul className="aboutList" ref="about_list">
                         <p className="line"></p>
                         <div className="H_listC clear">
                           <div className="aboutL clear">
