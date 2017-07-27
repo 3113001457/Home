@@ -3,7 +3,7 @@ body,html{
   padding: 0;
   font-family: sans-serif;
   font-size: 62.5%;
-  overflow-x: hidden;
+
 }
 .clear:after{
 	content: "";
@@ -63,6 +63,7 @@ body,html{
 }
 .D_search{
     border-bottom: 1px solid #ccc;
+    position: relative;
 }
 .D_search  input{
     padding: 0.1rem 0.1rem;
@@ -98,12 +99,20 @@ body,html{
     border-radius: 0.05rem;
     color: #0088C2;
     cursor: pointer;
+    position: relative;
 }
 .D_stychange_b{
     font-size:  0.14rem;
     padding: 0.1rem 0.05rem;
     transition: .5s;
     cursor: pointer;
+    position: relative;
+}
+.D_stychange > span {
+    right: -0.2rem;
+}
+.D_stychange_b > span{
+    right: -0.2rem;
 }
 .D_sidelist li span{
     float: right;
@@ -572,7 +581,8 @@ body,html{
 
     .glyphicon{
         position: absolute;
-        top:0.1rem;right: 0;
+        top:0.15rem;right: 0;
+
         cursor: pointer;
         width:0.5rem;
         height:0.5rem;
@@ -1181,7 +1191,7 @@ body,html{
         background-color: #F9F9F9;
     }
     .sy_friendSm {
-        width: 12rem;
+        width: 12.2rem;
         margin: 0 auto;
         overflow: hidden;
         padding-bottom:1rem;
@@ -1199,22 +1209,25 @@ body,html{
         transform: scale(0);transition: 1.5s;
     }
     .sy_friendSm ul {
+        width:100%;
         margin-top:1.2rem;
+        height:220px;
     }
     .sy_friendSm ul li {
     	width: 6rem;
         height: 100px;
         float: left;
-        border: 0.01rem solid #DBDBDB;
+        border: 1px solid #DBDBDB;
         padding: 0.30rem 0.05rem 0.20rem 0.05rem;
         font-family: 微软雅黑;
         transition: All .3s ease;box-sizing: border-box;
+
     }
     .sy_friendSm ul li:hover {
-        border-color: #009CDE;
-        transition: All .3s ease;
+
+        border-color:#009CDE;
         background-color: #FFF;
-        padding: 0.30rem 0.05rem 0.20rem 0.05rem;
+
     }
     .sy_friendSm ul li img, .sy_friendSm ul li b, .sy_friendSm ul li span {
         display: block;
@@ -1375,6 +1388,7 @@ body,html{
     .glyphicon{
         position: absolute;
         top:0.1rem;right: 0;
+        left:0.5rem;
         cursor: pointer;
         width:0.5rem;
         height:0.5rem;
@@ -1482,7 +1496,7 @@ body,html{
         margin-top: -1.45rem;
     }
     .sy_friendSm {
-        width: 12rem;
+        width: 12.2rem;
         margin: 0 auto;
         overflow: hidden;
         padding-bottom: 2rem;
@@ -1500,7 +1514,9 @@ body,html{
         transform: scale(0);transition: 1.5s;
     }
     .sy_friendSm ul {
+        width:100%;
         margin-top: 3rem;
+        height:210px;
     }
     .sy_friendSm ul li {
         width: 6.0rem;

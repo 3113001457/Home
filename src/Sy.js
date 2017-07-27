@@ -334,7 +334,7 @@ class Sy_wrap extends Component {
                                     this.state.wrap_img.map(function (arr) {
                                         return (
                                             <li key={arr}>
-                                                <a href=""><img src={arr} alt="" /></a>
+                                                <a href="Template"><img src={arr} alt="" /></a>
                                             </li>
                                         )
                                     }.bind(this))

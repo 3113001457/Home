@@ -151,7 +151,7 @@ class App extends Component {
                             <p><a href="">QQ客户中心</a></p>
                             <p><a href="" className="color_r">800088546</a></p>
                             <p><a href="">公司地址</a></p>
-                            <p><a href="" className="color_r">苏州市工业园区加城大厦F4-D2</a></p>
+                            <p><a href="" className="color_r">xx.xx.xx.xx</a></p>
                           </div>
                         </div>
                       </ul>
@@ -167,11 +167,11 @@ class App extends Component {
                   <div className="line_t"></div>
                   <div className="publick_panel_t clear">
                     <div className="publick_panel_t_l">
-                      <h2>起飞页 · 优雅做网站</h2>
-                      <p>2014年起，专注于响应式建站领域。起飞页是目前国内最专业、最领先的响应式建站平台。</p>
+                      <h2>鲜橙科技 · 优雅做网站</h2>
+                      <p>2017年起，专注于响应式建站领域。鲜橙科技是目前国内最专业、最领先的响应式建站平台。</p>
                       <div className="publick_panel_t_l_b">
-                        <p>QQ客服：800088546</p>
-                        <p>客服热线：4006-285-729 / 0512-62969169</p>
+                        <p>QQ客服：516612952</p>
+                        <p>客服热线：xxxxxxxxx / xxxxxxxxxx</p>
                       </div>
                     </div>
                     <ul className="publick_panel_t_r">
@@ -201,8 +201,8 @@ class App extends Component {
                     </ul>
                   </div>
                   <div className="publick_panel_s">
-                    <p>拓展您的业务，展示您的风采，或者只是尝试一下新的想法。 起飞页自助建站平台，拉近您与互联网的距离！</p>
-                    <p>版权所有 2013-2017 苏州卡达网络科技有限公司   增值电信业务经营许可证苏B2-20150321 苏ICP备09008221号-3 版本: V3.6</p>
+                    <p>拓展您的业务，展示您的风采，或者只是尝试一下新的想法。鲜橙科技自助建站平台，拉近您与互联网的距离！</p>
+                    <p>版权所有 2013-2017 鲜橙科技 增值电信业务经营许可证京A1-23456789 京ICP备01234567号-3 版本: V3.6</p>
                   </div>
                 </div>
               </div>
