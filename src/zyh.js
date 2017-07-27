@@ -78,7 +78,7 @@ class Zyh extends Component {
                     document.body.scrollTop = document.documentElement.scrollTop = num;
                 },10)
             };
-            if(scrollTop+window.screen.height>=responsive.offsetTop+200&&scrollTop+window.screen.height<responsive.offsetTop+500) {
+            if(scrollTop+window.screen.height>=responsive.offsetTop+200&&scrollTop+window.screen.height<responsive.offsetTop+1000) {
                 fast.style.opacity = '1';
                 fast.style.marginTop = '0';
                 technology.style.opacity = '1';
@@ -86,19 +86,19 @@ class Zyh extends Component {
                 edit.style.opacity = '1';
                 edit.style.marginTop = '0.13rem';
             }
-            if(scrollTop+window.screen.height>=main.offsetTop+200&&scrollTop+window.screen.height<main.offsetTop+500){
+            if(scrollTop+window.screen.height>=main.offsetTop+200&&scrollTop+window.screen.height<main.offsetTop+1000){
                 Firstleft.style.left='0';
                 Firstright.style.opacity='1';
             }
-            if(scrollTop+window.screen.height>=main2.offsetTop+200&&scrollTop+window.screen.height<main2.offsetTop+500){
+            if(scrollTop+window.screen.height>=main2.offsetTop+200&&scrollTop+window.screen.height<main2.offsetTop+1000){
                 Secondright.style.right='0.5rem';
                 Secondleft.style.opacity='1';
             }
-            if(scrollTop+window.screen.height>=main3.offsetTop+200&&scrollTop+window.screen.height<main3.offsetTop+500){
+            if(scrollTop+window.screen.height>=main3.offsetTop+200&&scrollTop+window.screen.height<main3.offsetTop+1000){
                 Thiredleft.style.left='0';
                 Thiredright.style.opacity='1';
             }
-            if(scrollTop+window.screen.height>=main4.offsetTop+200&&scrollTop+window.screen.height<main4.offsetTop+500){
+            if(scrollTop+window.screen.height>=main4.offsetTop+200&&scrollTop+window.screen.height<main4.offsetTop+1000){
                 Fourthright.style.right='0.5rem';
                 Fourthleft.style.opacity='1';
             }

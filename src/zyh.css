@@ -143,10 +143,14 @@ a:active {color: #950304;}
     .zyh-buttonIn{
         transition: 0.5s;
         cursor: pointer;
-        color: white;
+
     }
-    .zyh-buttonIn:hover {
-        background-color: white;
+    .zyh-buttonIn span a{
+        color: white;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+    .zyh-buttonIn:hover a{
         color: rgb(117, 117, 117);
         cursor: pointer;
     }
@@ -637,6 +641,15 @@ a:active {color: #950304;}
         color: rgb(255, 255, 255);
         font-size: 21px;
         font-weight: normal;
+    }
+    .zyh-buttonIn span a{
+        color: white;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+    .zyh-buttonIn:hover a{
+        color: white;
+        cursor: pointer;
     }
     .zyh-buttonIn:hover {
         width: 230px;

@@ -12,7 +12,6 @@ class MealtemplateFive extends Component{
 								<li>代建</li>
 								<li className="wjt_tem_fx">优惠</li>
 								<li>价格</li>
-								<li className="wjt_tem_on"></li>
 							</ul>
 							<ul className="wjt_col_b">
 								<li className="template2_font">微型网站代建</li>
@@ -22,8 +21,6 @@ class MealtemplateFive extends Component{
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_fx">/</li>
 								<li className="wjt_a">200元</li>
-								<li className="wjt_tem_on"><a href="
-								c">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_c">
 								<li className="template2_font">小型网站代建</li>
@@ -33,8 +30,6 @@ class MealtemplateFive extends Component{
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_sx wjt_tem_fx">一次购买3年翱翔版立刻就送！</li>
 								<li className="wjt_a">400元</li>
-								<li className="wjt_tem_on"><a href="
-								c">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_d">
 								<li className="template2_font">中型网站代建</li>
@@ -44,8 +39,6 @@ class MealtemplateFive extends Component{
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_sx wjt_tem_fx">一次购买3年太空版立刻就送！</li>
 								<li className="wjt_a">800元</li>
-								<li className="wjt_tem_on"><a href="
-								c">购买套餐</a></li>
 							</ul>
 							<ul className="wjt_col_e">
 								<li className="template2_font">大型网站代建</li>
@@ -55,13 +48,8 @@ class MealtemplateFive extends Component{
 								<li>我们负责录入和设定</li>
 								<li className="wjt_tem_fx"> /</li>
 								<li className="wjt_a">20元/页</li>
-								<li className="wjt_tem_on"><a href="
-								c">购买套餐</a></li>
 							</ul>
-							<div className="wht_rigther">
-								<div>了解更多</div>
-							</div>
-					</div>
+						</div>
 			</div>	
 		)
 	}

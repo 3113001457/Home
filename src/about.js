@@ -30,7 +30,7 @@ import {
 
 const About=({match})=>(
           <div>
-             <div className="wjt_nav">
+             <div className="wjt_navv">
                 <Route path={`${match.url}/Company_introduction`} component={Company_introduction}/>
                 <Route path={`${match.url}/Terms_of_service`} component={Terms_of_service}/>
                 <Route path={`${match.url}/Legal_notice`} component={Legal_notice}/>

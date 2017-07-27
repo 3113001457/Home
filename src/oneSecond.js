@@ -34,7 +34,6 @@ class Onesecond extends Component {
             p.style.boxSizing='border-box';
             p.style.transition='0.8s';
             dl.style.transition='0s';
-            dl.style.cursor='pointer';
             img.src=pic[i];
             dd.innerHTML=title[i];
             dd.style.fontFamily='微软雅黑';

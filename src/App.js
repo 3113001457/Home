@@ -11,153 +11,173 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+
 class App extends Component {
     componentDidMount(){
-      let flag=true;
-      let lis=document.querySelectorAll(".publick_header>li");
-      document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
-      window.onresize=function(){
+        let bodyW=document.body.offsetWidth;
+        let nav=document.getElementById('nav');
+        let head=document.getElementById('head');
+        let off=document.getElementById('off');
+        let bool=document.getElementById('bool');
+        let scro=document.getElementById('scro');
+        let scroHeight=scro.offsetHeight
         document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
-      };
-      function addEvent(obj,type,fn){
-          if(obj.attachEvent){
-              obj.attachEvent('on'+type,function(){
-                  fn.call(obj);
-              })
-          }else{
-              obj.addEventListener(type,fn,false);
-          }
-      }
-      addEvent(window,'scroll',function(){
-        let publick_header=document.getElementsByClassName('publick_header');
-        let header_logo=document.getElementsByClassName('header_logo');
-        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      	let falgs=document.getElementsByClassName("falgs");
-        let num=-70;
-        if(scrollTop>=70){
-          if(flag){
-            flag=false;
-            publick_header[0].style.position="fixed";
-            publick_header[0].style.top="-70px";
-            publick_header[0].style.left="0";
-            publick_header[0].style.zIndex="999";
-            publick_header[0].style.height="60px";
-            publick_header[0].style.marginTop="-10px";
-	        if(w<992){
-	            header_logo[0].style.top='15px';
-	            header_logo[0].style.left='20px';
-	            header_logo[0].style.marginTop='0';
-	            header_logo[0].style.marginLeft='0';
-          		falgs[0].style.top="10px";
+        window.onresize=function(){
+
+            if(bodyW>992){
+                nav.style.width=8+"rem";
+                head.style.height="70px";
+                nav.style.transition="0s";
+                off.style.display='none'
+                bool.style.display='none'
+            }else{
+                nav.style.width=0+"rem";
+                nav.style.transition="0s";
+                head.style.height="70px";
+                bool.style.display='block'
+
             }
-            var time=setInterval(function(){
-              num+=1;
-              publick_header[0].style.top=num+"px";
-              if(num>0){
-                publick_header[0].style.top=0;
-                clearInterval(time);
-              }
-            },7);
-          }
-        }else if(scrollTop<70){
-          flag=true;
-          if(w<992){
-          	header_logo[0].style.position="absolute";
-      			header_logo[0].style.top="50%";
-      			header_logo[0].style.left="50%";
-      			header_logo[0].style.marginTop="-20px";
-      			header_logo[0].style.marginLeft="-60px";
-	        publick_header[0].style.marginTop="0";
-	        publick_header[0].style.height="72px";
-          	falgs[0].style.top="20px";
-          }else if(w>992){
-          	  header_logo[0].style.position="static";
-	          publick_header[0].style.position="relative";
-	          publick_header[0].style.zIndex="999";
-	          publick_header[0].style.height="72px";
-	          publick_header[0].style.marginTop="0";
-          }
+            document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
+        };
+        function addEvent(obj,type,fn){
+            if(obj.attachEvent){
+                obj.attachEvent('on'+type,function(){
+                    fn.call(obj);
+                })
+            }else{
+                obj.addEventListener(type,fn,false);
+            }
         }
-      });
+        addEvent(window,'scroll',function(){
+            let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            let num=scrollTop;
+            let head=document.getElementById('head');
+            let t=null;
+            let nums=-70;
+            if(num>=scroHeight){
+                scro.style.position="fixed";
+                scro.style.top=0+'px';
+                // t=setInterval(()=> {
+                //     nums++;
+                //     if(nums>=0){
+                //         clearInterval(t);
+                //         nums=-70;
+                //         return
+                //     }
+                //     scro.style.top=nums+'px';
+                // },10)
+            }else {
+                scro.style.top=0+'px';
+                scro.style.position="relative";
+            }
+        });
+    }
+    handleClick(){
+        let bodyW=document.body.offsetWidth;
+        if(bodyW<992){
+            this.refs.bool.style.display="none"
+            this.refs.off.style.display="block"
+            this.refs.nav.style.width=100+"%";
+            this.refs.nav.style.transition="0.7s";
+            this.refs.head.style.height="409px";
+        }
+    }
+    handleClick1(){
+        let bodyW=document.body.offsetWidth;
+        if(bodyW<992){
+            this.refs.bool.style.display="block"
+            this.refs.off.style.display="none"
+            this.refs.nav.style.width=0+"rem";
+            this.refs.head.style.height="70px";
+        }
+
+    }
+    handleMouseover(){
+        let bodyW=document.body.offsetWidth;
+        if(bodyW<992){
+            this.refs.guanyu.style.height=250+'px';
+        }else if(bodyW>992){
+            this.refs.guanyu.style.height=263+'px';
+        }
+
+    }
+    handleOut(){
+        this.refs.guanyu.style.height=0+'px';
     }
     click(){
       document.body.scrollTop=0;
       document.documentElement.scrollTop=0;
     }
-
-    falseclick(){
-      let falgs=document.getElementsByClassName("falgs");
-      let box=document.getElementsByClassName("box");
-      let bool=null;
-      box[0].style.display=="block"?(box[0].style.display="none",bool=false):(box[0].style.display="block",bool=true);
-      if(bool){
-        box[0].style.position="fixed";
-        falgs[0].style.left="0.3rem";
-        box[0].style.zIndex="1002";
-        box[0].style.top="0";
-        box[0].style.right="0";
-      }else{
-        falgs[0].style.left="12.7rem";
-      }
-    }
-
     render() {
         return (
           <Router>
             <div>
-              <ul id="div" className="publick_header clear">
-                <div className="header_logo"><img src={logo} alt=""/></div>
-                <div className="falgs" onClick={this.falseclick}><img src={gang} alt=""/></div>
-                <div className="box">
-                  <li onClick={this.click}><Link to="/">首页</Link></li>
-                  <li onClick={this.click}><Link to="/Template">模板</Link></li>
-                  <li onClick={this.click}><Link to="/Meal">套餐</Link></li>
-                  <li className="H_about"><span>关于</span>
-                      <ul className="aboutList" ref="about_list">
-                        <p className="line"></p>
-                        <div className="H_listC clear">
-                          <div className="aboutL clear">
-                            <li><Link to="" className="list_O">公司信息</Link></li>
-                            <li><Link to="/About/Company_introduction">公司介绍</Link></li>
-                            <li><Link to="/About/Terms_of_service">服务条款</Link></li>
-                            <li><Link to="/About/Legal_notice">法律声明</Link></li>
-                            <li><Link to="/About/Adequate_service">可接受服务</Link></li>
-                            <li><Link to="/About/Disclaimer">免责声明</Link></li>
-                          </div>
-                          <div className="aboutC clear">
-                            <li><a href="" className="list_O">荣誉资质</a></li>
-                            <div className="clear"><a href="" className="clear">
-                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt=""/>
-                              <span></span>
-                            </a></div>
-                            <div className="clear"><a href="" className="clear">
-                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
-                              <span></span>
-                            </a></div>
-                            <div className="clear"><a href="" className="clear">
-                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
-                              <span></span>
-                            </a></div>
-                            <div className="clear"><a href="" className="clear">
-                              <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg" alt="" />
-                              <span></span>
-                            </a></div>
-                          </div>
-                          <div className="aboutR clear">
-                            <li><a href="" className="list_O">联系客服</a></li>
-                            <p><a href="">客户服务热线</a></p>
-                            <p><a href="" className="color_r">4006-285-729</a></p>
-                            <p><a href="">QQ客户中心</a></p>
-                            <p><a href="" className="color_r">800088546</a></p>
-                            <p><a href="">公司地址</a></p>
-                            <p><a href="" className="color_r">xx.xx.xx.xx</a></p>
-                          </div>
-                        </div>
-                      </ul>
-                  </li>
+              <div className="wjt_head" id="scro">
+                <div className="wjt_header" ref="head" id="head">
+                  <div className="wjt_logo"><img src={logo} style={{width:160+'px'}} alt=""/></div>
+                  <ul className="wjt_nav" ref="nav" id="nav">
+                    <div id="off" ref="off" className="wjt_off  glyphicon glyphicon-remove" onClick={this.handleClick1.bind(this)}></div>
+                    <li onClick={this.click.bind(this)}><Link to="/"><span></span>首页</Link></li>
+                    <li onClick={this.click.bind(this)}><Link to="/Template">模板</Link></li>
+                    <li onClick={this.click.bind(this)}><Link to="/Meal">套餐</Link></li>
+                    <li onMouseOver={this.handleMouseover.bind(this)} onMouseOut={this.handleOut.bind(this)}><Link to="select">关于</Link>
+                      <div className="wjt_guanyu"  ref="guanyu">
+                          <ul className="aboutLists">
+                              <div className="H_listCs">
+                                  <ul className="aboutLs">
+                                      <li className="list_Os">公司信息</li>
+                                      <li>
+                                          <Link to="/About/Company_introduction">公司介绍</Link></li>
+                                      <li>
+                                          <Link to="/About/Terms_of_service">服务条款</Link></li>
+                                      <li>
+                                          <Link to="/About/Legal_notice">法律声明</Link></li>
+                                      <li>
+                                          <Link to="/About/Adequate_service">可接受服务</Link></li>
+                                      <li>
+                                          <Link to="/About/Disclaimer">免责声明</Link></li>
+                                  </ul>
+                                  <ul className="aboutLs">
+                                      <p><a href="" className="list_Os">荣誉资质</a></p>
+                                      <li><a href="">
+                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                               alt=""/>
+                                          <span></span>
+                                      </a></li>
+                                      <li><a href="">
+                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                               alt=""/>
+                                          <span></span>
+                                      </a></li>
+                                      <li><a href="">
+                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                               alt=""/>
+                                          <span></span>
+                                      </a></li>
+                                      <li><a href="">
+                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                               alt=""/>
+                                          <span></span>
+                                      </a></li>
+                                  </ul>
+                                  <ul className="aboutLs">
+                                      <p className="list_Os">联系客服</p>
+                                      <li><a href="">客户服务热线</a></li>
+                                      <li><a href="" className="color_rs">4006-285-729</a></li>
+                                      <li><a href="">QQ客户中心</a></li>
+                                      <li><a href="" className="color_rs">800088546</a></li>
+                                      <li><a href="">公司地址</a></li>
+                                      <li><a href="" className="color_rs">xx.xx.xx.xx</a></li>
+                                  </ul>
+                              </div>
+                          </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <div id="bool" ref="bool" className="wjt_bool glyphicon glyphicon-align-justify" onClick={this.handleClick.bind(this)}></div>
                 </div>
-              </ul>
+
+              </div>
               <Route exact path="/" component={Home}/>
               <Route path="/Template" component={Template}/>
               <Route path="/Meal" component={Meal}/>

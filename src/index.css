@@ -151,7 +151,7 @@ body,html{
 .D_allcon li{
     float: left;
     margin-right: 0.15rem;
-    margin-left: 0.3rem;
+    margin-left: 0.2rem;
     margin-bottom: 0.25rem;
     transition: .5s;
     box-shadow: 0 0.05rem 0.05rem #F2F2F2;
@@ -252,7 +252,6 @@ body,html{
     z-index: 9999999999;
     top:50vh;
     right: -90px;
-    background: #ccc;
 }
 .D_sidebarWrap li{
     width: 140px;
@@ -260,15 +259,23 @@ body,html{
     padding: 10px 0;
     position: relative;
     right: 0;
-    background: #ccc;
+    background: rgb(49, 53, 61);
     transition: .7s;
-    border-bottom: 1px solid #aaa;
+    border-radius: 10px 0 0 10px;
 }
 .D_sidebarWrap li:nth-child(1):hover{
     right: 90px;
+    background-color: #61B0FF;
 }
 .D_sidebarWrap li:nth-child(2):hover{
     right: 90px;
+    background-color: #61B0FF;
+}
+.D_sidebarWrap li:nth-child(1):hover div{
+    color: white;
+}
+.D_sidebarWrap li:nth-child(2):hover div{
+    color: white;
 }
 .D_sidebarWrap li:nth-child(1) div{
     width: 60%;
@@ -312,49 +319,22 @@ body,html{
     height: 30px;
     margin:0 10px;
     float: left;
-    background: url("images/sidebar.png") no-repeat  0 -40px;
+    background: url("images/sidebar.png") no-repeat  -40px -40px;
 }
 .D_sidebarWrap li:nth-child(2) a p{
     width: 30px;
     height: 30px;
     margin:0 10px;
     float: left;
-    background: url("images/sidebar.png") no-repeat  0 0;
+    background: url("images/sidebar.png") no-repeat  -40px 0;
 }
 .D_sidebarWrap li:nth-child(3) a p{
     width: 30px;
     height: 30px;
     margin: 0 10px;
     float: left;
-    background: url("images/sidebar.png") no-repeat  0 -80px;
+    background: url("images/sidebar.png") no-repeat  -40px -80px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 992px) {
     .D_container{
         width: 15%;
@@ -381,6 +361,23 @@ body,html{
 }
 /*段超群*/
 @media only screen and (max-width: 992px) {
+    .D_search{
+        border-bottom: 1px solid #ccc;
+        position: relative;
+    }
+    .D_search  input{
+        padding: 0.1rem 0.1rem;
+        border-radius: 3px;
+        border:1px solid #e0e0e0;
+        font-size: 0.14rem;
+        box-sizing: border-box;
+    }
+    .D_search a:hover{
+        color: #0094CC;
+    }
+    .D_search{
+        padding: 0.15rem 0.05rem;
+    }
     .D_sidebarWrap{
         display: none;
     }
@@ -408,6 +405,7 @@ body,html{
         width: 5.75rem;
         margin-top: 0.3rem;
         margin-bottom: 0.2rem;
+        margin-left: 0.5rem;
     }
     .D_search span{
         margin-top: 0.15rem;
@@ -419,7 +417,6 @@ body,html{
 }
 /*段超群*/
 @media only screen and (max-width: 640px) {
-
     .D_allcon li{
         width: 12rem;
         margin-top: 0.5rem;
@@ -439,6 +436,7 @@ body,html{
      width: 12.5rem;
      margin: 0 auto;
      font-family: 微软雅黑;
+    clear: both;
 }
 .line_t {
      width: 100%;
@@ -564,25 +562,50 @@ body,html{
         border: 0.01rem solid #ccc;
 
     }
+    @keyframes sy_touch {
+        0%{
+            left:-62vw;
+            opacity: 0;
+        }
+
+        80%{
+            left:7.5vw;
+        }
+        100%{
+            left:5.5vw;opacity: 1;
+        }
+    }
+    @keyframes sy_touchend {
+        0%{
+            left:5.5vw;
+            opacity: 1;
+        }
+
+        30%{
+            left:7.5vw;
+        }
+        100%{
+            left:-62vw;opacity: 0;
+        }
+    }
     .sy_touch{
-        width:0vw;
-        margin-left:-5.5vw;
-        height:0vh;
-        position: fixed;
+        width:61vw;
+        left:-62vw;
+        height:89vh;
+        position: fixed;      opacity: 0;
         z-index:1;
-        top:11vh;transition: 1s;
+        top:11vh;
         overflow: auto;
         font-family: 微软雅黑;
-        background-color: #EFEFEF;
+        background-color: #e9e9e9;
         box-sizing: border-box;
         padding-right:0.2rem;
 
     }
 
-    .glyphicon{
+    .sy_touClo{
         position: absolute;
-        top:0.15rem;right: 0;
-
+        top:0.1rem;right: 0;
         cursor: pointer;
         width:0.5rem;
         height:0.5rem;
@@ -596,12 +619,16 @@ body,html{
         margin:0.2rem auto;
         text-align: center;
         margin-left:0.2rem;
+
+        border-bottom:1px solid #CCC;
+        padding-bottom:0.1rem;
     }
     .sy_touch > span{
         font-size: 0.16rem;
         margin:0.20rem auto;
         display: block;
         margin-left:0.20rem;
+        color: #333;
     }
     .sy_touch > div{
         font-size: 0.16rem;
@@ -624,6 +651,21 @@ body,html{
         font-size: 0.16rem;
         margin-left:0.2rem;
     }
+
+
+    .sy_touClo{
+        position: absolute;
+        top:0.15rem;right: 0;
+
+        cursor: pointer;
+        width:0.5rem;
+        height:0.5rem;
+    }
+    .sy_touClo:before{
+
+        font-size: 0.3rem;
+    }
+
 }
 @media only screen and (max-width: 992px) {
 	.publick_panel_t_r{
@@ -642,229 +684,35 @@ body,html{
 		margin-top: -20px;
 		margin-left: -60px;
 	}
-	.box,.aboutList{
-		display: none;
-	}
-	.box{
-		height: 10rem;
-		background: #efefef;
-	}
-	.box>li{
-		width: 12.92rem;
-		height: 1rem;
-		line-height: 1rem;
-		font-size: .3rem;
-		text-align: center;
-	}
-	.box>li>a:hover{
-		color: #3cf;
-	}
-	.box>li>a:hover{
-		color: #3cf;
-	}
-
 }
 /*段超群*/
 @media only screen and (min-width: 992px) {
-    .wjt_nav{overflow: hidden;width: 12rem;margin: 0 auto;border: 1px solid #F0F0F0;box-sizing: border-box;}
-     .wjt_nav>ul{width: 2.97rem;height:100%;float: right;}
-     .wjt_nav>ul>li>ul li{height: 0.52rem;line-height: 0.62rem;text-indent:0.4rem;font-size: 0.15rem;}
-     .wjt_nav>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 0.15rem;line-height: 0.62rem;}
+    .wjt_navv{overflow: hidden;width: 12rem;margin: 0 auto;border: 1px solid #F0F0F0;box-sizing: border-box;}
+     .wjt_navv>ul{width: 2.97rem;height:100%;float: right;}
+     .wjt_navv>ul>li>ul li{height: 0.52rem;line-height: 0.62rem;text-indent:0.4rem;font-size: 0.15rem;}
+     .wjt_navv>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 0.15rem;line-height: 0.62rem;}
     .wjt_xg{width: 8.72rem;float: left;}
-    .wjt_nav>ul li>p:hover{background: #F0F0F0;cursor: pointer;}
-    .wjt_nav ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}
-    .wjt_nav>ul>li>ul li:hover{background: #F0F0F0;cursor: pointer;}
+    .wjt_navv>ul li>p:hover{background: #F0F0F0;cursor: pointer;}
+    .wjt_navv ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}
+    .wjt_navv>ul>li>ul li:hover{background: #F0F0F0;cursor: pointer;}
      
 }
 
 /*段超群*/
 @media only screen and (max-width: 992px) {
-    .wjt_nav{overflow: hidden;width: 12rem;margin: 0 auto;border: 1px solid #F0F0F0;box-sizing: border-box;}
-     .wjt_nav>ul{width: 8.97rem;height:auto;clear:both;padding:  0 0 20px 0}
-     .wjt_nav>ul>li>ul li{height: 0.52rem;line-height: 0.52rem;text-indent:0.4rem;font-size: 0.15rem;}
-     .wjt_nav>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 0.15rem;line-height: 0.72rem    ;}
+    .wjt_navv{overflow: hidden;width: 12rem;margin: 0 auto;border: 1px solid #F0F0F0;box-sizing: border-box;}
+     .wjt_navv>ul{width: 8.97rem;height:auto;clear:both;padding:  0 0 20px 0}
+     .wjt_navv>ul>li>ul li{height: 0.52rem;line-height: 0.52rem;text-indent:0.4rem;font-size: 0.15rem;}
+     .wjt_navv>ul li>p{height: 0.52rem;margin: 0 auto;font-size: 0.15rem;line-height: 0.72rem    ;}
     .wjt_xg{width: 8.72rem;float: left;}
-    .wjt_nav>ul li>p:hover{background: #F0F0F0;cursor: pointer;}
-    .wjt_nav ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}
-    .wjt_nav>ul>li>ul li:hover{background: #F0F0F0;cursor: pointer;}
-    .wjt_nav ul li{margin-top: 3.5px}
+    .wjt_navv>ul li>p:hover{background: #F0F0F0;cursor: pointer;}
+    .wjt_navv ul li span{border: 5px solid transparent;border-left:5px solid #000;display: inline-block;vertical-align: middle;margin-right: 5px;margin-top: -4px}
+    .wjt_navv>ul>li>ul li:hover{background: #F0F0F0;cursor: pointer;}
+    .wjt_navv ul li{margin-top: 3.5px}
 }
 /*段超群*/
 @media only screen and (min-width: 992px) {
-	.falgs{
-		display: none;
-	}
-    .header_logo {
-        margin-top: 16px;
-        margin-right: 112px;
-        float: left;
-        margin-left: 100px;
-    }
-    .box > li {
-         float: left;
-         font-size: 16px;
-         margin-top: 27px;
-         margin-right: 47px;
-         color: #fff;
-         position: relative;
-         padding-bottom: 10px;
-    }
-     .box > li > a {
-         padding-bottom: 0.05rem;
-         color: #fff;
-         letter-spacing: 0.1rem;
-         text-decoration: none;
-    }
-    .aboutList {
-         position: absolute;
-         width: 16rem;
-         background: #333;
-         top: 0.32rem;
-         left: -8rem;
-         z-index: -1;
-         display: none;
-         font-size: 0.14rem;
-    }
-     .H_about span {
-         letter-spacing: 0.1rem;
-         cursor: pointer;
-    }
-     .H_about:hover .aboutList {
-         display: block;
-         animation: mymove 1s;
-         -webkit-animation: mymove 1s;
-         z-index: 999;
-    }
-     @keyframes mymove {
-         from {
-             opacity: 0;
-        }
-         to {
-             opacity: 1;
-        }
-    }
-    .line {
-         height: 0.01rem;
-         width: 100%;
-         border-width: 0.01rem 0rem 0rem;
-         border-style: solid;
-         border-color: rgb(68, 68, 68) rgb(255, 255, 255) rgb(255, 255, 255);
-    }
-    .H_listC {
-         width: 10rem;
-         margin-left: 2rem;
-         padding-top: 0.3rem;
-    }
-    .aboutL {
-         width: 1.25rem;
-         float: left;
-    }
-     .aboutL li {
-         height: 0.3rem;
-    }
-     .aboutL li:first-of-type {
-         margin-bottom: 0.1rem;
-    }
-     .aboutL li a {
-         color: #808080;
-         transition: all 500ms linear;
-         text-decoration: none;
-    }
-     .aboutL li .list_O {
-         color: #fff;
-    }
-     .aboutL li .list_O:hover {
-         color: #808080;
-    }
-     .aboutL li a:hover {
-         color: #61b0ff;
-    }
-     .aboutC {
-         width: 4rem;
-         float: left;
-         padding-bottom:  0.2rem;
-    }
-     .aboutC li:first-of-type {
-         margin-bottom: 0.1rem;
-    }
-     .aboutC li a {
-         color: #808080;
-         transition: all 500ms linear;
-         text-decoration: none;
-    }
-     .aboutC li .list_O {
-         color: #fff;
-    }
-     .aboutC li .list_O:hover {
-         color: #808080;
-    }
-     .aboutC div {
-         float: left;
-         padding-right: 0.1rem;
-    }
-     .aboutC div a {
-         margin-top: 0.15rem;
-         display: block;
-         position: relative;
-    }
-    .aboutC div a img {
-         filter: grayscale(100%);
-         -webkit-filter: grayscale(100%);
-         margin: 0.05rem;
-         float: left;
-         transtion: all .5s;
-    }
-     .aboutC div a:hover img {
-         animation: h_filter 1s;
-         -webkit-animation: h_filter 1s;
-    }
-     @keyframes h_filter {
-         from {
-             filter: grayscale(100%);
-        }
-         to {
-             filter: grayscale(0%);
-        }
-    }
-     .aboutC div a span {
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         box-sizing: border-box;
-         display: block;
-         border: 1px solid #ccc;
-    }
-     .aboutR {
-         width: 4.7rem;
-         float: left;
-    }
-     .aboutR li:first-of-type {
-         margin-bottom: 0.1rem;
-    }
-     .aboutR li a {
-         color: #808080;
-         transition: all 500ms linear;
-         text-decoration: none;
-    }
-     .aboutR li .list_O {
-         color: #fff;
-    }
-     .aboutR li .list_O:hover {
-         color: #808080;
-    }
-     .aboutR p {
-         height: 0.3rem;
-    }
-     .aboutR p a {
-         text-decoration: none;
-         color: rgb(128, 128, 128);
-    }
-     .aboutR p .color_r {
-         color: #A9A9A9;
-    }
-     .publick_panel_o_c p:first-of-type {
-         color: #000;
-    }
+
     .Sy {
         width: 100%;
         height: 26.5rem;
@@ -1370,30 +1218,55 @@ body,html{
         border: 0.01rem solid #ccc;
 
     }
+    @keyframes sy_touch {
+        0%{
+            left:-62vw;
+            opacity: 0;
+        }
+
+        80%{
+            left:7.5vw;
+        }
+        100%{
+            left:5.5vw;opacity: 1;
+        }
+    }
+    @keyframes sy_touchend {
+        0%{
+            left:5.5vw;
+            opacity: 1;
+        }
+
+        30%{
+            left:7.5vw;
+        }
+        100%{
+            left:-62vw;opacity: 0;
+        }
+    }
     .sy_touch{
-        width:0vw;
-        margin-left:-6.2vw;
-        height:0vh;
+        width:61vw;
+        left:-62vw;
+        height:89vh;
         position: fixed;
         z-index:1;
-        top:11vh;transition: 1s;
+        top:11vh;
         overflow: auto;
         font-family: 微软雅黑;
-        background-color: #EFEFEF;
-        box-sizing: border-box;
-        padding-right:0.2rem;
+        background-color: #e9e9e9;
+        padding-right:0.2rem;box-sizing: border-box;
+
 
     }
 
-    .glyphicon{
+    .sy_touClo{
         position: absolute;
         top:0.1rem;right: 0;
-        left:0.5rem;
         cursor: pointer;
         width:0.5rem;
         height:0.5rem;
     }
-    .glyphicon:before{
+    .sy_touClo:before{
 
         font-size: 0.3rem;
     }
@@ -1639,14 +1512,56 @@ body,html{
 
     }
 
-    .glyphicon{
+    @keyframes sy_touch {
+        0%{
+            left:-62vw;
+            opacity: 0;
+        }
+
+        80%{
+            left:7.5vw;
+        }
+        100%{
+            left:5.5vw;opacity: 1;
+        }
+    }
+    @keyframes sy_touchend {
+        0%{
+            left:5.5vw;
+            opacity: 1;
+        }
+
+        30%{
+            left:7.5vw;
+        }
+        100%{
+            left:-62vw;opacity: 0;
+        }
+    }
+    .sy_touch{
+        width:83vw;
+        left:-84vw;
+        height:89vh;
+        position: fixed;
+        z-index:1;
+        top:12vh;transition: 1s;
+        overflow: auto;
+        font-family: 微软雅黑;
+        background-color: #e9e9e9;
+        box-sizing: border-box;
+        padding-right:0.2rem;
+        padding-bottom:0.2rem;
+
+    }
+
+    .sy_touClo{
         position: absolute;
         top:0.1rem;right: 0.1rem;
         cursor: pointer;
         width:0.5rem;
         height:0.5rem;
     }
-    .glyphicon:before{
+    .sy_touClo:before{
 
         font-size: 0.3rem;
     }

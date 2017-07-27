@@ -4,6 +4,15 @@
 import React, { Component } from 'react';
 import './zyh.css';
 import video from './video/1234.mp4';
+import {
+
+    BrowserRouter as Router,
+
+    Route,
+
+    Link
+
+} from 'react-router-dom'
 
 class Banner extends Component {
     componentDidMount(){
@@ -11,8 +20,6 @@ class Banner extends Component {
         let videoImg=document.getElementById('video-img');
         if(navigator.userAgent.indexOf('MSIE')!=-1 || navigator.userAgent.indexOf('rv')!=-1){
             video.style.display='none';
-            // videoImg.style.width='100%';
-            // videoImg.style.height='8.5rem';
             videoImg.style.display='block';
         }else{
             video.style.display='block';
@@ -36,7 +43,7 @@ class Banner extends Component {
                         </div>
                         <p className="zyh-tSecond zyh-tSecondTop">真「响应式」自助建站平台</p>
                         <p className="zyh-tSecond zyh-tSecondBottom">艺术品级模板 引领自助建站潮流</p>
-                        <p className="zyh-button"><div className="zyh-buttonIn"><span>查看模板</span></div></p>
+                        <p className="zyh-button"><div className="zyh-buttonIn"><span><Link to="/Template">查看模板</Link></span></div></p>
                         <p className="zyh-decline" id="zyhButton"></p>
                     </div>
                 </div>

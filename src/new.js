@@ -68,14 +68,14 @@ class New extends Component {
         this.setState({
             newNum: i
         });
-        this.refs.sy_touch.style.width = '94.5' + 'vw';
-        this.refs.sy_touch.style.height = '89' + 'vh';
+        this.refs.sy_touch.style.animation='sy_touch ease 1s forwards';
+
         this.refs.divNode.innerHTML = this.state.Json.name[i].cont
     }
 
     closeClick() {
-        this.refs.sy_touch.style.width = '0' + 'vw';
-        this.refs.sy_touch.style.height = '0' + 'vh';
+        this.refs.sy_touch.style.animation='sy_touchend ease 1s forwards';
+
     }
 
     render() {
