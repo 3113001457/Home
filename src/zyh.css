@@ -856,12 +856,12 @@ a:active {color: #950304;}
         transition: 0s;
     }
     .zyh-RTSpan{
-        font-size: 0.34rem;
+        font-size: 24px;
         transition: 0s;
     }
     .zyh-RTBSpan{
         margin-top: 0.19rem;
-        font-size: 0.15rem;
+        font-size: 15px;
         transition: 0s;
     }
     /*main结束*/

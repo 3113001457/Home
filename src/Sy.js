@@ -2,6 +2,12 @@
  * Created by Administrator on 2017/7/17.
  */
 import React, {Component} from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
+
 /*父组件*/
 class Sy extends Component {
     constructor(props) {
@@ -319,6 +325,10 @@ class Sy_wrap extends Component {
             this.state.wrap_fun()
         }.bind(this), 3000);
     }
+    sy_scroClick(){
+        document.body.scrollTop=0;
+        document.documentElement.scrollTop=0;
+    }
     render() {
         return (
             <div className="sy_wrap">
@@ -334,7 +344,7 @@ class Sy_wrap extends Component {
                                     this.state.wrap_img.map(function (arr) {
                                         return (
                                             <li key={arr}>
-                                                <a href="Template"><img src={arr} alt="" /></a>
+                                                <Link to="Template" onClick={()=>this.sy_scroClick()}><img src={arr} alt="" /></Link>
                                             </li>
                                         )
                                     }.bind(this))

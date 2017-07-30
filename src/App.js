@@ -6,29 +6,28 @@ import About from './about'
 import logo from './images/鲜橙logo_03.png'
 import cha from './images/cha.png'
 import gang from './images/gang.png'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import { HashRouter as Router, Route ,Link} from 'react-router-dom'
+import createHistory from 'history/createHashHistory'
+const history = createHistory();
 
 class App extends Component {
     componentDidMount(){
-        let bodyW=document.body.offsetWidth;
-        let nav=document.getElementById('nav');
-        let head=document.getElementById('head');
-        let off=document.getElementById('off');
-        let bool=document.getElementById('bool');
         let scro=document.getElementById('scro');
-        let scroHeight=scro.offsetHeight
-        document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
+        let scroHeight=scro.offsetHeight;
+
         window.onresize=function(){
+            let bodyW=document.body.offsetWidth;
+            let nav=document.getElementById('nav');
+            let head=document.getElementById('head');
+            let off=document.getElementById('off');
+            let bool=document.getElementById('bool');
+
 
             if(bodyW>992){
                 nav.style.width=8+"rem";
                 head.style.height="70px";
                 nav.style.transition="0s";
-                off.style.display='none'
+                off.style.display='none';
                 bool.style.display='none'
             }else{
                 nav.style.width=0+"rem";
@@ -37,6 +36,7 @@ class App extends Component {
                 bool.style.display='block'
 
             }
+
             document.documentElement.style.fontSize=document.documentElement.clientWidth/13.66+'px';
         };
         function addEvent(obj,type,fn){
@@ -51,21 +51,22 @@ class App extends Component {
         addEvent(window,'scroll',function(){
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             let num=scrollTop;
+            let bodyW=document.body.offsetWidth;
+            let nav=document.getElementById('nav');
             let head=document.getElementById('head');
-            let t=null;
-            let nums=-70;
+            let off=document.getElementById('off');
+            let bool=document.getElementById('bool');
+            if(bodyW>992){
+
+            }else{
+                nav.style.width=0+"rem";
+                nav.style.transition="0s";
+                head.style.height="70px";
+                bool.style.display='block'
+            }
             if(num>=scroHeight){
                 scro.style.position="fixed";
                 scro.style.top=0+'px';
-                // t=setInterval(()=> {
-                //     nums++;
-                //     if(nums>=0){
-                //         clearInterval(t);
-                //         nums=-70;
-                //         return
-                //     }
-                //     scro.style.top=nums+'px';
-                // },10)
             }else {
                 scro.style.top=0+'px';
                 scro.style.position="relative";
@@ -75,8 +76,8 @@ class App extends Component {
     handleClick(){
         let bodyW=document.body.offsetWidth;
         if(bodyW<992){
-            this.refs.bool.style.display="none"
-            this.refs.off.style.display="block"
+            this.refs.bool.style.display="none";
+            this.refs.off.style.display="block";
             this.refs.nav.style.width=100+"%";
             this.refs.nav.style.transition="0.7s";
             this.refs.head.style.height="409px";
@@ -85,8 +86,8 @@ class App extends Component {
     handleClick1(){
         let bodyW=document.body.offsetWidth;
         if(bodyW<992){
-            this.refs.bool.style.display="block"
-            this.refs.off.style.display="none"
+            this.refs.bool.style.display="block";
+            this.refs.off.style.display="none";
             this.refs.nav.style.width=0+"rem";
             this.refs.head.style.height="70px";
         }
@@ -110,8 +111,9 @@ class App extends Component {
     }
     render() {
         return (
-          <Router>
+          <Router history={history}>
             <div>
+
               <div className="wjt_head" id="scro">
                 <div className="wjt_header" ref="head" id="head">
                   <div className="wjt_logo"><img src={logo} style={{width:160+'px'}} alt=""/></div>
@@ -120,58 +122,58 @@ class App extends Component {
                     <li onClick={this.click.bind(this)}><Link to="/"><span></span>首页</Link></li>
                     <li onClick={this.click.bind(this)}><Link to="/Template">模板</Link></li>
                     <li onClick={this.click.bind(this)}><Link to="/Meal">套餐</Link></li>
-                    <li onMouseOver={this.handleMouseover.bind(this)} onMouseOut={this.handleOut.bind(this)}><Link to="select">关于</Link>
-                      <div className="wjt_guanyu"  ref="guanyu">
-                          <ul className="aboutLists">
-                              <div className="H_listCs">
-                                  <ul className="aboutLs">
-                                      <li className="list_Os">公司信息</li>
-                                      <li>
-                                          <Link to="/About/Company_introduction">公司介绍</Link></li>
-                                      <li>
-                                          <Link to="/About/Terms_of_service">服务条款</Link></li>
-                                      <li>
-                                          <Link to="/About/Legal_notice">法律声明</Link></li>
-                                      <li>
-                                          <Link to="/About/Adequate_service">可接受服务</Link></li>
-                                      <li>
-                                          <Link to="/About/Disclaimer">免责声明</Link></li>
-                                  </ul>
-                                  <ul className="aboutLs">
-                                      <p><a href="" className="list_Os">荣誉资质</a></p>
-                                      <li><a href="">
-                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
-                                               alt=""/>
-                                          <span></span>
-                                      </a></li>
-                                      <li><a href="">
-                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
-                                               alt=""/>
-                                          <span></span>
-                                      </a></li>
-                                      <li><a href="">
-                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
-                                               alt=""/>
-                                          <span></span>
-                                      </a></li>
-                                      <li><a href="">
-                                          <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
-                                               alt=""/>
-                                          <span></span>
-                                      </a></li>
-                                  </ul>
-                                  <ul className="aboutLs">
-                                      <p className="list_Os">联系客服</p>
-                                      <li><a href="">客户服务热线</a></li>
-                                      <li><a href="" className="color_rs">4006-285-729</a></li>
-                                      <li><a href="">QQ客户中心</a></li>
-                                      <li><a href="" className="color_rs">800088546</a></li>
-                                      <li><a href="">公司地址</a></li>
-                                      <li><a href="" className="color_rs">xx.xx.xx.xx</a></li>
-                                  </ul>
-                              </div>
-                          </ul>
-                      </div>
+                    <li className="wjt_li" onMouseOver={this.handleMouseover.bind(this)} onMouseOut={this.handleOut.bind(this)}>关于
+                        <div className="wjt_guanyu"  ref="guanyu">
+                            <ul className="aboutLists">
+                                <div className="H_listCs">
+                                    <ul className="aboutLs">
+                                        <li className="list_Os">公司信息</li>
+                                        <li>
+                                            <Link to="/About/Company_introduction">公司介绍</Link></li>
+                                        <li>
+                                            <Link to="/About/Terms_of_service">服务条款</Link></li>
+                                        <li>
+                                            <Link to="/About/Legal_notice">法律声明</Link></li>
+                                        <li>
+                                            <Link to="/About/Adequate_service">可接受服务</Link></li>
+                                        <li>
+                                            <Link to="/About/Disclaimer">免责声明</Link></li>
+                                    </ul>
+                                    <ul className="aboutLs">
+                                        <p><a href="" className="list_Os"> <Link to="/About/Honor_and_qualification">荣誉资质</Link></a></p>
+                                        <li><a href="">
+                                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                                 alt=""/>
+                                            <span></span>
+                                        </a></li>
+                                        <li><a href="">
+                                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                                 alt=""/>
+                                            <span></span>
+                                        </a></li>
+                                        <li><a href="">
+                                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                                 alt=""/>
+                                            <span></span>
+                                        </a></li>
+                                        <li><a href="">
+                                            <img src="http://static.qifeiye.com/caches/2d2bd038d43e773a454cbb4ae76768fb/aHR0cDovL3d3dy5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTIvYTg2ZGZmNWFiYmQ0MjU1OWM2ZTY3ZDFkZGIzMDNlMmItMTIweDU1LmpwZw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                                 alt=""/>
+                                            <span></span>
+                                        </a></li>
+                                    </ul>
+                                    <ul className="aboutLs">
+                                        <p className="list_Os">联系客服</p>
+                                        <li><a href="">客户服务热线</a></li>
+                                        <li><a href="" className="color_rs">4006-285-729</a></li>
+                                        <li><a href="">QQ客户中心</a></li>
+                                        <li><a href="" className="color_rs">800088546</a></li>
+                                        <li><a href="">公司地址</a></li>
+                                        <li><a href="" className="color_rs">xx.xx.xx.xx</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
                     </li>
                   </ul>
                   <div id="bool" ref="bool" className="wjt_bool glyphicon glyphicon-align-justify" onClick={this.handleClick.bind(this)}></div>
@@ -197,20 +199,20 @@ class App extends Component {
                     <ul className="publick_panel_t_r">
                       <li>
                         <h2>公司信息</h2>
-                        <p><a href="">公司介绍</a></p>
-                        <p><a href="">服务条款</a></p>
-                        <p><a href="">法律声明</a></p>
-                        <p><a href="">可接受服务</a></p>
-                        <p><a href="">免责声明</a></p>
+                         <p><Link to="/About/Company_introduction"  onClick={this.click.bind(this)}>公司介绍</Link></p>
+                        <p><Link to="/About/Terms_of_service"  onClick={this.click.bind(this)}>服务条款</Link></p>
+                        <p><Link to="/About/Legal_notice"  onClick={this.click.bind(this)}>法律声明</Link></p>
+                        <p><Link to="/About/Adequate_service"  onClick={this.click.bind(this)}>可接受服务</Link></p>
+                        <p><Link to="/About/Disclaimer"  onClick={this.click.bind(this)}>免责声明</Link></p>
                       </li>
                       <li>
                         <h2>最新资讯</h2>
-                        <p><a href="">如何减少网站页面相似度？</a></p>
-                        <p><a href="">企业如何建网站？</a></p>
-                        <p><a href="">响应式网站建设报价单</a></p>
-                        <p><a href="">网站推广的方法</a></p>
-                        <p><a href="">企业如何建网站？</a></p>
-                        <p><a href="">网站外链越多越好吗？</a></p>
+                          <p><Link to="/About/New"  onClick={this.click.bind(this)}>如何减少网站页面相似度？</Link></p>
+                          <p><Link to="/About/New"  onClick={this.click.bind(this)}>企业如何建网站？</Link></p>
+                          <p><Link to="/About/New"  onClick={this.click.bind(this)}>响应式网站建设报价单</Link></p>
+                          <p><Link to="/About/New"  onClick={this.click.bind(this)}>网站推广的方法</Link></p>
+                          <p><Link to="/About/New"  onClick={this.click.bind(this)}>企业如何建网站？</Link></p>
+                          <p><Link to="/About/New"  onClick={this.click.bind(this)}>网站外链越多越好吗？</Link></p>
                       </li>
                       <li>
                          <div className="publick_panel_o_c">

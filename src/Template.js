@@ -289,7 +289,7 @@ class D_sidebar extends React.Component{
                 </div>
                 <ul className="D_sidelist" >
                     {this.state.sidebarword.map(function (i,k) {
-                        return <li key={k} name={i.uid} onClick={this.click.bind(null,i.uid)} className={this.state.index==k?"D_stychange":"D_stychange_b"}>{i.name} <span ref={i.uid}  className="glyphicon glyphicon-circle-arrow-right"></span></li>
+                        return <li key={k} name={i.uid} onClick={this.click.bind(null,i.uid)} className={this.state.index==k?"D_stychange":"D_stychange_b"}>{i.name}</li>
                     }.bind(this))}
                 </ul>
             </div>

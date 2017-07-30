@@ -16,15 +16,9 @@ import Contact_me from './contact_me'
 
 import New from './new'
 
-import {
-
-  BrowserRouter as Router,
-
-  Route,
-
-  Link
-
-} from 'react-router-dom'
+import { HashRouter as Router, Route ,Link} from 'react-router-dom'
+import createHistory from 'history/createHashHistory'
+const history = createHistory()
 
 
 
@@ -47,7 +41,7 @@ const About=({match})=>(
                          <Link to={`${match.url}/Terms_of_service`}><li><span></span>服务条款</li></Link>
                          <Link to={`${match.url}/Legal_notice`}><li><span></span>法律声明</li></Link>
                          <Link to={`${match.url}/Disclaimer`}><li><span></span>免责声明</li></Link>
-                         <Link to={`${match.url}/Adequate_service`}><li><span></span>起飞页可接受服务</li></Link>
+                         <Link to={`${match.url}/Adequate_service`}><li><span></span>鲜橙科技可接受服务</li></Link>
                      </ul>
                  </li>
                  <Link to={`${match.url}/Honor_and_qualification`}><li><p><span></span>荣誉资质</p></li></Link>
