@@ -1,26 +1,16 @@
 import React,{Component} from 'react'
-
 import Company_introduction from './company_introduction'
-
 import Terms_of_service from './terms_of_service'
-
 import Legal_notice from './legal_notice'
-
 import Disclaimer from './disclaimer'
-
 import Adequate_service from './adequate_service'
-
 import Honor_and_qualification from './honor_and_qualification'
-
 import Contact_me from './contact_me'
-
 import New from './new'
 
 import { HashRouter as Router, Route ,Link} from 'react-router-dom'
 import createHistory from 'history/createHashHistory'
-const history = createHistory()
-
-
+const history = createHistory();
 
 const About=({match})=>(
           <div>
@@ -50,5 +40,5 @@ const About=({match})=>(
              </div>
 
          </div>
-)
+);
 export default About;

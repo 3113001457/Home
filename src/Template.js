@@ -303,7 +303,7 @@ class D_sidebar extends React.Component{
                   <ul className="D_allcon">
                       {this.state.allcon.map(function (i,k) {
                           return <li key={k} src={i.url}>
-                              <img src={require(''+i.image+'')} alt=""/>
+                              <img src={i.image} alt=""/>
                                <div>
                                    <p className="D_conTit">{i.name}</p>
                                    <p className="D_conhref"><button><a href={'http://'+i.url+''} target="_blank">预览</a></button></p>

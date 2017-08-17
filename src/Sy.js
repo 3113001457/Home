@@ -124,7 +124,6 @@ class Sy_Contain extends Component {
         }
         addEvent(window,'scroll',function(){
             let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            console.log(this.sy_Con)
             if(scrollTop+window.screen.height>=this.sy_Con.offsetTop+200&&scrollTop+window.screen.height< this.sy_Con.offsetTop+500){
                 sy_Con_h2.style.transform='scale(1)';
             }

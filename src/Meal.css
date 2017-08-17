@@ -2,11 +2,11 @@
     .wjt_head{width: 100%;background: #333;position: relative;z-index: 999999}
     .wjt_header{width: 100%;height: 70px;margin: 0 auto;transition: .7s;}
     .wjt_logo{width: 1.03rem;height: 33px;float: left;margin-top: 15px;position: absolute;left: 50%;margin-left: -5rem;}
-    .wjt_nav{width: 0;margin-left: 1rem;border: none;overflow: hidden;position: absolute;right: 0;height: 100%;background: #61AFFF;}
+    .wjt_nav{width: 0;margin-left: 1rem;border: none;overflow: hidden;position: absolute;right: 0;height: 100%;background: rgba(0,0,0,.7);}
     .wjt_nav>li{float: left;height:36px;cursor: pointer;box-sizing: border-box;line-height: 36px;width: 100%;text-align: center;}
     .wjt_nav>li>a{width: 100%;height: 100%;padding: 25px;font-size: 18px;color: white;}
     .wjt_nav>li>a:hover{text-decoration: none;color: white;}
-    .wjt_guanyu{width: 100%;height: 0px;position: absolute;top:150px;left: 0;overflow: hidden;transition: 0.7s;z-index: 111;background: #ccc;font-size: 16px}
+    .wjt_guanyu{width: 100%;height: 0px;position: absolute;top:150px;left: 0;overflow: hidden;transition: 0.7s;z-index: 111;background: rgba(0,0,0,.7);font-size: 16px}
     .wjt_bool{width: 40px;height: 40px;position: absolute;font-size: 30px;display: block;right: 20px;
         top:15px;cursor: pointer}
     .wjt_off{width: 40px;height: 40px;position: absolute;left: 5px;top:15px;z-index: 222;font-size: 30px;display: block;cursor: pointer}
@@ -822,3 +822,6 @@
     .wjt_li{line-height: 70px;font-size: 16px;color: white;padding: 0 0 0 25px}
 }
 
+@media screen and (min-width: 993px) and (max-width: 1009px){
+    .wjt_nav{height: 70px;}
+}

@@ -32,6 +32,9 @@ class Banner extends Component {
                 <video id="video" src={video} autoPlay='autoPlay' type="video/mp4" muted="muted" poster="https://www.qifeiye.com/qfy-content/uploads/2016/03/dd8fdac72904e0efbcc4e738fbba329a.jpg" loop="loop" className="zyh-background-video">
                     <source src={video} autoPlay='autoPlay' type="video/ogg" muted="muted" poster="https://www.qifeiye.com/qfy-content/uploads/2016/03/dd8fdac72904e0efbcc4e738fbba329a.jpg" loop="loop"/>
                 </video>
+                <div id="banner-img">
+                    <img src="https://www.qifeiye.com/qfy-content/uploads/2016/03/dd8fdac72904e0efbcc4e738fbba329a.jpg" alt=""/>
+                </div>
                 <img id="video-img" src="https://www.qifeiye.com/qfy-content/uploads/2016/03/dd8fdac72904e0efbcc4e738fbba329a.jpg" alt=""/>
                 <div className="zyh-bannerIn" id="zyh-bannerIn">
                     <div className="zyh-container">

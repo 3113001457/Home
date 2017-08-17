@@ -21,15 +21,16 @@ class App extends Component {
             let head=document.getElementById('head');
             let off=document.getElementById('off');
             let bool=document.getElementById('bool');
+            console.log(nav)
 
-
-            if(bodyW>992){
+            if(bodyW>=992){
                 nav.style.width=8+"rem";
                 head.style.height="70px";
                 nav.style.transition="0s";
                 off.style.display='none';
                 bool.style.display='none'
-            }else{
+
+            }else if(bodyW<992){
                 nav.style.width=0+"rem";
                 nav.style.transition="0s";
                 head.style.height="70px";
